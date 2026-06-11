@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+/instances/instances_large/
+/instances/instances_big/
+/instances/instances_medium/
+/instances/instances_small/
+/output/temp*

@@ -1,0 +1,757 @@
+{
+  "./instances/random_sat/uf50-033.cnf": {
+    "variables": 50,
+    "clauses": 218,
+    "kissat404": {
+      "satisfiable": true,
+      "time": 0.00015260000009220676,
+      "data": null
+    },
+    "division_solver_naive": {
+      "satisfiable": true,
+      "time": 0.8814036200001283,
+      "data": null
+    }
+  },
+  "./instances/test/sat_random/uf50-08.cnf": {
+    "variables": 50,
+    "clauses": 218,
+    "kissat404": {
+      "satisfiable": true,
+      "time": 0.001194799999893803,
+      "data": null
+    },
+    "division_solver_naive": {
+      "satisfiable": true,
+      "time": 0.38199687599990284,
+      "data": null
+    }
+  },
+  "./instances/test/sat_random/uf250-02.cnf": {
+    "variables": 250,
+    "clauses": 1065,
+    "kissat404": {
+      "satisfiable": true,
+      "time": 1.8119459869999446,
+      "data": null
+    }
+  },
+  "./instances/test/unsat_random/uuf200-02.cnf": {
+    "variables": 200,
+    "clauses": 860,
+    "kissat404": {
+      "satisfiable": false,
+      "time": 0.21389246699982323,
+      "data": null
+    }
+  },
+  "./instances/test/unsat_problem/hole7.cnf": {
+    "variables": 56,
+    "clauses": 204,
+    "kissat404": {
+      "satisfiable": false,
+      "time": 0.007817997000074683,
+      "data": null
+    },
+    "division_solver_naive": {
+      "satisfiable": false,
+      "time": 5.867565887000183,
+      "data": null
+    }
+  },
+  "./instances/test/unsat_problem/hole10.cnf": {
+    "variables": 110,
+    "clauses": 561,
+    "kissat404": {
+      "satisfiable": false,
+      "time": 1.0675115459998779,
+      "data": null
+    }
+  },
+  "./instances/random_sat/uf50-029.cnf": {
+    "variables": 50,
+    "clauses": 218,
+    "kissat404": {
+      "satisfiable": true,
+      "time": 0.0019755000000714062,
+      "data": null
+    },
+    "division_solver_naive": {
+      "satisfiable": true,
+      "time": 0.025931796999884682,
+      "data": null
+    }
+  },
+  "./instances/random_sat/uf50-043.cnf": {
+    "variables": 50,
+    "clauses": 218,
+    "kissat404": {
+      "satisfiable": true,
+      "time": 0.002541099999916696,
+      "data": null
+    },
+    "division_solver_naive": {
+      "satisfiable": true,
+      "time": 0.20156537700017907,
+      "data": null
+    }
+  },
+  "./instances/random_sat/uf50-08.cnf": {
+    "variables": 50,
+    "clauses": 218,
+    "kissat404": {
+      "satisfiable": true,
+      "time": 0.001222599000129776,
+      "data": null
+    },
+    "division_solver_naive": {
+      "satisfiable": true,
+      "time": 2.137972356000091,
+      "data": null
+    }
+  },
+  "./instances/random_sat/uf50-022.cnf": {
+    "variables": 50,
+    "clauses": 218,
+    "kissat404": {
+      "satisfiable": true,
+      "time": 0.0013483000000178436,
+      "data": null
+    },
+    "division_solver_naive": {
+      "satisfiable": true,
+      "time": 0.7016042200000356,
+      "data": null
+    }
+  },
+  "./instances/random_sat/uf50-050.cnf": {
+    "variables": 50,
+    "clauses": 218,
+    "kissat404": {
+      "satisfiable": true,
+      "time": 0.001535699999976714,
+      "data": null
+    },
+    "division_solver_naive": {
+      "satisfiable": true,
+      "time": 1.3326022480000574,
+      "data": null
+    }
+  },
+  "./instances/random_sat/uf50-042.cnf": {
+    "variables": 50,
+    "clauses": 218,
+    "kissat404": {
+      "satisfiable": true,
+      "time": 0.0014429000000291126,
+      "data": null
+    },
+    "division_solver_naive": {
+      "satisfiable": true,
+      "time": 4.463572333000002,
+      "data": null
+    }
+  },
+  "./instances/random_sat/uf50-04.cnf": {
+    "variables": 50,
+    "clauses": 218,
+    "kissat404": {
+      "satisfiable": true,
+      "time": 0.002138000000059037,
+      "data": null
+    },
+    "division_solver_naive": {
+      "satisfiable": true,
+      "time": 0.25794960600001104,
+      "data": null
+    }
+  },
+  "./instances/random_sat/uf50-032.cnf": {
+    "variables": 50,
+    "clauses": 218,
+    "kissat404": {
+      "satisfiable": true,
+      "time": 0.0037229000001843815,
+      "data": null
+    },
+    "division_solver_naive": {
+      "satisfiable": true,
+      "time": 0.06871550100004242,
+      "data": null
+    }
+  },
+  "./instances/random_sat/uf50-048.cnf": {
+    "variables": 50,
+    "clauses": 218,
+    "kissat404": {
+      "satisfiable": true,
+      "time": 0.0017989999998917483,
+      "data": null
+    },
+    "division_solver_naive": {
+      "satisfiable": true,
+      "time": 1.0975429249999706,
+      "data": null
+    }
+  },
+  "./instances/random_sat/uf50-040.cnf": {
+    "variables": 50,
+    "clauses": 218,
+    "kissat404": {
+      "satisfiable": true,
+      "time": 0.0012311999998928513,
+      "data": null
+    },
+    "division_solver_naive": {
+      "satisfiable": true,
+      "time": 5.422237276000033,
+      "data": null
+    }
+  },
+  "./instances/random_sat/uf50-026.cnf": {
+    "variables": 50,
+    "clauses": 218,
+    "kissat404": {
+      "satisfiable": true,
+      "time": 0.0014944009999453556,
+      "data": null
+    },
+    "division_solver_naive": {
+      "satisfiable": true,
+      "time": 1.6389158130000396,
+      "data": null
+    }
+  },
+  "./instances/random_sat/uf50-09.cnf": {
+    "variables": 50,
+    "clauses": 218,
+    "kissat404": {
+      "satisfiable": true,
+      "time": 0.0014303000000381871,
+      "data": null
+    },
+    "division_solver_naive": {
+      "satisfiable": true,
+      "time": 0.08387633699999242,
+      "data": null
+    }
+  },
+  "./instances/random_sat/uf50-018.cnf": {
+    "variables": 50,
+    "clauses": 218,
+    "kissat404": {
+      "satisfiable": true,
+      "time": 0.001696799999990617,
+      "data": null
+    },
+    "division_solver_naive": {
+      "satisfiable": true,
+      "time": 2.736317291999967,
+      "data": null
+    }
+  },
+  "./instances/random_sat/uf50-013.cnf": {
+    "variables": 50,
+    "clauses": 218,
+    "kissat404": {
+      "satisfiable": true,
+      "time": 0.001906100000041988,
+      "data": null
+    },
+    "division_solver_naive": {
+      "satisfiable": true,
+      "time": 1.1604880760000924,
+      "data": null
+    }
+  },
+  "./instances/random_sat/uf50-020.cnf": {
+    "variables": 50,
+    "clauses": 218,
+    "kissat404": {
+      "satisfiable": true,
+      "time": 0.002674001000059434,
+      "data": null
+    },
+    "division_solver_naive": {
+      "satisfiable": true,
+      "time": 0.048319130999971094,
+      "data": null
+    }
+  },
+  "./instances/random_sat/uf50-044.cnf": {
+    "variables": 50,
+    "clauses": 218,
+    "kissat404": {
+      "satisfiable": true,
+      "time": 0.0028000020001854864,
+      "data": null
+    },
+    "division_solver_naive": {
+      "satisfiable": true,
+      "time": 0.08353665300001012,
+      "data": null
+    }
+  },
+  "./instances/random_sat/uf50-036.cnf": {
+    "variables": 50,
+    "clauses": 218,
+    "kissat404": {
+      "satisfiable": true,
+      "time": 0.001971000999901662,
+      "data": null
+    },
+    "division_solver_naive": {
+      "satisfiable": true,
+      "time": 0.1635974040000292,
+      "data": null
+    }
+  },
+  "./instances/random_sat/uf50-05.cnf": {
+    "variables": 50,
+    "clauses": 218,
+    "kissat404": {
+      "satisfiable": true,
+      "time": 0.0035223019999648386,
+      "data": null
+    },
+    "division_solver_naive": {
+      "satisfiable": true,
+      "time": 0.7626331839999239,
+      "data": null
+    }
+  },
+  "./instances/random_sat/uf50-031.cnf": {
+    "variables": 50,
+    "clauses": 218,
+    "kissat404": {
+      "satisfiable": true,
+      "time": 0.0008756009999615344,
+      "data": null
+    },
+    "division_solver_naive": {
+      "satisfiable": true,
+      "time": 3.54967855100017,
+      "data": null
+    }
+  },
+  "./instances/random_sat/uf50-015.cnf": {
+    "variables": 50,
+    "clauses": 218,
+    "kissat404": {
+      "satisfiable": true,
+      "time": 0.0020261009999558155,
+      "data": null
+    },
+    "division_solver_naive": {
+      "satisfiable": true,
+      "time": 0.8464169369999581,
+      "data": null
+    }
+  },
+  "./instances/random_sat/uf50-030.cnf": {
+    "variables": 50,
+    "clauses": 218,
+    "kissat404": {
+      "satisfiable": true,
+      "time": 0.0016876009999577946,
+      "data": null
+    },
+    "division_solver_naive": {
+      "satisfiable": true,
+      "time": 5.730787043000191,
+      "data": null
+    }
+  },
+  "./instances/random_sat/uf50-019.cnf": {
+    "variables": 50,
+    "clauses": 218,
+    "kissat404": {
+      "satisfiable": true,
+      "time": 0.0023467010000786104,
+      "data": null
+    },
+    "division_solver_naive": {
+      "satisfiable": true,
+      "time": 0.35735182700000223,
+      "data": null
+    }
+  },
+  "./instances/random_sat/uf50-027.cnf": {
+    "variables": 50,
+    "clauses": 218,
+    "kissat404": {
+      "satisfiable": true,
+      "time": 0.00016179999988708005,
+      "data": null
+    },
+    "division_solver_naive": {
+      "satisfiable": true,
+      "time": 0.13406738499998028,
+      "data": null
+    }
+  },
+  "./instances/random_sat/uf50-039.cnf": {
+    "variables": 50,
+    "clauses": 218,
+    "kissat404": {
+      "satisfiable": true,
+      "time": 0.0023832020001464116,
+      "data": null
+    },
+    "division_solver_naive": {
+      "satisfiable": true,
+      "time": 6.060875807000002,
+      "data": null
+    }
+  },
+  "./instances/random_sat/uf50-049.cnf": {
+    "variables": 50,
+    "clauses": 218,
+    "kissat404": {
+      "satisfiable": true,
+      "time": 0.0020742009999139555,
+      "data": null
+    },
+    "division_solver_naive": {
+      "satisfiable": true,
+      "time": 2.169122649999963,
+      "data": null
+    }
+  },
+  "./instances/random_sat/uf50-024.cnf": {
+    "variables": 50,
+    "clauses": 218,
+    "kissat404": {
+      "satisfiable": true,
+      "time": 0.001737900000080117,
+      "data": null
+    },
+    "division_solver_naive": {
+      "satisfiable": true,
+      "time": 0.0611816269999963,
+      "data": null
+    }
+  },
+  "./instances/random_sat/uf50-047.cnf": {
+    "variables": 50,
+    "clauses": 218,
+    "kissat404": {
+      "satisfiable": true,
+      "time": 0.001455401000157508,
+      "data": null
+    },
+    "division_solver_naive": {
+      "satisfiable": true,
+      "time": 3.069980414999918,
+      "data": null
+    }
+  },
+  "./instances/random_sat/uf50-041.cnf": {
+    "variables": 50,
+    "clauses": 218,
+    "kissat404": {
+      "satisfiable": true,
+      "time": 0.0015103069999895524,
+      "data": null
+    },
+    "division_solver_naive": {
+      "satisfiable": true,
+      "time": 1.8405394080000406,
+      "data": null
+    }
+  },
+  "./instances/random_sat/uf50-046.cnf": {
+    "variables": 50,
+    "clauses": 218,
+    "kissat404": {
+      "satisfiable": true,
+      "time": 0.002866101000108756,
+      "data": null
+    },
+    "division_solver_naive": {
+      "satisfiable": true,
+      "time": 1.6201217170000746,
+      "data": null
+    }
+  },
+  "./instances/random_sat/uf50-017.cnf": {
+    "variables": 50,
+    "clauses": 218,
+    "kissat404": {
+      "satisfiable": true,
+      "time": 0.001793400999986261,
+      "data": null
+    },
+    "division_solver_naive": {
+      "satisfiable": true,
+      "time": 5.95905036299996,
+      "data": null
+    }
+  },
+  "./instances/random_sat/uf50-03.cnf": {
+    "variables": 50,
+    "clauses": 218,
+    "kissat404": {
+      "satisfiable": true,
+      "time": 0.0009308999999575462,
+      "data": null
+    },
+    "division_solver_naive": {
+      "satisfiable": true,
+      "time": 0.645902931999899,
+      "data": null
+    }
+  },
+  "./instances/random_sat/uf50-045.cnf": {
+    "variables": 50,
+    "clauses": 218,
+    "kissat404": {
+      "satisfiable": true,
+      "time": 0.002723500000001877,
+      "data": null
+    },
+    "division_solver_naive": {
+      "satisfiable": true,
+      "time": 0.915764746999912,
+      "data": null
+    }
+  },
+  "./instances/random_sat/uf50-021.cnf": {
+    "variables": 50,
+    "clauses": 218,
+    "kissat404": {
+      "satisfiable": true,
+      "time": 0.0017017000000123517,
+      "data": null
+    },
+    "division_solver_naive": {
+      "satisfiable": true,
+      "time": 1.860466795000093,
+      "data": null
+    }
+  },
+  "./instances/random_sat/uf50-016.cnf": {
+    "variables": 50,
+    "clauses": 218,
+    "kissat404": {
+      "satisfiable": true,
+      "time": 0.001274299999977302,
+      "data": null
+    },
+    "division_solver_naive": {
+      "satisfiable": true,
+      "time": 3.4205281079998713,
+      "data": null
+    }
+  },
+  "./instances/random_sat/uf50-028.cnf": {
+    "variables": 50,
+    "clauses": 218,
+    "kissat404": {
+      "satisfiable": true,
+      "time": 0.002427999000019554,
+      "data": null
+    },
+    "division_solver_naive": {
+      "satisfiable": true,
+      "time": 20.04477592499984,
+      "data": null
+    }
+  },
+  "./instances/random_sat/uf50-037.cnf": {
+    "variables": 50,
+    "clauses": 218,
+    "kissat404": {
+      "satisfiable": true,
+      "time": 0.0018730000001596636,
+      "data": null
+    },
+    "division_solver_naive": {
+      "satisfiable": true,
+      "time": 1.6209602760000053,
+      "data": null
+    }
+  },
+  "./instances/random_sat/uf50-02.cnf": {
+    "variables": 50,
+    "clauses": 218,
+    "kissat404": {
+      "satisfiable": true,
+      "time": 0.001505898999994315,
+      "data": null
+    },
+    "division_solver_naive": {
+      "satisfiable": true,
+      "time": 75.27583987599996,
+      "data": null
+    }
+  },
+  "./instances/random_sat/uf50-014.cnf": {
+    "variables": 50,
+    "clauses": 218,
+    "kissat404": {
+      "satisfiable": true,
+      "time": 0.001979200000050696,
+      "data": null
+    },
+    "division_solver_naive": {
+      "satisfiable": true,
+      "time": 11.946168035000028,
+      "data": null
+    }
+  },
+  "./instances/random_sat/uf50-035.cnf": {
+    "variables": 50,
+    "clauses": 218,
+    "kissat404": {
+      "satisfiable": true,
+      "time": 0.002290999000024385,
+      "data": null
+    },
+    "division_solver_naive": {
+      "satisfiable": true,
+      "time": 1.3569268050000574,
+      "data": null
+    }
+  },
+  "./instances/random_sat/uf50-023.cnf": {
+    "variables": 50,
+    "clauses": 218,
+    "kissat404": {
+      "satisfiable": true,
+      "time": 0.0019214999999803695,
+      "data": null
+    },
+    "division_solver_naive": {
+      "satisfiable": true,
+      "time": 1.6931220100000246,
+      "data": null
+    }
+  },
+  "./instances/random_sat/uf50-012.cnf": {
+    "variables": 50,
+    "clauses": 218,
+    "kissat404": {
+      "satisfiable": true,
+      "time": 0.0011076999999204418,
+      "data": null
+    },
+    "division_solver_naive": {
+      "satisfiable": true,
+      "time": 0.5680243030001293,
+      "data": null
+    }
+  },
+  "./instances/random_sat/uf50-025.cnf": {
+    "variables": 50,
+    "clauses": 218,
+    "kissat404": {
+      "satisfiable": true,
+      "time": 0.0026212000000214175,
+      "data": null
+    },
+    "division_solver_naive": {
+      "satisfiable": true,
+      "time": 6.350845054000047,
+      "data": null
+    }
+  },
+  "./instances/random_sat/uf50-010.cnf": {
+    "variables": 50,
+    "clauses": 218,
+    "kissat404": {
+      "satisfiable": true,
+      "time": 0.0016338000000359898,
+      "data": null
+    },
+    "division_solver_naive": {
+      "satisfiable": true,
+      "time": 1.015366313999948,
+      "data": null
+    }
+  },
+  "./instances/random_sat/uf50-011.cnf": {
+    "variables": 50,
+    "clauses": 218,
+    "kissat404": {
+      "satisfiable": true,
+      "time": 0.0007588999999370571,
+      "data": null
+    },
+    "division_solver_naive": {
+      "satisfiable": true,
+      "time": 3.3130705459998353,
+      "data": null
+    }
+  },
+  "./instances/random_sat/uf50-07.cnf": {
+    "variables": 50,
+    "clauses": 218,
+    "kissat404": {
+      "satisfiable": true,
+      "time": 0.002931100000068909,
+      "data": null
+    },
+    "division_solver_naive": {
+      "satisfiable": true,
+      "time": 17.95226857600005,
+      "data": null
+    }
+  },
+  "./instances/random_sat/uf50-038.cnf": {
+    "variables": 50,
+    "clauses": 218,
+    "kissat404": {
+      "satisfiable": true,
+      "time": 0.003089100000124745,
+      "data": null
+    },
+    "division_solver_naive": {
+      "satisfiable": true,
+      "time": 11.590656373000002,
+      "data": null
+    }
+  },
+  "./instances/random_sat/uf50-06.cnf": {
+    "variables": 50,
+    "clauses": 218,
+    "kissat404": {
+      "satisfiable": true,
+      "time": 0.0014452989998972043,
+      "data": null
+    },
+    "division_solver_naive": {
+      "satisfiable": true,
+      "time": 3.208560271999886,
+      "data": null
+    }
+  },
+  "./instances/random_sat/uf50-01.cnf": {
+    "variables": 50,
+    "clauses": 218,
+    "kissat404": {
+      "satisfiable": true,
+      "time": 0.0013814000001275417,
+      "data": null
+    },
+    "division_solver_naive": {
+      "satisfiable": true,
+      "time": 14.74614891400006,
+      "data": null
+    }
+  },
+  "./instances/random_sat/uf50-034.cnf": {
+    "variables": 50,
+    "clauses": 218,
+    "kissat404": {
+      "satisfiable": true,
+      "time": 0.002570799999830342,
+      "data": null
+    },
+    "division_solver_naive": {
+      "satisfiable": true,
+      "time": 8.544546372000013,
+      "data": null
+    }
+  }
+}
