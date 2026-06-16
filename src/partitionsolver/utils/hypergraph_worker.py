@@ -3,8 +3,8 @@ import mtkahypar
 import multiprocessing
 import numpy as np
 
-def create_context(mtk, k=2, epsilon=0.15):
-    context = mtk.context_from_preset(mtkahypar.PresetType.DEFAULT)
+def create_context(mtk, k=2, epsilon=0.15, preset_type = mtkahypar.PresetType.DEFAULT):
+    context = mtk.context_from_preset(preset_type)
     context.set_partitioning_parameters(
         k,                        # number of blocks
         epsilon,                  # imbalance parameter

@@ -3,7 +3,7 @@ from partitionsolver.utils import literal_util
 
 class TwoWatchedLiterals:
     def __init__(self, num_variables, base_clauses, base_clauses_in_dimacs = True):
-        self.watches = [] # What literal is each clause watching
+        self.watches = [] # What literal is each clause watching -- Maybe not numpy?
         # Assume variables are numbered 1..num_variables
         self.num_variables = num_variables
 
@@ -50,44 +50,22 @@ class TwoWatchedLiterals:
         assert literal_util.get_variable(changed_lit) <= self.num_variables, f"Changed literal {literal_util.get_variable(changed_lit)} exceeds number of variables {self.num_variables}"
 
         forced_literals = []
-        
-        watch_list = self.watch_lists[changed_lit]
+        for clause_id, clause in enumerate(self.base_clauses):
+            pos_lit = 0
+            found_pos_lits = 0
 
-        # for (int ix = watchList.size() - 1; ix >= 0; ix--)
-        for ix in range(len(watch_list) - 1, -1, -1):
-            clause_id = watch_list[ix]
-
-            watch = self.watches[clause_id]
-            lit0 = watch[0]
-            lit1 = watch[1]
-
-            other_watch_index = 1 if changed_lit == lit0 else 0
-            other_lit = lit1 if changed_lit == lit0 else lit0
-            if literal_util.evaluates_positive(other_lit, assignment):
-                continue
-
-            found = False
-            found_literal = -1
-            for clauseLit in self.base_clauses[clause_id]:
-                if clauseLit == lit0 or clauseLit == lit1:
+            for lit in clause:
+                if literal_util.evaluates_negative(lit, assignment):
                     continue
-                if (literal_util.evaluates_negative(clauseLit, assignment)):
-                    continue
-                found_literal = clauseLit;
-                found = True;
-                break;
+                pos_lit = lit
+                found_pos_lits += 1
 
-            if found:
-                watch[1 - other_watch_index] = found_literal; # "1 -": the other watcher 1-->0, 0-->1
-                watch_list.pop(ix);
-                self.watch_lists[found_literal].append(clause_id);
-            else:
-                if literal_util.evaluates_negative(other_lit, assignment):
-                    return [], False, clause_id
-                else:
-                    # Here we already know that otherLit is not true --> Propagate literal
-                    forced_literals.append((other_lit, clause_id))
-        
+            if found_pos_lits == 0:
+                return [], False, clause_id
+            
+            if found_pos_lits == 1:
+                forced_literals.append((pos_lit, clause_id))
+
         return forced_literals, True, None
 
     def add_learnt_clause(self, clause, clause_id, assignment):

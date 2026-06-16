@@ -17,24 +17,42 @@ class DivisionDPLL:
         self.partial_clauses = partial_clauses
         self.num_gvars = len(glue_variables)
 
+        self.trails = []
+        self.values = [0] * self.num_gvars
+
         self.var_to_index = {var: index for index, var in enumerate(glue_variables)}
 
         self.learnt_clauses = [] # Learnt clauses, in bitshifted variable format - NOT DIMACS
         self.twl_translation = VariableTranslation(glue_variables)
         self.tow_watched_literals = TwoWatchedLiterals(self.num_gvars, [self.twl_translation(clause) for clause in self.learnt_clauses], base_clauses_in_dimacs=False)
 
+
         self.solution = None
 
 
-    def reset_solver(self):
+    def reset_solver(self, keep_global_decisions:bool = True, keep_learnt_clauses = True):
+        # todo: Inconsistent naming. This does NOT reset the solver, just backtracks to decision level 0
         self.test_number = 0
 
         self.decision_level = 0
         self.decision_stack = []
-        self.trails = []
-        self.propagated = [False] * self.num_gvars # todo: this is unused
+        if keep_global_decisions:
+            if len(self.trails) >= 1:
+                self.trails = self.trails[0:1]
+                global_decision_vars = [self.var_to_index[literal_util.get_variable(lit)] for lit in self.trails[0]]
+            else:
+                self.trails = [[]]
+                global_decision_vars = []
+        else:
+            self.trails = [[]]
+            global_decision_vars = []
         # values: 0: undecided | -1,-2: False | 1,2: True | abs = 1, if first choice, abs = 2, if second choice
-        self.values = [0] * self.num_gvars
+        if len(global_decision_vars) == 0:
+            self.values = [0] * self.num_gvars
+        else:
+            self.values = [0 if i in global_decision_vars else old_value for i, old_value in enumerate(self.values)]
+        if not keep_learnt_clauses:
+            pass
 
     def all_variables_set(self):
         return not any(x == 0 for x in self.values)
@@ -56,15 +74,14 @@ class DivisionDPLL:
     
     def backtrack(self, decision_level):
         # Reset the implied variables of the current decision level
-        #print(f"Trails length: {len(self.trails)} - accessing {decision_level - 1}")
-        for trail_variable, trail_variable_index in self.trails[decision_level - 1]:
-            self.propagated[trail_variable_index] = False
+
+        # todo: this looks extremely brittle
+        for trail_variable, trail_variable_index in self.trails[decision_level]:
             self.values[trail_variable_index] = 0
         self.trails.pop()
 
         # Reset the decision variable of the current decision level
         variable, variable_index = self.decision_stack[decision_level - 1]
-        self.propagated[variable_index] = False
         self.values[variable_index] = 0
         self.decision_stack.pop()
 
@@ -76,7 +93,7 @@ class DivisionDPLL:
         assert self.values[decision_var_index] == decision_value
         assert decision_value != 0
 
-        trail = self.trails[len(self.trails) - 1]
+        trail = self.trails[-1]
         
         notify_lit = literal_util.get_pos_lit(decision_var) if decision_value < 0 else literal_util.get_neg_lit(decision_var)
         forced_initial_literals, initial_satisfiable, conflict_clause = self.tow_watched_literals.notify_false(
@@ -129,7 +146,6 @@ class DivisionDPLL:
 
     def set_decision_variable(self, variable, variable_index, value, unit_propagation = True):
         self.values[variable_index] = value
-        self.propagated[variable_index] = False
 
         if len(self.decision_stack) != self.decision_level - 1:
             raise IndexError(f"Size of decisionStack ({len(self.decision_stack)}) does not correspond to decision_level {self.decision_level}")
@@ -170,11 +186,16 @@ class DivisionDPLL:
         self.decision_level = 1 # 0 means universal level
 
         start = time.perf_counter()
-        self.add_initial_clauses(1_000)
+        # Only learn clauses on the initial solve
+        #self.add_initial_clauses(1_000)
         print(f"Added initial clauses in {1000 * (time.perf_counter() - start):.2f}ms")
 
         backtracking = False
+        possible_model = [1, -2, 3, 9, 10, -11, -12, 14, -15, 16, -17, -19, 20, -21, 22, -24, -26, 27, 28, 30, 34, 36, -37, -39, -40, 41, 43, -44, -45, 46, -47, -48, 49]
+        possible_decisions = [abs(d) for d in possible_model]
         while True:
+            assert len(self.decision_stack) == self.decision_level - 1, f"Decision Level: {self.decision_level} - stack length: {len(self.decision_stack)}"
+            assert len(self.trails) == self.decision_level, f"Decision Level: {self.decision_level} - trails length: {len(self.trails)}"
             #if backtracking:
             #    print(f"Backtracking from: {self.decision_level}")
             #    return
@@ -182,7 +203,11 @@ class DivisionDPLL:
             #    print(f"Backtrackig to: {self.decision_level}")
             #print(f"Testing decision Level: {self.decision_level}, backtracking: {backtracking}")
             
-            #print(self.values)
+            critical = False
+            if self.values == [1, -2, 1, 1, 1, -2, -2, 1, -2, 1, -2, -2, 1, -2, 1, -2, -2, 1, 1, 1, 1, 1, -2, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0]:
+                critical = True
+                print(f"TEST!!!!!!!! {self.values}")
+            print(f"Next iteration: {self.decision_level} - {self.values}")
             # Backtrack to level 0: level 1 is unsatisfiable
             if self.decision_level <= 0:
                 self.solution = None
@@ -196,11 +221,14 @@ class DivisionDPLL:
                     self.solution = self.values.copy()
                     return True
                 else:
+                    if critical:
+                        print("111111111")
                     backtracking = True
             
             next_variable, next_variable_index, next_value = None, None, None
             if backtracking:
-                decided_variable, decided_variable_index = self.decision_stack[self.decision_level - 1]
+                print(f" ===== {self.decision_level} - {self.decision_stack}")
+                decided_variable, decided_variable_index = self.decision_stack[self.decision_level - 2]
                 decided_value = self.values[decided_variable_index]
 
                 # Abs of 2: both options have been tried, need to backtrack again
@@ -212,7 +240,8 @@ class DivisionDPLL:
                     raise Exception("Backtracking to a decision level with an undecided variable")
                 
                 # Reset the first decision, then change to the next value
-                self.backtrack(self.decision_level)
+                self.backtrack(self.decision_level - 1)
+                self.decision_level -= 1
                 next_variable = decided_variable
                 next_variable_index = decided_variable_index
 
@@ -220,10 +249,13 @@ class DivisionDPLL:
                 next_value = -2 if decided_value == 1 else 2
 
                 unit_prop_satisfiable = self.set_decision_variable(next_variable, next_variable_index, next_value)
+                self.decision_level += 1
                 #if not unit_prop_satisfiable:
                 #    print("============= Unit prop unsat!")
                 satisfiable = unit_prop_satisfiable and self.test_assignment()
                 if not satisfiable:
+                    if critical:
+                        print("222222222")
                     backtracking = True
                     # decisionlevel stays the same - gets decremented 10 in the start of the loop
                 else:
@@ -233,24 +265,30 @@ class DivisionDPLL:
                 continue
             
             # todo: compute trails
-            all_iterations_are_sat = self.search_next_backtrack_level()
+            all_iterations_are_sat = self.search_next_backtrack_level(critical=critical)
             if all_iterations_are_sat:
                 assert self.all_variables_set()
                 self.solution = self.values.copy()
                 return True
+            
+            if critical:
+                print("3333333")
             backtracking = True
 
-    def search_next_backtrack_level(self, randomize_decisions = False):
+    def search_next_backtrack_level_old(self, randomize_decisions = False, critical = True):
+        if critical:
+            print([-var if self.values[i] < 0 else var for var, i in self.decision_stack])
         base_decision_level = self.decision_level
         possible_decisions = [(index, 1) for index, value in enumerate(self.values) if value == 0]
+        evaluations = [0] * len(possible_decisions)
+        if critical:
+            print(f"Possible decision: {[(self.glue_variables[i], v) for i, v in possible_decisions]}")
+            print(f"Decision Level: {self.decision_level}")
         # todo: order possible_decisions + add True/False as base values
         if randomize_decisions:
             random.shuffle(possible_decisions)
             possible_decisions = [(index, random.choice([1, -1])) for index, _ in possible_decisions]
-
-        start = 0
-        end = len(possible_decisions)
-
+        
         def set_up_to(level):
             while self.decision_level < level:
                 next_variable_index, next_value = possible_decisions[self.decision_level - base_decision_level]
@@ -265,6 +303,9 @@ class DivisionDPLL:
             while self.decision_level > target:
                 self.decision_level -= 1
                 self.backtrack(self.decision_level)
+
+        start = 0
+        end = len(possible_decisions)
 
         target_level = 0
         last_iteration_was_sat = False
@@ -283,8 +324,13 @@ class DivisionDPLL:
                 reset_back_to(base_decision_level + target_level)
             if self.decision_level < base_decision_level + target_level:
                 unit_prop_conflict = set_up_to(base_decision_level + target_level)
+                if unit_prop_conflict:
+                    end = self.decision_level - base_decision_level
             
             satisfiable = not unit_prop_conflict and self.test_assignment()
+            evaluations[target_level] = 1 if satisfiable else -1 
+            if critical:
+                print(f"Testing level {base_decision_level} + {target_level}, got: {satisfiable}")
             last_iteration_was_sat = satisfiable
             if satisfiable:
                 start = target_level + 1
@@ -292,13 +338,116 @@ class DivisionDPLL:
                 end = target_level
                 all_iterations_are_sat = False
         
+        # All iterations were satisfiable - found a model
+        if eval[-1] == 1:
+            return True
+
         # Make sure the current decision level is unsatisfiable
         if last_iteration_was_sat:
+            if critical:
+                print(f"last_iteration_was_sat - Set up to {self.decision_level + 1}")
             all_iterations_are_sat = False # We do not know this any longer # todo: this may cause an additional computation. May improve
             set_up_to(self.decision_level + 1)
         
         self.decision_level -= 1 # backtracking expects the decision_level to be the conflict level
+        if critical:
+            print(f"Decision Level: {self.decision_level}")
+
         return all_iterations_are_sat
+
+
+    def search_next_backtrack_level(self, randomize_decisions = False, critical = True):
+        """
+        Assumption: The current decision level is satisfiable!!!!
+        Fast forwards to the first decision level, that results in a conflict. The decided literals will lead to a conflict.
+        The caller must handle the conflict (i.e. change the last variable assignment or backtrack).
+
+        Exception: All decisions lead to a satisfiable assignment. The function will return True in this case. 
+        """
+
+        print(f"Start at {self.decision_level} with values {self.values}")
+        start_decision_level = self.decision_level
+        possible_decisions = [(index, 1) for index, value in enumerate(self.values) if value == 0]
+
+        assert len(possible_decisions) != 0
+
+        evaluations = [0] * len(possible_decisions)
+        def set_up_to(level):
+            while self.decision_level < level:
+                next_variable_index, next_value = possible_decisions[self.decision_level - start_decision_level]
+                next_variable = self.glue_variables[next_variable_index]
+                unit_prop_sat = self.set_decision_variable(next_variable, next_variable_index, next_value)
+                self.decision_level += 1
+                if not unit_prop_sat:
+                    assert True == False
+                    return True
+            return False
+
+        def reset_back_to(target):
+            while self.decision_level > target:
+                self.decision_level -= 1
+                self.backtrack(self.decision_level)
+
+        start = self.decision_level + 1
+        end = self.decision_level + len(possible_decisions)
+        target = 0
+
+        while start < end:
+            target = int((start + end) / 2)
+
+            unit_prop_conflict = False
+            if target > self.decision_level:
+                unit_prop_conflict = set_up_to(target)
+            else:
+                reset_back_to(target)
+            
+            satisfiable = not unit_prop_conflict and self.test_assignment()
+            print(f"Search - decision_level: {self.decision_level} - index {target - start_decision_level - 1} - set {1 if satisfiable else -1} - {self.values}")
+            evaluations[target - start_decision_level - 1] = 1 if satisfiable else -1
+            if satisfiable:
+                start = self.decision_level + 1
+            else:
+                end = self.decision_level
+
+        assert self.decision_level > start_decision_level, f"target: {target} - {evaluations}"
+        assert target == self.decision_level, f"target: {target} - {evaluations}"
+
+        target_evaluation = evaluations[self.decision_level - start_decision_level - 1]
+        assert target_evaluation != 0, f"target: {target} - {evaluations}"
+
+        if len(possible_decisions) == 1:
+            assert self.decision_level == start_decision_level + 1, f"target: {target} - {evaluations}"
+            if evaluations[self.decision_level - start_decision_level - 1] == 1:
+                return True
+            else:
+                assert self.test_assignment() == False
+                return False
+
+        # currently negative ->
+        if target_evaluation == -1:
+            previous_evaluation = evaluations[self.decision_level - start_decision_level - 1 - 1]
+            assert previous_evaluation != 0, f"target: {target} - {evaluations}"
+            if previous_evaluation == - 1:
+                old = self.decision_level
+                print("Move 1 down")
+                reset_back_to(self.decision_level - 1)
+                assert self.decision_level == old - 1
+                self.decision_level -= 1
+
+
+        if target_evaluation == 1:
+            next_evaluation = evaluations[self.decision_level - start_decision_level - 1 + 1]
+            assert next_evaluation == -1, f"target: {target} - {evaluations}"
+            print(f"MOve 1 up - {self.values}")
+            old = self.decision_level
+            set_up_to(self.decision_level + 1)
+            print(f"MOve 1 after - {self.values}")
+            assert self.decision_level == old + 1
+
+        assert self.test_assignment() == False, f"target: {target}, dec_level: {self.decision_level} - {evaluations} - values: {self.values}"
+        print(f"Finished with decision_level {self.decision_level} - {self.values}")
+        return False
+
 
     def add_learnt_clause(self, clause, clause_in_DIMACS=False):
         clause_id = len(self.learnt_clauses)
@@ -309,22 +458,26 @@ class DivisionDPLL:
 
     def add_initial_clauses(self, num_clauses : int):
         for _ in range(num_clauses):
-            #print("PROBE!")
             clause = self.probe_for_new_clause()
-            if len(clause) > 1: # TODO: handle unit clauses
+            if len(clause) == 1:
+                lit = clause[0]
+                var = literal_util.get_variable(lit)
+                self.values[self.var_to_index[var]] = 1 if literal_util.is_positive(lit) else -1
+                self.trails[0].append(lit)
+                print("Added level 0 decision!!!!")
+            elif len(clause) > 1:
                 self.add_learnt_clause(clause)
-            #print(f"Added clause {[literal_util.get_variable(lit) * (-1 if literal_util.is_negative(lit) else 1) for lit in clause]}")
         self.reset_solver()
         self.decision_level = 1
 
                             
     def probe_for_new_clause(self) -> list[int]:
-        self.reset_solver()
+        self.reset_solver(keep_global_decisions=True)
         self.decision_level = 1
 
         assert self.decision_level == 1
         assert len(self.decision_stack) == 0, f"Expected exactly one decision on the stack, but got {len(self.decision_stack)}"
-        assert len(self.trails) == 0, f"Expected no trails, but got {len(self.trails)}"
+        assert len(self.trails) == 1, f"Expected one trail, but got {len(self.trails)}"
         assert self.values == [0] * self.num_gvars
 
         self.search_next_backtrack_level(randomize_decisions=True)
