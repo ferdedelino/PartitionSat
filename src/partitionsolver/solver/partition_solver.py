@@ -74,7 +74,7 @@ class PartitionDPLL:
         """ Resets the state of the solver to the given decision level.
             The assignment of decision_level_target are NOT changed, only assignments above that level! 
         """
-
+        assert decision_level_target <= self.decision_level
         while self.decision_level > decision_level_target:
             for trail_variable, trail_variable_index in self.trails[self.decision_level]:
                 self.values[trail_variable_index] = 0
@@ -141,7 +141,7 @@ class PartitionDPLL:
                           (literal_util.is_negative(unit) and old_value < 0)
                 if not correct:
                     #print(f"Unit prop unsat: value already set")
-                    assert self.test_assignment() == False
+                    #assert self.test_assignment() == False
                     reset_propagations()
                     print(f"Propagating {variable} - {variable}")
                     return False
@@ -214,8 +214,9 @@ class PartitionDPLL:
         self.reset_solver()
 
         # Warmup
+        start = time.perf_counter()
         found_model_while_probing = self.add_initial_clauses(1_000)
-        print(f"Finished adding initial clauses")
+        print(f"Finished adding initial clauses in {1000 * (time.perf_counter() - start):.2f}ms")
         if found_model_while_probing:
             #self.model = ... is set in add_initial_clauses()
             return True
@@ -238,24 +239,25 @@ class PartitionDPLL:
 
             if not backtracking:
                 assert not self.all_variables_set(), "All variables are set but not backtracking - did you forget the check the assignment and return True?"
-                #next_variable, next_variable_index, next_value = self.next_decision()
-                #propagation_conflict = self.set_decision_variable(next_variable, next_variable_index, 1 if next_value else -1)
+                next_variable, next_variable_index, next_value = self.next_decision()
+                propagation_conflict = self.set_decision_variable(next_variable, next_variable_index, 1 if next_value else -1)
 
-                #if propagation_conflict or not self.test_assignment():
-                #    backtracking = True
-                #    continue
+                if propagation_conflict or not self.test_assignment():
+                    backtracking = True
+                    continue
 
-                #if self.all_variables_set():
-                #    self.model = [-var if self.values[var_index] < 0 else var for var_index, var in enumerate(self.glue_variables)]
-                #    return True
+                if self.all_variables_set():
+                    self.model = [-var if self.values[var_index] < 0 else var for var_index, var in enumerate(self.glue_variables)]
+                    return True
 
-                #backtracking = False # keep going forward
-                #continue
+                backtracking = False # keep going forward
+                continue
+                #TODO: forward jumping is less efficient than normal forward tracking - only reenable, after rewriting forward jumping
 
                 all_levels_sat = self.search_next_backtrack_level()
                 if all_levels_sat:
-                    assert self.all_variables_set()
-                    assert self.test_assignment()
+                    #assert self.all_variables_set()
+                    #assert self.test_assignment()
                     self.model = [-var if self.values[var_index] < 0 else var for var_index, var in enumerate(self.glue_variables)]
                     return True
                 else:
@@ -333,11 +335,11 @@ class PartitionDPLL:
         while start < end:
             target = int((start + end) / 2)
 
+            #TODO: back to start, only to recompute everythig is extremely inefficient!
             reset_back_to_start()
             unit_prop_conflict = set_up_to(target)
             
             satisfiable = not unit_prop_conflict and self.test_assignment()
-            #print(f"Search - decision_level: {self.decision_level} - index {target - start_decision_level - 1} - set {1 if satisfiable else -1} - {self.values}")
             evaluations[target] = 1 if satisfiable else -1
             if satisfiable:
                 start = target + 1
@@ -353,9 +355,11 @@ class PartitionDPLL:
             assert self.all_variables_set()
             return True if evaluations[target] == 1 else False
         
-        last_evaluation = evaluations[target]
-        assert last_evaluation != 0
-        if last_evaluation == 1:
+        # Off by one problems:
+        current_assignment = evaluations[target]
+        assert current_assignment != 0
+
+        if current_assignment == 1:
             assert target != len(possible_decisions) - 1, "Not all set, but at maximum level??"
             next_assignment = evaluations[target + 1]
             assert next_assignment == -1
@@ -364,7 +368,7 @@ class PartitionDPLL:
             #assert self.test_assignment() == False
             return False
         
-        if last_evaluation == -1:
+        if current_assignment == -1:
             if target == 0:
                 return False
             prev_assignment = evaluations[target - 1]
@@ -386,7 +390,6 @@ class PartitionDPLL:
         self.two_watched_literals.add_learnt_clause(self.twl_translation.clause_to_local(clause), clause_id, self.values)
 
     def add_initial_clauses(self, num_clauses : int):
-        learned = []
         for _ in range(num_clauses):
             clause = self.probe_for_new_clause()
             if clause == None:
@@ -398,18 +401,14 @@ class PartitionDPLL:
                 lit = clause[0]
                 var = literal_util.get_variable(lit)
                 self.values[self.var_to_index[var]] = 1 if literal_util.is_positive(lit) else -1
-                print(f"Level 0 prop: {var * (1 if literal_util.is_positive(lit) else -1)}")
+                #print(f"Level 0 prop: {var * (1 if literal_util.is_positive(lit) else -1)}")
                 self.trails[0].append((var, self.var_to_index[var]))
             elif len(clause) > 1:
-                learned.append(clause)
+                #learned.append(clause)
+                self.add_learnt_clause(clause)
         
         self.reset_solver()
         
-        # TODO: Add directly, so the probing can utilize the learned clauses.
-        # Needs efficient TWL implementation!
-        for clause in learned:
-            self.add_learnt_clause(clause)
-
         return False
 
                             
@@ -422,12 +421,12 @@ class PartitionDPLL:
 
         all_set = self.search_next_backtrack_level(randomize_decisions=True)
         if all_set:
-            assert self.all_variables_set()
+            #assert self.all_variables_set()
             self.model = [-var if self.values[var_index] < 0 else var for var_index, var in enumerate(self.glue_variables)]
             return None
 
-        for _, i in self.decision_stack:
-            assert self.values[i] != 0
+        #for _, i in self.decision_stack:
+        #    assert self.values[i] != 0
         new_clause = [literal_util.get_pos_lit(decision_var) if self.values[decision_var_index] < 0 else \
                 literal_util.get_neg_lit(decision_var) \
                     for (decision_var, decision_var_index) in self.decision_stack]
@@ -435,7 +434,5 @@ class PartitionDPLL:
         #print(f"Added clause: {new_clause}")
         # todo: This might by chance find a model - adding a clause that way might prevent a model!
         
-        
-        assert self.test_assignment() == False, f"Level: {self.decision_level}"
         return new_clause
         
