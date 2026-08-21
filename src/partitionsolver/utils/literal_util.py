@@ -41,3 +41,6 @@ def clause_from_dimacs(clause: list[int]) -> list[int]:
         else:
             new_clasue.append(get_pos_lit(abs(dimacs_literal)))
     return new_clasue
+
+def clause_to_dimacs(clause: list[int]) -> list[int]:
+    return [get_variable(lit) * (-1 if is_negative(lit) else 1) for lit in clause]

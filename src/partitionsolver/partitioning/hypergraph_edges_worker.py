@@ -3,6 +3,7 @@ import mtkahypar
 import multiprocessing
 import numpy as np
 
+
 def create_context(mtk, k=2, epsilon=0.15, preset_type = mtkahypar.PresetType.DEFAULT):
     context = mtk.context_from_preset(preset_type)
     context.set_partitioning_parameters(
@@ -32,10 +33,10 @@ def analyze_hypergraph(queue, num_clauses, hyperedges):
 
     queue.put(result)
 
-def create_partition(queue, num_clauses, hyperedges):
+def create_partition(queue, num_clauses, hyperedges, buckets=2):
     mtk = mtkahypar.initialize(multiprocessing.cpu_count())
 
-    context = create_context(mtk)
+    context = create_context(mtk, k=buckets)
     hypergraph = mtk.create_hypergraph(context, num_clauses, len(hyperedges), hyperedges)
     start = time.perf_counter()
     partitioned_hg = hypergraph.partition(context)

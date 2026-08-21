@@ -1,22 +1,24 @@
 from operator import index
 import random
 from pysat.solvers import Kissat404
+from pysat.solvers import Cadical195
 from pysat.formula import CNF
 import time
 
 from partitionsolver.solver.two_watched_literals import TwoWatchedLiterals
 from partitionsolver.solver.variable_translation import VariableTranslation
+from partitionsolver.solver.variable_selection import VariableSelector
 from partitionsolver.utils import literal_util
-
 
 
 class PartitionDPLL:
 
-    def __init__(self, num_variables:int, glue_variables:list, partial_clauses:list):
+    def __init__(self, num_variables:int, glue_variables:list, partial_clauses:list, debug_level:int = 0):
         self.num_variables = num_variables
         self.glue_variables = glue_variables
         self.partial_clauses = partial_clauses
         self.num_gvars = len(glue_variables)
+        self.DEBUG_LEVEL = debug_level
 
         self.trails = []
         self.values = [0] * self.num_gvars
@@ -27,9 +29,159 @@ class PartitionDPLL:
 
         self.twl_translation = VariableTranslation(glue_variables)
         self.two_watched_literals = TwoWatchedLiterals(self.num_gvars, [self.twl_translation.clause_to_local(clause) for clause in self.learnt_clauses], base_clauses_in_dimacs=False)
+        self.variable_selector = VariableSelector(self.glue_variables)
+        
+        self.restarts_first = 100
+        self.restart_inc = 1.5
 
+        self.nof_prop_conflicts = 0
+        self.nof_test_conflicts = 0
+        self.nof_implications = 0
+        self.test_time = 0
+        self.time_kissat = 0
+        self.time_cadical = 0
+            
         self.solution = None
 
+    def solve(self):
+        self.reset_solver()
+        self.initialize_persistent_solvers()
+
+        # Warmup
+        start = time.perf_counter()
+        found_result_while_probing = self.add_initial_clauses(300)
+        if self.DEBUG_LEVEL >= 1:
+            print(f"Finished adding initial clauses in {1000 * (time.perf_counter() - start):.2f}ms")
+            clause_len_median = sorted([len(clause) for clause in self.learnt_clauses])[len(self.learnt_clauses) // 2] if len(self.learnt_clauses) > 0 else 0
+            clause_len_mean = sum([len(clause) for clause in self.learnt_clauses]) / len(self.learnt_clauses) if len(self.learnt_clauses) > 0 else 0
+            print(f"Initial clauses: {len(self.learnt_clauses)}, median length: {clause_len_median}, mean length: {clause_len_mean:.2f}")
+        if found_result_while_probing is not None:
+            #self.model = ... is set in add_initial_clauses()
+            return found_result_while_probing
+        
+        curr_restarts = 0
+        restart_increment = 1
+        while True:
+            restart_base = int(self.restarts_first * restart_increment)
+            restart_increment *= self.restart_inc
+            curr_restarts += 1
+
+            nof_test_conflicts_start = self.nof_test_conflicts
+            nof_prop_conflicts_start = self.nof_prop_conflicts
+            nof_implications_start = self.nof_implications
+            test_time = self.test_time
+            time_kissat = self.time_kissat
+            time_cadical = self.time_cadical 
+            start_time = time.perf_counter()
+
+            self.reset_solver()
+            found_model = self.search(restart_base)
+            if found_model is not None:
+                return found_model
+            
+            # Max number of conflicts reached
+            implied_clauses_granularity = 3
+            contradicting_clause = self.imply_cnf_from_assignment(details=implied_clauses_granularity)
+            if contradicting_clause:
+                if self.DEBUG_LEVEL >= 1:
+                    print(f"Found a conflict unit-clause during restart.")
+                return False # Impossible to reach?
+
+            prop_conflicts = self.nof_prop_conflicts - nof_prop_conflicts_start
+            test_conflicts = self.nof_test_conflicts - nof_test_conflicts_start
+            implications = self.nof_implications - nof_implications_start
+            total_time = time.perf_counter() - start_time
+            test_time = self.test_time - test_time
+            time_cadical = self.time_cadical - time_cadical
+            time_kissat = self.time_kissat - time_kissat
+            if self.DEBUG_LEVEL >= 2:
+                print(f"Restart {curr_restarts} after {restart_base} conflicts. Conflicts: {prop_conflicts} prop conflicts + {test_conflicts} test conflicts. Propagations: {implications}. Times: {1000 * total_time:.2f}ms total - {1000 * test_time:.2f}ms test time. Kissat {1000 * time_kissat:.2f} vs Cadical {1000 * time_cadical:.2f}")
+                print(f"Best learnt clause: {self.learnt_clauses[-implied_clauses_granularity] if len(self.learnt_clauses) > implied_clauses_granularity else None}")
+
+            #TODO: This can probably be done better
+            activity_scores_pos = [0] * self.num_gvars
+            activity_scores_neg = [0] * self.num_gvars
+
+            for clause in self.learnt_clauses:
+                for lit in clause:
+                    var = literal_util.get_variable(lit)
+                    var_index = self.var_to_index[var]
+
+                    if literal_util.is_positive(lit):
+                        activity_scores_pos[var_index] += 1/len(clause)
+                    else:
+                        activity_scores_neg[var_index] += 1/len(clause)
+
+            total_activity = [
+                [pos, False] if pos > neg else [neg, True]
+                for pos, neg in zip(activity_scores_pos, activity_scores_neg)
+            ]
+
+            median_activity = sorted([activity for activity, _ in total_activity])[len(total_activity) // 2] if len(total_activity) > 0 else 0
+            for i in range(len(total_activity)):
+                total_activity[i][0] = total_activity[i][0] + median_activity * random.random() * 0.5 + total_activity[i][0] * 0.3
+            
+            self.variable_selector.sort_variables_by_activity(total_activity)
+
+
+    def test_assignment(self, additional_clauses = None):
+        start = time.perf_counter()
+        if additional_clauses == None:
+            additional_clauses = []
+            for var_index, value in enumerate(self.values):
+                if value == 0:
+                    continue
+                variable = self.glue_variables[var_index]
+                if value < 0:
+                    additional_clauses.append([-variable])
+                else:
+                    additional_clauses.append([variable])
+        assumption_lits = [clause[0] for clause in additional_clauses]
+
+        sat_kissat = True
+        time_kissat = time.perf_counter()
+        for clauses in self.partial_clauses:
+            cnf = CNF(from_clauses=clauses)
+            cnf.extend(additional_clauses)
+            cnf.nv = self.num_variables
+            with Kissat404(bootstrap_with=cnf) as solver:
+                if not solver.solve():
+                    sat_kissat = False
+                    break
+        self.time_kissat += time.perf_counter() - time_kissat
+
+        sat_cadical = True
+        time_cadical = time.perf_counter()
+        for cadical_solver in self.persistant_solvers:
+            if not cadical_solver.solve(assumptions=assumption_lits):
+                sat_cadical = False
+                break
+        self.time_cadical += time.perf_counter() - time_cadical
+
+        assert sat_cadical == sat_kissat
+
+        if self.DEBUG_LEVEL >= 3:
+            print(f"Tested single assignment in {1000 * (time.perf_counter() - start):.2f}ms")
+
+        self.test_time += time.perf_counter() - start
+        return sat_kissat
+
+    def initialize_persistent_solvers(self):
+        # Destroy old instances (maybe a todo for later - keeping them?)
+        for solver in getattr(self, 'persistant_solvers', []) or []:
+            if solver is not None:
+                solver.delete()
+            self.persistant_solvers = []
+
+        # Create solvers that support assumptions!
+        self.persistant_solvers = [None] * len(self.partial_clauses)
+        for i in range(len(self.partial_clauses)):
+            clauses = self.partial_clauses[i]
+            cnf = CNF(from_clauses=clauses)
+            cnf.nv = self.num_variables
+            self.persistant_solvers[i] = Cadical195(bootstrap_with=cnf)
+
+    
     def reset_solver(self, keep_global_decisions:bool = True, keep_learnt_clauses = True):
         self.decision_level = 0
         self.decision_stack = []
@@ -59,16 +211,12 @@ class PartitionDPLL:
         for clause_id, clause in enumerate(self.learnt_clauses):
             self.two_watched_literals.add_learnt_clause(self.twl_translation.clause_to_local(clause), clause_id, self.values)
 
-
     
     def all_variables_set(self):
-        return not any(x == 0 for x in self.values)
+        return self.variable_selector.all_variables_set(self.values)
 
     def next_decision(self):
-        for i in range(self.num_gvars):
-            if self.values[i] == 0:
-                return self.glue_variables[i], i, True
-        return None, None, None
+        return self.variable_selector.next_decision(self.values)
     
     def backtrack(self, decision_level_target:int):
         """ Resets the state of the solver to the given decision level.
@@ -140,16 +288,16 @@ class PartitionDPLL:
                 correct = (literal_util.is_positive(unit) and old_value > 0) or \
                           (literal_util.is_negative(unit) and old_value < 0)
                 if not correct:
-                    #print(f"Unit prop unsat: value already set")
                     #assert self.test_assignment() == False
                     reset_propagations()
-                    print(f"Propagating {variable} - {variable}")
                     return False
                 continue
             
             new_value = 1 if literal_util.is_positive(unit) else -1
             self.values[var_index] = new_value
             trail.append((variable, var_index))
+
+            self.nof_implications += 1
 
             # Add next units implied by this assignment
             forced_literals, satisfiable, conflict_clause = notify_false(variable, var_index, new_value)
@@ -185,50 +333,16 @@ class PartitionDPLL:
         assert len(self.trails) == self.decision_level + 1
 
         return unit_prop_conflict
+             
 
-    def test_assignment(self, additional_clauses = None):
-        if additional_clauses == None:
-            additional_clauses = []
-            for var_index, value in enumerate(self.values):
-                if value == 0:
-                    continue
-                variable = self.glue_variables[var_index]
-                if value < 0:
-                    additional_clauses.append([-variable])
-                else:
-                    additional_clauses.append([variable])
-
-        sat = True
-        for clauses in self.partial_clauses:
-            cnf = CNF(from_clauses=clauses)
-            cnf.extend(additional_clauses)
-            cnf.nv = self.num_variables
-            with Kissat404(bootstrap_with=cnf) as solver:
-                if not solver.solve():
-                    sat = False
-                    break
-        
-        return sat
-
-    def solve(self):
-        self.reset_solver()
-
-        # Warmup
-        start = time.perf_counter()
-        found_model_while_probing = self.add_initial_clauses(1_000)
-        print(f"Finished adding initial clauses in {1000 * (time.perf_counter() - start):.2f}ms")
-        if found_model_while_probing:
-            #self.model = ... is set in add_initial_clauses()
-            return True
-        
-        self.reset_solver()
-
+    def search(self, nof_conflicts:int):
         assert self.decision_level == 0
         """ Loop invariant: A decision level is in a consistent state.
-            Only outer information is backtracking! If backtracking: Next loop will decrement the decision_level, else increment 
+            Only external information is backtracking! If backtracking: Next loop will decrement the decision_level else increment it
         """
         backtracking = False
-        while True:
+        conflict_counter = 0
+        while conflict_counter < nof_conflicts or nof_conflicts == -1:
             #print(f"decision_level: {self.decision_level}, backtracking: {backtracking} - {self.values}")
             assert len(self.decision_stack) == self.decision_level
             assert len(self.trails) == self.decision_level + 1
@@ -243,7 +357,12 @@ class PartitionDPLL:
                 propagation_conflict = self.set_decision_variable(next_variable, next_variable_index, 1 if next_value else -1)
 
                 if propagation_conflict or not self.test_assignment():
+                    if propagation_conflict:
+                        self.nof_prop_conflicts += 1
+                    else:
+                        self.nof_test_conflicts += 1
                     backtracking = True
+                    conflict_counter += 1
                     continue
 
                 if self.all_variables_set():
@@ -280,6 +399,11 @@ class PartitionDPLL:
             self.backtrack(self.decision_level - 1)
             propagation_conflict = self.set_decision_variable(curr_var, curr_var_index, new_value)
             if propagation_conflict or not self.test_assignment():
+                if propagation_conflict:
+                    self.nof_prop_conflicts += 1
+                else:
+                    self.nof_test_conflicts += 1
+                conflict_counter += 1
                 self.backtrack(self.decision_level - 1)
                 backtracking = True
                 continue
@@ -289,8 +413,8 @@ class PartitionDPLL:
                 return True
             
             backtracking = False
-
-
+        
+        return None
 
     def search_next_backtrack_level(self, randomize_decisions = False, critical = True):
         """
@@ -386,30 +510,45 @@ class PartitionDPLL:
         clause_id = len(self.learnt_clauses)
         if clause_in_DIMACS:
             clause = literal_util.clause_from_dimacs(clause)
+        
+        if len(clause) == 1:
+            lit = clause[0]
+            var = literal_util.get_variable(lit)
+            new_value = 1 if literal_util.is_positive(lit) else -1
+            if self.values[self.var_to_index[var]] != 0:
+                same_value = (self.values[self.var_to_index[var]] < 0) == (new_value < 0)
+                if not same_value:
+                    return True # Conflict
+                return False # Already set to the same value
+
+            self.values[self.var_to_index[var]] = new_value
+            if self.DEBUG_LEVEL >= 2:
+                print(f"Level 0 prop: {var * (1 if literal_util.is_positive(lit) else -1)}")
+            self.trails[0].append((var, self.var_to_index[var]))
+            return False
+
+
         self.learnt_clauses.append(clause)
         self.two_watched_literals.add_learnt_clause(self.twl_translation.clause_to_local(clause), clause_id, self.values)
+        return False
 
     def add_initial_clauses(self, num_clauses : int):
         for _ in range(num_clauses):
             clause = self.probe_for_new_clause()
             if clause == None:
                 # Found a model.
-                print(f"Found a model while probing")
+                if self.DEBUG_LEVEL >= 1:
+                    print(f"Found a model while probing")
                 return True
-            
-            if len(clause) == 1:
-                lit = clause[0]
-                var = literal_util.get_variable(lit)
-                self.values[self.var_to_index[var]] = 1 if literal_util.is_positive(lit) else -1
-                #print(f"Level 0 prop: {var * (1 if literal_util.is_positive(lit) else -1)}")
-                self.trails[0].append((var, self.var_to_index[var]))
-            elif len(clause) > 1:
-                #learned.append(clause)
-                self.add_learnt_clause(clause)
-        
+            conflicting_clause = self.add_learnt_clause(clause)
+            if conflicting_clause:
+                if self.DEBUG_LEVEL >= 1:
+                    print(f"Found a conflict unit-clause during initial clause learning.")
+                return False
+                
         self.reset_solver()
         
-        return False
+        return None
 
                             
     def probe_for_new_clause(self) -> list[int]:
@@ -430,9 +569,36 @@ class PartitionDPLL:
         new_clause = [literal_util.get_pos_lit(decision_var) if self.values[decision_var_index] < 0 else \
                 literal_util.get_neg_lit(decision_var) \
                     for (decision_var, decision_var_index) in self.decision_stack]
-        #print(f"Decision Stack: {self.decision_stack}")
         #print(f"Added clause: {new_clause}")
-        # todo: This might by chance find a model - adding a clause that way might prevent a model!
         
         return new_clause
+        
+    def imply_cnf_from_assignment(self, details:int = 3) -> list[int]:
+        # TODO: can be done in a single traversal
+        for detail in range(details):
+            found_backtracks = 0
+            clause = []
+            learned_a_clause = False
+            for i in range(len(self.decision_stack)):
+                variable, variable_index = self.decision_stack[i]
+                value = self.values[variable_index]
+                if abs(value) == 1:
+                    clause.append(literal_util.get_neg_lit(variable) if value > 0 else literal_util.get_pos_lit(variable))
+                if abs(value) == 2:
+                    found_enoght_backtracks = found_backtracks >= detail
+                    if found_enoght_backtracks:
+                        clause.append(literal_util.get_neg_lit(variable) if value < 0 else literal_util.get_pos_lit(variable))
+                        conflicting_clause = self.add_learnt_clause(clause)
+                        if conflicting_clause:
+                            return True # Conflict
+                        learned_a_clause = True
+                        break
+                    else:
+                        clause.append(literal_util.get_neg_lit(variable) if value > 0 else literal_util.get_pos_lit(variable))
+                    found_backtracks += 1
+            
+            if not learned_a_clause:
+                break
+
+        return False
         

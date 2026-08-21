@@ -69,7 +69,6 @@ def hypergraph_from_cnf_xz(file_location:str, display_progress:bool = False, rem
                 var = abs(val) - 1
                 hyperedges[var][hyperedge_indices[var]] = clause_number
                 hyperedge_indices[var] += 1
-                    
             clause_number += 1
 
     if display_progress:
@@ -122,7 +121,12 @@ def read_cnf(file_location:str):
             if num_vars == -1:
                 raise ValueError("Invalid CNF file: missing problem line")
             literals = line.split()
-            length = len(literals) - 1
+            length = len(literals)
+
+            # Usually a clause line has a trailing "0" to indicate the end of the clause. Some files from the 90s don't?
+            if literals[-1] == '0':
+                length -= 1
+
             clause = np.empty(length, dtype=int)
             clause_index = 0
             for litstring in literals:
@@ -131,6 +135,9 @@ def read_cnf(file_location:str):
                     continue
                 clause[clause_index] = lit
                 clause_index += 1
+            # Some files have a line of a sing "0" at the end
+            if len(clause) == 0:
+                continue
             clauses[clause_id] = clause
             clause_id += 1
     

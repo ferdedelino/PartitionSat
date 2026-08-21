@@ -3,33 +3,32 @@ from partitionsolver.utils import literal_util
 
 class TwoWatchedLiterals:
     def __init__(self, num_variables, base_clauses, base_clauses_in_dimacs = True):
-        self.watches = [] # What literal is each clause watching
+        self.watches = {} # What literal is each clause watching
         # Assume variables are numbered 1..num_variables
         self.num_variables = num_variables
 
-        self.base_clauses = []
+        self.base_clauses = {}
         if base_clauses_in_dimacs:
-            for dimacs_clause in base_clauses:
-                self.base_clauses.append(literal_util.clause_from_dimacs(dimacs_clause))
+            for clause_id, dimacs_clause in base_clauses.items():
+                self.base_clauses[clause_id] = literal_util.clause_from_dimacs(dimacs_clause)
         else:
             self.base_clauses = base_clauses.copy()
 
-        for clause in self.base_clauses:
+        for clause_id, clause in self.base_clauses.items():
+            assert len(clause) > 1
             for lit in clause:
                 var = literal_util.get_variable(lit)
-                if var > num_variables:
-                    raise ValueError(f"Variable {var} in clause {clause} exceeds declared number of variables {num_variables}. Have you forgotten to rename the variables in the input clauses?")
+                assert var < num_variables, f"Variable {var} in clause {clause} exceeds declared number of variables {num_variables}. Have you forgotten to rename the variables in the input clauses?"
         
         # What clauses are currently watching this literal
         self.watch_lists = [[] for _ in range(2 * (self.num_variables + 1))]
 
         # Initialize watches
-        for clause_id in range(len(self.base_clauses)):
-            self.watches.append([0, 0])
+        for clause_id, clause in self.base_clauses.items():
+            self.watches[clause_id] = [0, 0]
 
         # Initially watch the first two literals of each clause
-        for clause_id in range(len(self.base_clauses)):
-            clause = self.base_clauses[clause_id]
+        for clause_id, clause in self.base_clauses.items():
             self.watches[clause_id] = [clause[0], clause[1 if len(clause) > 1 else 0]]
             watched_lit1 = self.watches[clause_id][0]
             watched_lit2 = self.watches[clause_id][1]
@@ -92,8 +91,8 @@ class TwoWatchedLiterals:
 
     def add_learnt_clause(self, clause, clause_id, assignment):
         assert len(clause) > 1, "Unit clauses should be handled separately by the solver, not added to the two watched literals data structure"
-        assert clause_id == len(self.base_clauses)
-        self.base_clauses.append(clause)
+        assert clause_id not in self.base_clauses, f"There already exists a clause with the same id"
+        self.base_clauses[clause_id] = clause
 
         # We pick any two literals to watch, that are not currently false. 
         # todo: CDCL learnt clauses should watch UIP cut and highest-decision-level remaining literal
@@ -113,7 +112,7 @@ class TwoWatchedLiterals:
         if watched_index2 == -1:
             watched_index2 = 1 if len(clause) > 1 else 0
 
-        self.watches.append([clause[watched_index1], clause[watched_index2]])
+        self.watches[clause_id] = [clause[watched_index1], clause[watched_index2]]
         watched_lit1 = self.watches[clause_id][0]
         watched_lit2 = self.watches[clause_id][1]
 
@@ -121,3 +120,11 @@ class TwoWatchedLiterals:
         if watched_lit1 != watched_lit2:
             self.watch_lists[watched_lit2].append(clause_id)
 
+    def delete_clause(self, clause_id):
+        assert clause_id in self.base_clauses
+        watched = self.watches[clause_id]
+        self.watch_lists[watched[0]].remove(clause_id)
+        if watched[1] != watched[0]:
+            self.watch_lists[watched[1]].remove(clause_id)
+        del self.watches[clause_id]
+        del self.base_clauses[clause_id]
