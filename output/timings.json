@@ -1,757 +1,7167 @@
 {
-  "./instances/random_sat/uf50-033.cnf": {
-    "variables": 50,
-    "clauses": 218,
-    "kissat404": {
-      "satisfiable": true,
-      "time": 0.00015260000009220676,
-      "data": null
-    },
-    "division_solver_naive": {
-      "satisfiable": true,
-      "time": 0.8814036200001283,
-      "data": null
-    }
-  },
-  "./instances/test/sat_random/uf50-08.cnf": {
-    "variables": 50,
-    "clauses": 218,
-    "kissat404": {
-      "satisfiable": true,
-      "time": 0.001194799999893803,
-      "data": null
-    },
-    "division_solver_naive": {
-      "satisfiable": true,
-      "time": 0.38199687599990284,
-      "data": null
-    }
-  },
-  "./instances/test/sat_random/uf250-02.cnf": {
-    "variables": 250,
-    "clauses": 1065,
-    "kissat404": {
-      "satisfiable": true,
-      "time": 1.8119459869999446,
-      "data": null
-    }
-  },
-  "./instances/test/unsat_random/uuf200-02.cnf": {
-    "variables": 200,
-    "clauses": 860,
-    "kissat404": {
-      "satisfiable": false,
-      "time": 0.21389246699982323,
-      "data": null
-    }
-  },
-  "./instances/test/unsat_problem/hole7.cnf": {
-    "variables": 56,
+  "hole7.cnf": {
     "clauses": 204,
-    "kissat404": {
+    "variables": 56,
+    "Propagation-HyGra-2-NoWarmup": {
       "satisfiable": false,
-      "time": 0.007817997000074683,
+      "time": 69.51630299954559,
+      "data": {
+        "common": 27
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": false,
+      "time": 25.151294999886886,
       "data": null
     },
-    "division_solver_naive": {
+    "Propagation-HyGra-2-Warmup-2": {
       "satisfiable": false,
-      "time": 5.867565887000183,
-      "data": null
+      "time": 134.55142299972067,
+      "data": {
+        "common": 27,
+        "warmup": 6.566406000274583
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": false,
+      "time": 138.6955020007008,
+      "data": {
+        "common": 28,
+        "split": 0
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": false,
+      "time": 84.51988399974653,
+      "data": {
+        "common": 29,
+        "split": 0,
+        "processing": 0.7891999994171783
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": false,
+      "time": 150.62401500000533,
+      "data": {
+        "common": 44,
+        "split": 0,
+        "processing": 0.918000000012853
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": false,
+      "time": 68.68480600007842,
+      "data": {
+        "common": 42,
+        "split": 0,
+        "processing": 0.6711000000336753
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": false,
+      "time": 217.32165299999906,
+      "data": {
+        "common": 37,
+        "split": 0,
+        "processing": 1.0234000001219101
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": false,
+      "time": 390.15148299995417,
+      "data": {
+        "common": 43,
+        "split": 0,
+        "processing": 0.9520999999494961
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": false,
+      "time": 25.68079999946349,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 0.6292999996730941
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": false,
+      "time": 21.22276799999412,
+      "data": {
+        "common": 32,
+        "split": 0,
+        "processing": 0.4756989999989969
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": false,
+      "time": 211.48122399995373,
+      "data": {
+        "common": 45,
+        "split": 0,
+        "processing": 0.5790989999923113
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": false,
+      "time": 33.99839899975632,
+      "data": {
+        "common": 29,
+        "split": 0,
+        "processing": 0.7209999998849526
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": false,
+      "time": 61.6480070000307,
+      "data": {
+        "common": 38,
+        "split": 0,
+        "processing": 0.5725000000893488
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": false,
+      "time": 75.77485900037573,
+      "data": {
+        "common": 42,
+        "split": 0,
+        "processing": 1.0136980001789198
+      }
     }
   },
-  "./instances/test/unsat_problem/hole10.cnf": {
-    "variables": 110,
+  "hole10.cnf": {
     "clauses": 561,
-    "kissat404": {
+    "variables": 110,
+    "Propagation-HyGra-2-NoWarmup": {
+      "satisfiable": "unknown",
+      "time": -1,
+      "data": {
+        "common": 55
+      }
+    },
+    "CaDiCaL": {
       "satisfiable": false,
-      "time": 1.0675115459998779,
-      "data": null
-    }
-  },
-  "./instances/random_sat/uf50-029.cnf": {
-    "variables": 50,
-    "clauses": 218,
-    "kissat404": {
-      "satisfiable": true,
-      "time": 0.0019755000000714062,
+      "time": 37229.3067949995,
       "data": null
     },
-    "division_solver_naive": {
-      "satisfiable": true,
-      "time": 0.025931796999884682,
-      "data": null
+    "Propagation-HyGra-2-Warmup-2": {
+      "satisfiable": "unknown",
+      "time": -1,
+      "data": {
+        "common": 55,
+        "warmup": -1
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": "unknown",
+      "time": -1,
+      "data": {
+        "common": 55,
+        "split": 0
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": false,
+      "time": 27252.607689999422,
+      "data": {
+        "common": 55,
+        "split": 0,
+        "processing": 1.393399999869871
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": false,
+      "time": 24720.375768999987,
+      "data": {
+        "common": 55,
+        "split": 0,
+        "processing": 0.9854999999845404
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": false,
+      "time": 3090.4533570000012,
+      "data": {
+        "common": 88,
+        "split": 0,
+        "processing": 0.9198999999853186
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": "unknown",
+      "time": -1,
+      "data": {
+        "common": 72,
+        "split": 0,
+        "processing": 1.4526999998452084
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": "unknown",
+      "time": -1,
+      "data": {
+        "common": 90,
+        "split": 0,
+        "processing": 1.4327000001230772
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": false,
+      "time": 34763.51943100007,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 1.4381999999386608
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": false,
+      "time": 8818.294906999994,
+      "data": {
+        "common": 44,
+        "split": 0,
+        "processing": 0.9816979999968112
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": false,
+      "time": 37776.24332300002,
+      "data": {
+        "common": 85,
+        "split": 0,
+        "processing": 1.136099000007107
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": false,
+      "time": 25816.847892999933,
+      "data": {
+        "common": 55,
+        "split": 0,
+        "processing": 1.8798999999489752
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": false,
+      "time": 6589.3485130000045,
+      "data": {
+        "common": 74,
+        "split": 0,
+        "processing": 1.3123999999606895
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": false,
+      "time": 27524.01505199987,
+      "data": {
+        "common": 85,
+        "split": 0,
+        "processing": 1.7885969998587825
+      }
     }
   },
-  "./instances/random_sat/uf50-043.cnf": {
-    "variables": 50,
-    "clauses": 218,
-    "kissat404": {
-      "satisfiable": true,
-      "time": 0.002541099999916696,
+  "hole6.cnf": {
+    "clauses": 133,
+    "variables": 42,
+    "Propagation-HyGra-2-NoWarmup": {
+      "satisfiable": false,
+      "time": 13.43189999988681,
+      "data": {
+        "common": 21
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": false,
+      "time": 3.3813999998528743,
       "data": null
     },
-    "division_solver_naive": {
-      "satisfiable": true,
-      "time": 0.20156537700017907,
-      "data": null
+    "Propagation-HyGra-2-Warmup-2": {
+      "satisfiable": false,
+      "time": 25.20890000050713,
+      "data": {
+        "common": 21,
+        "warmup": 4.289000000426313
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": false,
+      "time": 26.85499300059746,
+      "data": {
+        "common": 21,
+        "split": 0
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": false,
+      "time": 17.159516999527114,
+      "data": {
+        "common": 21,
+        "split": 0,
+        "processing": 0.4793009993591113
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": false,
+      "time": 31.508006999985128,
+      "data": {
+        "common": 30,
+        "split": 0,
+        "processing": 0.3132999999877484
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": false,
+      "time": 11.427300999969248,
+      "data": {
+        "common": 28,
+        "split": 0,
+        "processing": 0.5605999999716005
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": false,
+      "time": 29.429101999767227,
+      "data": {
+        "common": 30,
+        "split": 0,
+        "processing": 0.540399999863439
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": false,
+      "time": 38.964007999993555,
+      "data": {
+        "common": 30,
+        "split": 0,
+        "processing": 0.4473999999845546
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": false,
+      "time": 2.02690000014627,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 0.4534999998213607
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": false,
+      "time": 16.148288000003674,
+      "data": {
+        "common": 33,
+        "split": 0,
+        "processing": 0.33719900000050984
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": false,
+      "time": 31.96259799995005,
+      "data": {
+        "common": 31,
+        "split": 0,
+        "processing": 0.4012999999645217
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": false,
+      "time": 4.69470200005162,
+      "data": {
+        "common": 21,
+        "split": 0,
+        "processing": 0.39940000010574295
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": false,
+      "time": 8.891586999880019,
+      "data": {
+        "common": 28,
+        "split": 0,
+        "processing": 0.4141990000334772
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": false,
+      "time": 17.859013000133928,
+      "data": {
+        "common": 32,
+        "split": 0,
+        "processing": 0.484800000094765
+      }
     }
   },
-  "./instances/random_sat/uf50-08.cnf": {
-    "variables": 50,
-    "clauses": 218,
-    "kissat404": {
-      "satisfiable": true,
-      "time": 0.001222599000129776,
+  "pret150_60.cnf": {
+    "clauses": 400,
+    "variables": 150,
+    "Propagation-HyGra-2-NoWarmup": {
+      "satisfiable": false,
+      "time": 12.801699000192457,
+      "data": {
+        "common": 4
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": false,
+      "time": 34.793500000887434,
       "data": null
     },
-    "division_solver_naive": {
-      "satisfiable": true,
-      "time": 2.137972356000091,
-      "data": null
+    "Propagation-HyGra-2-Warmup-2": {
+      "satisfiable": false,
+      "time": 12.439400000403111,
+      "data": {
+        "common": 4,
+        "warmup": 8.738500000617933
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": false,
+      "time": 14.146596999125904,
+      "data": {
+        "common": 4,
+        "split": 0
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": false,
+      "time": 38.639938000414986,
+      "data": {
+        "common": 8,
+        "split": 0,
+        "processing": 1.4207020012690919
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": false,
+      "time": 31.638606000001346,
+      "data": {
+        "common": 8,
+        "split": 0,
+        "processing": 0.9019000000023425
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": false,
+      "time": 50.47850399995468,
+      "data": {
+        "common": 11,
+        "split": 0,
+        "processing": 1.4573999999925036
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": false,
+      "time": 84.51020600023185,
+      "data": {
+        "common": 10,
+        "split": 0,
+        "processing": 1.4064000001781096
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": false,
+      "time": 178.11424100000295,
+      "data": {
+        "common": 14,
+        "split": 0,
+        "processing": 1.4257000000270637
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": false,
+      "time": 220.24979900061226,
+      "data": {
+        "common": 11,
+        "split": 0,
+        "processing": 1.722400000289781
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": false,
+      "time": 95.97003500000056,
+      "data": {
+        "common": 10,
+        "split": 0,
+        "processing": 0.9287990000004243
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": false,
+      "time": 38.848998000048596,
+      "data": {
+        "common": 12,
+        "split": 0,
+        "processing": 1.167100000031951
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": false,
+      "time": 32.36182099999496,
+      "data": {
+        "common": 8,
+        "split": 0,
+        "processing": 1.374701000031564
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": false,
+      "time": 29.94175899993934,
+      "data": {
+        "common": 10,
+        "split": 0,
+        "processing": 1.3911979999647883
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": false,
+      "time": 49.85313700012739,
+      "data": {
+        "common": 12,
+        "split": 0,
+        "processing": 1.4119009999831178
+      }
     }
   },
-  "./instances/random_sat/uf50-022.cnf": {
-    "variables": 50,
-    "clauses": 218,
-    "kissat404": {
-      "satisfiable": true,
-      "time": 0.0013483000000178436,
+  "pret60_75.cnf": {
+    "clauses": 160,
+    "variables": 60,
+    "Propagation-HyGra-2-NoWarmup": {
+      "satisfiable": false,
+      "time": 1.0025000001405715,
+      "data": {
+        "common": 4
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": false,
+      "time": 3.503199999613571,
       "data": null
     },
-    "division_solver_naive": {
-      "satisfiable": true,
-      "time": 0.7016042200000356,
-      "data": null
+    "Propagation-HyGra-2-Warmup-2": {
+      "satisfiable": false,
+      "time": 1.4982000002419227,
+      "data": {
+        "common": 4,
+        "warmup": 1.0262999994665734
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": false,
+      "time": 1.521399999546702,
+      "data": {
+        "common": 4,
+        "split": 0
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": false,
+      "time": 7.291507001355058,
+      "data": {
+        "common": 7,
+        "split": 0,
+        "processing": 0.709100000676699
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": false,
+      "time": 5.490300999980491,
+      "data": {
+        "common": 7,
+        "split": 0,
+        "processing": 0.4729999999995016
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": false,
+      "time": 6.395901000018966,
+      "data": {
+        "common": 9,
+        "split": 0,
+        "processing": 0.578800000027968
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": false,
+      "time": 6.06789900007243,
+      "data": {
+        "common": 7,
+        "split": 0,
+        "processing": 0.6616000000576605
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": false,
+      "time": 7.192602000259285,
+      "data": {
+        "common": 9,
+        "split": 0,
+        "processing": 0.6729010001436109
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": false,
+      "time": 6.380599999829428,
+      "data": {
+        "common": 7,
+        "split": 0,
+        "processing": 0.5990999998175539
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": false,
+      "time": 5.481596000002753,
+      "data": {
+        "common": 7,
+        "split": 0,
+        "processing": 0.481098999998153
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": false,
+      "time": 7.633399999974699,
+      "data": {
+        "common": 11,
+        "split": 0,
+        "processing": 0.5391999999915242
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": false,
+      "time": 5.610803999843483,
+      "data": {
+        "common": 7,
+        "split": 0,
+        "processing": 0.659400999893478
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": false,
+      "time": 5.657293000012942,
+      "data": {
+        "common": 9,
+        "split": 0,
+        "processing": 0.6212000000687112
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": false,
+      "time": 7.8363059999446705,
+      "data": {
+        "common": 11,
+        "split": 0,
+        "processing": 0.673899999810601
+      }
     }
   },
-  "./instances/random_sat/uf50-050.cnf": {
-    "variables": 50,
-    "clauses": 218,
-    "kissat404": {
-      "satisfiable": true,
-      "time": 0.001535699999976714,
+  "pret150_75.cnf": {
+    "clauses": 400,
+    "variables": 150,
+    "Propagation-HyGra-2-NoWarmup": {
+      "satisfiable": false,
+      "time": 11.780799000007391,
+      "data": {
+        "common": 4
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": false,
+      "time": 31.715499000711134,
       "data": null
     },
-    "division_solver_naive": {
-      "satisfiable": true,
-      "time": 1.3326022480000574,
-      "data": null
+    "Propagation-HyGra-2-Warmup-2": {
+      "satisfiable": false,
+      "time": 12.279200000193669,
+      "data": {
+        "common": 4,
+        "warmup": 10.615899999720568
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": false,
+      "time": 13.792297000691178,
+      "data": {
+        "common": 4,
+        "split": 0
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": false,
+      "time": 34.41063399986888,
+      "data": {
+        "common": 8,
+        "split": 0,
+        "processing": 1.3357019997783937
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": false,
+      "time": 34.80360800003268,
+      "data": {
+        "common": 8,
+        "split": 0,
+        "processing": 0.9007010000061655
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": false,
+      "time": 39.70750399997769,
+      "data": {
+        "common": 11,
+        "split": 0,
+        "processing": 0.9423000000197135
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": false,
+      "time": 90.80817900030524,
+      "data": {
+        "common": 10,
+        "split": 0,
+        "processing": 1.308100000187551
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": false,
+      "time": 181.13914200012005,
+      "data": {
+        "common": 14,
+        "split": 0,
+        "processing": 1.3712009999835573
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": false,
+      "time": 219.5010989998991,
+      "data": {
+        "common": 11,
+        "split": 0,
+        "processing": 1.2749000002258981
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": false,
+      "time": 89.76233899999642,
+      "data": {
+        "common": 10,
+        "split": 0,
+        "processing": 0.9453989999954615
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": false,
+      "time": 38.394698000047356,
+      "data": {
+        "common": 12,
+        "split": 0,
+        "processing": 1.1676000000306885
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": false,
+      "time": 41.73292699988451,
+      "data": {
+        "common": 8,
+        "split": 0,
+        "processing": 1.8154009999307164
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": false,
+      "time": 54.69902599998022,
+      "data": {
+        "common": 11,
+        "split": 0,
+        "processing": 1.3175980000141863
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": false,
+      "time": 158.6744149999504,
+      "data": {
+        "common": 16,
+        "split": 0,
+        "processing": 2.0367009999517904
+      }
     }
   },
-  "./instances/random_sat/uf50-042.cnf": {
-    "variables": 50,
-    "clauses": 218,
-    "kissat404": {
-      "satisfiable": true,
-      "time": 0.0014429000000291126,
+  "pret60_25.cnf": {
+    "clauses": 160,
+    "variables": 60,
+    "Propagation-HyGra-2-NoWarmup": {
+      "satisfiable": false,
+      "time": 1.0250000004816684,
+      "data": {
+        "common": 4
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": false,
+      "time": 3.4929000003103283,
       "data": null
     },
-    "division_solver_naive": {
-      "satisfiable": true,
-      "time": 4.463572333000002,
-      "data": null
+    "Propagation-HyGra-2-Warmup-2": {
+      "satisfiable": false,
+      "time": 1.6034999998737476,
+      "data": {
+        "common": 4,
+        "warmup": 1.154500000666303
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": false,
+      "time": 1.4628999997512437,
+      "data": {
+        "common": 4,
+        "split": 0
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": false,
+      "time": 6.95950700173853,
+      "data": {
+        "common": 7,
+        "split": 0,
+        "processing": 0.6652000010944903
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": false,
+      "time": 5.283201000025883,
+      "data": {
+        "common": 7,
+        "split": 0,
+        "processing": 0.42160000000990294
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": false,
+      "time": 6.273001000010936,
+      "data": {
+        "common": 9,
+        "split": 0,
+        "processing": 0.4998000000000502
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": false,
+      "time": 5.56549900011305,
+      "data": {
+        "common": 7,
+        "split": 0,
+        "processing": 0.5864000002020475
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": false,
+      "time": 6.785801999967589,
+      "data": {
+        "common": 9,
+        "split": 0,
+        "processing": 0.7213999999748921
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": false,
+      "time": 5.67910000017946,
+      "data": {
+        "common": 7,
+        "split": 0,
+        "processing": 0.6459000001086679
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": false,
+      "time": 5.375796999992133,
+      "data": {
+        "common": 7,
+        "split": 0,
+        "processing": 0.45649999999852753
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": false,
+      "time": 7.591399999967052,
+      "data": {
+        "common": 11,
+        "split": 0,
+        "processing": 0.5491999999662767
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": false,
+      "time": 5.942605000200274,
+      "data": {
+        "common": 7,
+        "split": 0,
+        "processing": 0.6348010001602233
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": false,
+      "time": 5.620193000140716,
+      "data": {
+        "common": 9,
+        "split": 0,
+        "processing": 0.6184000001212553
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": false,
+      "time": 7.99650599992674,
+      "data": {
+        "common": 11,
+        "split": 0,
+        "processing": 1.0403010001027724
+      }
     }
   },
-  "./instances/random_sat/uf50-04.cnf": {
-    "variables": 50,
-    "clauses": 218,
-    "kissat404": {
-      "satisfiable": true,
-      "time": 0.002138000000059037,
+  "pret150_40.cnf": {
+    "clauses": 400,
+    "variables": 150,
+    "Propagation-HyGra-2-NoWarmup": {
+      "satisfiable": false,
+      "time": 13.719599000069138,
+      "data": {
+        "common": 5
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": false,
+      "time": 35.55169900027977,
       "data": null
     },
-    "division_solver_naive": {
-      "satisfiable": true,
-      "time": 0.25794960600001104,
-      "data": null
+    "Propagation-HyGra-2-Warmup-2": {
+      "satisfiable": false,
+      "time": 13.848599999619182,
+      "data": {
+        "common": 4,
+        "warmup": 11.358499999914784
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": false,
+      "time": 14.008796999405604,
+      "data": {
+        "common": 4,
+        "split": 0
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": false,
+      "time": 39.30093999952078,
+      "data": {
+        "common": 8,
+        "split": 0,
+        "processing": 1.398301999870455
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": false,
+      "time": 30.115307000016855,
+      "data": {
+        "common": 8,
+        "split": 0,
+        "processing": 0.9346010000115257
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": false,
+      "time": 51.18070399998942,
+      "data": {
+        "common": 11,
+        "split": 0,
+        "processing": 0.977100000000064
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": false,
+      "time": 90.33177900005285,
+      "data": {
+        "common": 10,
+        "split": 0,
+        "processing": 1.1600000000271393
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": false,
+      "time": 674.6585539999614,
+      "data": {
+        "common": 16,
+        "split": 0,
+        "processing": 2.2874009998758993
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": false,
+      "time": 148.72199899991756,
+      "data": {
+        "common": 11,
+        "split": 0,
+        "processing": 1.352000000224507
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": false,
+      "time": 85.55934099999973,
+      "data": {
+        "common": 10,
+        "split": 0,
+        "processing": 0.9266989999971997
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": false,
+      "time": 37.40149800000836,
+      "data": {
+        "common": 12,
+        "split": 0,
+        "processing": 1.2004000000160886
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": false,
+      "time": 31.748720999758007,
+      "data": {
+        "common": 8,
+        "split": 0,
+        "processing": 1.3929009999174014
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": false,
+      "time": 25.981565000165574,
+      "data": {
+        "common": 10,
+        "split": 0,
+        "processing": 1.3359980000586802
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": false,
+      "time": 37.77452899998934,
+      "data": {
+        "common": 12,
+        "split": 0,
+        "processing": 1.5082019999681506
+      }
     }
   },
-  "./instances/random_sat/uf50-032.cnf": {
-    "variables": 50,
-    "clauses": 218,
-    "kissat404": {
-      "satisfiable": true,
-      "time": 0.0037229000001843815,
+  "pret60_40.cnf": {
+    "clauses": 160,
+    "variables": 60,
+    "Propagation-HyGra-2-NoWarmup": {
+      "satisfiable": false,
+      "time": 1.0589000003164983,
+      "data": {
+        "common": 4
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": false,
+      "time": 3.6421000004338566,
       "data": null
     },
-    "division_solver_naive": {
-      "satisfiable": true,
-      "time": 0.06871550100004242,
-      "data": null
+    "Propagation-HyGra-2-Warmup-2": {
+      "satisfiable": false,
+      "time": 1.5725000002930756,
+      "data": {
+        "common": 4,
+        "warmup": 1.123600000028091
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": false,
+      "time": 1.5521990007982822,
+      "data": {
+        "common": 4,
+        "split": 0
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": false,
+      "time": 6.650105999142397,
+      "data": {
+        "common": 7,
+        "split": 0,
+        "processing": 0.6362999993143603
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": false,
+      "time": 5.2420009999991635,
+      "data": {
+        "common": 7,
+        "split": 0,
+        "processing": 0.4499000000066644
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": false,
+      "time": 6.50639999997793,
+      "data": {
+        "common": 9,
+        "split": 0,
+        "processing": 0.5146999999965374
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": false,
+      "time": 5.572198999971079,
+      "data": {
+        "common": 7,
+        "split": 0,
+        "processing": 0.6433999999444495
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": false,
+      "time": 5.896501000052012,
+      "data": {
+        "common": 9,
+        "split": 0,
+        "processing": 0.7777000000714906
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": false,
+      "time": 5.67060000003039,
+      "data": {
+        "common": 7,
+        "split": 0,
+        "processing": 0.6728999996994389
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": false,
+      "time": 5.375796999999238,
+      "data": {
+        "common": 7,
+        "split": 0,
+        "processing": 0.48720000000201935
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": false,
+      "time": 7.528798999999253,
+      "data": {
+        "common": 11,
+        "split": 0,
+        "processing": 0.612398999976449
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": false,
+      "time": 5.860903999973743,
+      "data": {
+        "common": 7,
+        "split": 0,
+        "processing": 0.6665010000688198
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": false,
+      "time": 7.501190000084534,
+      "data": {
+        "common": 10,
+        "split": 0,
+        "processing": 0.6652990000475256
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": false,
+      "time": 7.6900060000753,
+      "data": {
+        "common": 11,
+        "split": 0,
+        "processing": 0.7162010001593444
+      }
     }
   },
-  "./instances/random_sat/uf50-048.cnf": {
-    "variables": 50,
-    "clauses": 218,
-    "kissat404": {
-      "satisfiable": true,
-      "time": 0.0017989999998917483,
+  "pret150_25.cnf": {
+    "clauses": 400,
+    "variables": 150,
+    "Propagation-HyGra-2-NoWarmup": {
+      "satisfiable": false,
+      "time": 11.65189899984398,
+      "data": {
+        "common": 4
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": false,
+      "time": 17.509100000097533,
       "data": null
     },
-    "division_solver_naive": {
-      "satisfiable": true,
-      "time": 1.0975429249999706,
-      "data": null
+    "Propagation-HyGra-2-Warmup-2": {
+      "satisfiable": false,
+      "time": 14.27919900015695,
+      "data": {
+        "common": 4,
+        "warmup": 11.029398999198747
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": false,
+      "time": 13.405495999904815,
+      "data": {
+        "common": 4,
+        "split": 0
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": false,
+      "time": 35.77843499806477,
+      "data": {
+        "common": 8,
+        "split": 0,
+        "processing": 1.3170009988243692
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": false,
+      "time": 28.732305999994878,
+      "data": {
+        "common": 8,
+        "split": 0,
+        "processing": 0.8849000000168417
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": false,
+      "time": 39.7864029999937,
+      "data": {
+        "common": 11,
+        "split": 0,
+        "processing": 0.9531999999694563
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": false,
+      "time": 113.7249740002062,
+      "data": {
+        "common": 10,
+        "split": 0,
+        "processing": 1.3043000001289329
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": false,
+      "time": 188.32004199975927,
+      "data": {
+        "common": 14,
+        "split": 0,
+        "processing": 1.3802999999370513
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": false,
+      "time": 196.79799899995487,
+      "data": {
+        "common": 11,
+        "split": 0,
+        "processing": 1.3810000000376021
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": false,
+      "time": 100.40983199999687,
+      "data": {
+        "common": 10,
+        "split": 0,
+        "processing": 0.9289990000027615
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": false,
+      "time": 37.948997999933454,
+      "data": {
+        "common": 12,
+        "split": 0,
+        "processing": 1.181499999972857
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": false,
+      "time": 30.81861900000149,
+      "data": {
+        "common": 8,
+        "split": 0,
+        "processing": 1.838700999996945
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": false,
+      "time": 25.21586600005321,
+      "data": {
+        "common": 10,
+        "split": 0,
+        "processing": 1.2644989999444078
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": false,
+      "time": 38.9767279998523,
+      "data": {
+        "common": 12,
+        "split": 0,
+        "processing": 1.7987009998705616
+      }
     }
   },
-  "./instances/random_sat/uf50-040.cnf": {
-    "variables": 50,
-    "clauses": 218,
-    "kissat404": {
-      "satisfiable": true,
-      "time": 0.0012311999998928513,
+  "hole8.cnf": {
+    "clauses": 297,
+    "variables": 72,
+    "Propagation-HyGra-2-NoWarmup": {
+      "satisfiable": false,
+      "time": 457.1645770001851,
+      "data": {
+        "common": 36
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": false,
+      "time": 228.6494979998679,
       "data": null
     },
-    "division_solver_naive": {
-      "satisfiable": true,
-      "time": 5.422237276000033,
-      "data": null
+    "Propagation-HyGra-2-Warmup-2": {
+      "satisfiable": false,
+      "time": 954.2519889992036,
+      "data": {
+        "common": 36,
+        "warmup": 12.03929999974207
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": false,
+      "time": 1379.4016579995514,
+      "data": {
+        "common": 36,
+        "split": 0
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": false,
+      "time": 273.4395669976948,
+      "data": {
+        "common": 36,
+        "split": 0,
+        "processing": 0.7571009991806932
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": false,
+      "time": 52.7013120000106,
+      "data": {
+        "common": 36,
+        "split": 0,
+        "processing": 0.5068000000107986
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": false,
+      "time": 1103.1210620000138,
+      "data": {
+        "common": 63,
+        "split": 0,
+        "processing": 0.7377000000019507
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": false,
+      "time": 2306.2891659999423,
+      "data": {
+        "common": 49,
+        "split": 0,
+        "processing": 0.6690999998681946
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": false,
+      "time": 3922.2555349999766,
+      "data": {
+        "common": 56,
+        "split": 0,
+        "processing": 0.9534999999232241
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": false,
+      "time": 247.72599900006753,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 0.8665000000291911
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": false,
+      "time": 231.74554399999892,
+      "data": {
+        "common": 36,
+        "split": 0,
+        "processing": 1.0216999999954623
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": false,
+      "time": 512.5229739999781,
+      "data": {
+        "common": 54,
+        "split": 0,
+        "processing": 0.6434000000012929
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": false,
+      "time": 260.91216700001496,
+      "data": {
+        "common": 36,
+        "split": 0,
+        "processing": 0.6378000000495376
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": false,
+      "time": 473.9493610002228,
+      "data": {
+        "common": 51,
+        "split": 0,
+        "processing": 0.7387990001461731
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": false,
+      "time": 547.3774979996051,
+      "data": {
+        "common": 54,
+        "split": 0,
+        "processing": 0.8495999998103798
+      }
     }
   },
-  "./instances/random_sat/uf50-026.cnf": {
-    "variables": 50,
-    "clauses": 218,
-    "kissat404": {
-      "satisfiable": true,
-      "time": 0.0014944009999453556,
+  "pret60_60.cnf": {
+    "clauses": 160,
+    "variables": 60,
+    "Propagation-HyGra-2-NoWarmup": {
+      "satisfiable": false,
+      "time": 0.9783000004972564,
+      "data": {
+        "common": 4
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": false,
+      "time": 3.361099999892758,
       "data": null
     },
-    "division_solver_naive": {
-      "satisfiable": true,
-      "time": 1.6389158130000396,
-      "data": null
+    "Propagation-HyGra-2-Warmup-2": {
+      "satisfiable": false,
+      "time": 1.532000000224798,
+      "data": {
+        "common": 4,
+        "warmup": 1.0064000007332652
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": false,
+      "time": 1.4234999998734565,
+      "data": {
+        "common": 4,
+        "split": 0
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": false,
+      "time": 6.781407000744366,
+      "data": {
+        "common": 7,
+        "split": 0,
+        "processing": 0.6294009999692207
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": false,
+      "time": 5.276302000027044,
+      "data": {
+        "common": 7,
+        "split": 0,
+        "processing": 0.5042010000124719
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": false,
+      "time": 6.375537999929293,
+      "data": {
+        "common": 9,
+        "split": 0,
+        "processing": 0.6879939999748785
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": false,
+      "time": 5.328298999984327,
+      "data": {
+        "common": 7,
+        "split": 0,
+        "processing": 0.6432999998651212
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": false,
+      "time": 5.764001999978063,
+      "data": {
+        "common": 9,
+        "split": 0,
+        "processing": 0.6667010000001028
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": false,
+      "time": 5.740899999636895,
+      "data": {
+        "common": 7,
+        "split": 0,
+        "processing": 0.7280999998329207
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": false,
+      "time": 5.286396000002469,
+      "data": {
+        "common": 7,
+        "split": 0,
+        "processing": 0.5006989999998268
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": false,
+      "time": 7.703200000037214,
+      "data": {
+        "common": 11,
+        "split": 0,
+        "processing": 0.6311000000209788
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": false,
+      "time": 6.043704999910915,
+      "data": {
+        "common": 7,
+        "split": 0,
+        "processing": 0.9033009998802299
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": false,
+      "time": 5.449391999945874,
+      "data": {
+        "common": 9,
+        "split": 0,
+        "processing": 0.5998990000080084
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": false,
+      "time": 7.64570499995898,
+      "data": {
+        "common": 11,
+        "split": 0,
+        "processing": 0.6751999999323743
+      }
     }
   },
-  "./instances/random_sat/uf50-09.cnf": {
-    "variables": 50,
-    "clauses": 218,
-    "kissat404": {
-      "satisfiable": true,
-      "time": 0.0014303000000381871,
+  "bf0432-007.cnf": {
+    "clauses": 3668,
+    "variables": 1040,
+    "Propagation-HyGra-2-NoWarmup": {
+      "satisfiable": false,
+      "time": 72.90339700011828,
+      "data": {
+        "common": 67
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": false,
+      "time": 6.430698999793094,
       "data": null
     },
-    "division_solver_naive": {
-      "satisfiable": true,
-      "time": 0.08387633699999242,
-      "data": null
+    "Propagation-HyGra-2-Warmup-2": {
+      "satisfiable": false,
+      "time": 85.25929899951734,
+      "data": {
+        "common": 67,
+        "warmup": 16.19360000040615
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": false,
+      "time": 307.0800240002427,
+      "data": {
+        "common": 137,
+        "split": 0
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": false,
+      "time": 26.90552599960938,
+      "data": {
+        "common": 25,
+        "split": 0,
+        "processing": 8.006907999515533
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": false,
+      "time": 224.95784899999194,
+      "data": {
+        "common": 57,
+        "split": 0,
+        "processing": 6.374700999998595
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": false,
+      "time": 168.9917390000346,
+      "data": {
+        "common": 72,
+        "split": 0,
+        "processing": 6.218639000053372
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": false,
+      "time": 223.50144800020644,
+      "data": {
+        "common": 63,
+        "split": 0,
+        "processing": 7.743198000071061
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": false,
+      "time": 178.64772699999776,
+      "data": {
+        "common": 79,
+        "split": 0,
+        "processing": 8.936301999938223
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": false,
+      "time": 159.45099899954585,
+      "data": {
+        "common": 66,
+        "split": 0,
+        "processing": 8.487699999932374
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": false,
+      "time": 235.96244099999808,
+      "data": {
+        "common": 69,
+        "split": 0,
+        "processing": 5.950296000001742
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": false,
+      "time": 166.3770910000153,
+      "data": {
+        "common": 76,
+        "split": 0,
+        "processing": 7.479698999986795
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": false,
+      "time": 21.13020900014817,
+      "data": {
+        "common": 24,
+        "split": 0,
+        "processing": 7.5333040001623885
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": false,
+      "time": 35.75495099994441,
+      "data": {
+        "common": 34,
+        "split": 0,
+        "processing": 7.874689000118451
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": false,
+      "time": 238.59807300004832,
+      "data": {
+        "common": 44,
+        "split": 0,
+        "processing": 8.79740599998513
+      }
     }
   },
-  "./instances/random_sat/uf50-018.cnf": {
-    "variables": 50,
-    "clauses": 218,
-    "kissat404": {
-      "satisfiable": true,
-      "time": 0.001696799999990617,
+  "bf2670-001.cnf": {
+    "clauses": 3434,
+    "variables": 1393,
+    "Propagation-HyGra-2-NoWarmup": {
+      "satisfiable": false,
+      "time": 3.5531000003174995,
+      "data": {
+        "common": 15
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": false,
+      "time": 5.566699999690172,
       "data": null
     },
-    "division_solver_naive": {
-      "satisfiable": true,
-      "time": 2.736317291999967,
-      "data": null
+    "Propagation-HyGra-2-Warmup-2": {
+      "satisfiable": false,
+      "time": 6.7555000005086185,
+      "data": {
+        "common": 15,
+        "warmup": 5.581100000199513
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": false,
+      "time": 8.949298000516137,
+      "data": {
+        "common": 43,
+        "split": 0
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": false,
+      "time": 2.7250029997958336,
+      "data": {
+        "only_processor": true,
+        "processing": 2.7250029997958336
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": false,
+      "time": 1.7896010000129081,
+      "data": {
+        "only_processor": true,
+        "processing": 1.7896010000129081
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": false,
+      "time": 1.7295829999852685,
+      "data": {
+        "only_processor": true,
+        "processing": 1.7295829999852685
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": false,
+      "time": 2.7738989999761543,
+      "data": {
+        "only_processor": true,
+        "processing": 2.7738989999761543
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": false,
+      "time": 2.9015999998591724,
+      "data": {
+        "only_processor": true,
+        "processing": 2.9015999998591724
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": false,
+      "time": 2.7937999998357554,
+      "data": {
+        "only_processor": true,
+        "processing": 2.7937999998357554
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": false,
+      "time": 1.8334989999999607,
+      "data": {
+        "only_processor": true,
+        "processing": 1.8334989999999607
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": false,
+      "time": 2.414999999984957,
+      "data": {
+        "only_processor": true,
+        "processing": 2.414999999984957
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": false,
+      "time": 2.61450099992544,
+      "data": {
+        "only_processor": true,
+        "processing": 2.61450099992544
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": false,
+      "time": 2.5959959998544946,
+      "data": {
+        "only_processor": true,
+        "processing": 2.5959959998544946
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": false,
+      "time": 3.139101999977356,
+      "data": {
+        "only_processor": true,
+        "processing": 3.139101999977356
+      }
     }
   },
-  "./instances/random_sat/uf50-013.cnf": {
-    "variables": 50,
-    "clauses": 218,
-    "kissat404": {
-      "satisfiable": true,
-      "time": 0.001906100000041988,
+  "bf1355-075.cnf": {
+    "clauses": 6778,
+    "variables": 2180,
+    "Propagation-HyGra-2-NoWarmup": {
+      "satisfiable": false,
+      "time": 11.592799000027298,
+      "data": {
+        "common": 46
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": false,
+      "time": 5.003700000088429,
       "data": null
     },
-    "division_solver_naive": {
-      "satisfiable": true,
-      "time": 1.1604880760000924,
-      "data": null
+    "Propagation-HyGra-2-Warmup-2": {
+      "satisfiable": false,
+      "time": 8.785299999544804,
+      "data": {
+        "common": 43,
+        "warmup": 6.612399999539775
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": false,
+      "time": 258.8552359993628,
+      "data": {
+        "common": 165,
+        "split": 0
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": false,
+      "time": 12.22911200056842,
+      "data": {
+        "only_processor": true,
+        "processing": 12.22911200056842
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": false,
+      "time": 8.597001999987697,
+      "data": {
+        "only_processor": true,
+        "processing": 8.597001999987697
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": false,
+      "time": 8.739714000000731,
+      "data": {
+        "only_processor": true,
+        "processing": 8.739714000000731
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": false,
+      "time": 12.270097000055102,
+      "data": {
+        "only_processor": true,
+        "processing": 12.270097000055102
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": false,
+      "time": 12.78970099997423,
+      "data": {
+        "only_processor": true,
+        "processing": 12.78970099997423
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": false,
+      "time": 12.131400000271242,
+      "data": {
+        "only_processor": true,
+        "processing": 12.131400000271242
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": false,
+      "time": 9.330593000001386,
+      "data": {
+        "only_processor": true,
+        "processing": 9.330593000001386
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": false,
+      "time": 11.383298999987801,
+      "data": {
+        "only_processor": true,
+        "processing": 11.383298999987801
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": false,
+      "time": 11.583303000179512,
+      "data": {
+        "only_processor": true,
+        "processing": 11.583303000179512
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": false,
+      "time": 12.317482999833373,
+      "data": {
+        "only_processor": true,
+        "processing": 12.317482999833373
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": false,
+      "time": 12.123108999958276,
+      "data": {
+        "only_processor": true,
+        "processing": 12.123108999958276
+      }
     }
   },
-  "./instances/random_sat/uf50-020.cnf": {
-    "variables": 50,
-    "clauses": 218,
-    "kissat404": {
-      "satisfiable": true,
-      "time": 0.002674001000059434,
+  "hole9.cnf": {
+    "clauses": 415,
+    "variables": 90,
+    "Propagation-HyGra-2-NoWarmup": {
+      "satisfiable": false,
+      "time": 10774.746979000156,
+      "data": {
+        "common": 45
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": false,
+      "time": 2972.7374830008557,
       "data": null
     },
-    "division_solver_naive": {
-      "satisfiable": true,
-      "time": 0.048319130999971094,
-      "data": null
+    "Propagation-HyGra-2-Warmup-2": {
+      "satisfiable": false,
+      "time": 49674.712143999386,
+      "data": {
+        "common": 45,
+        "warmup": 27.824499999951513
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": false,
+      "time": 7880.273199998555,
+      "data": {
+        "common": 42,
+        "split": 0
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": false,
+      "time": 3326.536249000128,
+      "data": {
+        "common": 48,
+        "split": 0,
+        "processing": 0.9222009994118707
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": false,
+      "time": 28196.719521000035,
+      "data": {
+        "common": 74,
+        "split": 0,
+        "processing": 0.6906000000128643
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": false,
+      "time": 5407.914692000019,
+      "data": {
+        "common": 70,
+        "split": 0,
+        "processing": 0.7913929999858738
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": false,
+      "time": 55369.417470999906,
+      "data": {
+        "common": 67,
+        "split": 0,
+        "processing": 0.8525999999164924
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": "unknown",
+      "time": -1,
+      "data": {
+        "common": 72,
+        "split": 0,
+        "processing": 0.8517999999639869
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": false,
+      "time": 2095.3789909999614,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 0.9180000001833832
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": false,
+      "time": 2631.0312380000055,
+      "data": {
+        "common": 50,
+        "split": 0,
+        "processing": 0.718699000003653
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": false,
+      "time": 10161.088838000012,
+      "data": {
+        "common": 77,
+        "split": 0,
+        "processing": 0.8521999999970831
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": false,
+      "time": 808.9010559997405,
+      "data": {
+        "common": 48,
+        "split": 0,
+        "processing": 0.8636999998543615
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": false,
+      "time": 4021.5633000000253,
+      "data": {
+        "common": 60,
+        "split": 0,
+        "processing": 0.8913990000110061
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": false,
+      "time": 2826.434160999952,
+      "data": {
+        "common": 69,
+        "split": 0,
+        "processing": 0.8793009999408241
+      }
     }
   },
-  "./instances/random_sat/uf50-044.cnf": {
-    "variables": 50,
-    "clauses": 218,
-    "kissat404": {
-      "satisfiable": true,
-      "time": 0.0028000020001854864,
+  "bf1355-638.cnf": {
+    "clauses": 6768,
+    "variables": 2177,
+    "Propagation-HyGra-2-NoWarmup": {
+      "satisfiable": false,
+      "time": 4.4145009997009765,
+      "data": {
+        "common": 48
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": false,
+      "time": 5.516199999874516,
       "data": null
     },
-    "division_solver_naive": {
-      "satisfiable": true,
-      "time": 0.08353665300001012,
-      "data": null
+    "Propagation-HyGra-2-Warmup-2": {
+      "satisfiable": false,
+      "time": 51.43210099959106,
+      "data": {
+        "common": 57,
+        "warmup": 42.67110099954152
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": false,
+      "time": 103.49630699965928,
+      "data": {
+        "common": 112,
+        "split": 0
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": false,
+      "time": 10.044310000012047,
+      "data": {
+        "only_processor": true,
+        "processing": 10.044310000012047
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": false,
+      "time": 7.394901999987269,
+      "data": {
+        "only_processor": true,
+        "processing": 7.394901999987269
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": false,
+      "time": 7.385500999987471,
+      "data": {
+        "only_processor": true,
+        "processing": 7.385500999987471
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": false,
+      "time": 11.273499000026277,
+      "data": {
+        "only_processor": true,
+        "processing": 11.273499000026277
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": false,
+      "time": 11.722001999942222,
+      "data": {
+        "only_processor": true,
+        "processing": 11.722001999942222
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": false,
+      "time": 10.314899000150035,
+      "data": {
+        "only_processor": true,
+        "processing": 10.314899000150035
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": false,
+      "time": 7.275863000003824,
+      "data": {
+        "only_processor": true,
+        "processing": 7.275863000003824
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": false,
+      "time": 9.300557000017307,
+      "data": {
+        "only_processor": true,
+        "processing": 9.300557000017307
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": false,
+      "time": 9.62950300004195,
+      "data": {
+        "only_processor": true,
+        "processing": 9.62950300004195
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": false,
+      "time": 10.029224000163595,
+      "data": {
+        "only_processor": true,
+        "processing": 10.029224000163595
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": false,
+      "time": 10.707908000085808,
+      "data": {
+        "only_processor": true,
+        "processing": 10.707908000085808
+      }
     }
   },
-  "./instances/random_sat/uf50-036.cnf": {
-    "variables": 50,
-    "clauses": 218,
-    "kissat404": {
+  "sw100-5.cnf": {
+    "clauses": 3100,
+    "variables": 500,
+    "Propagation-HyGra-2-NoWarmup": {
       "satisfiable": true,
-      "time": 0.001971000999901662,
+      "time": 19.715403000191145,
+      "data": {
+        "common": 45
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 21.532000000661355,
       "data": null
     },
-    "division_solver_naive": {
+    "Propagation-HyGra-2-Warmup-2": {
       "satisfiable": true,
-      "time": 0.1635974040000292,
-      "data": null
+      "time": 41.947300999709114,
+      "data": {
+        "common": 45,
+        "warmup": 24.55070100040757
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": true,
+      "time": 53.56870399918989,
+      "data": {
+        "common": 46,
+        "split": 0
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": true,
+      "time": 61.629259998881025,
+      "data": {
+        "common": 36,
+        "split": 0,
+        "processing": 5.404004999945755
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": true,
+      "time": 50.553608000001304,
+      "data": {
+        "common": 36,
+        "split": 0,
+        "processing": 3.6944000000005417
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": true,
+      "time": 205.27772200000527,
+      "data": {
+        "common": 64,
+        "split": 0,
+        "processing": 6.528101000014885
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": true,
+      "time": 166.87499499994374,
+      "data": {
+        "common": 44,
+        "split": 0,
+        "processing": 5.862400000069101
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": true,
+      "time": 38.796604000253865,
+      "data": {
+        "common": 64,
+        "split": 0,
+        "processing": 6.291601000157243
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": true,
+      "time": 49.179300000105286,
+      "data": {
+        "common": 36,
+        "split": 0,
+        "processing": 5.334599999969214
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": true,
+      "time": 61.315430999997034,
+      "data": {
+        "common": 40,
+        "split": 0,
+        "processing": 3.577831000001197
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": true,
+      "time": 80.13363100008064,
+      "data": {
+        "common": 93,
+        "split": 0,
+        "processing": 4.813078000040605
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 20.204806000037934,
+      "data": {
+        "common": 36,
+        "split": 0,
+        "processing": 4.873501000020042
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": true,
+      "time": 63.142346999939036,
+      "data": {
+        "common": 56,
+        "split": 0,
+        "processing": 5.1583120000486815
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": true,
+      "time": 31.38252299982014,
+      "data": {
+        "common": 69,
+        "split": 0,
+        "processing": 5.586003999951572
+      }
     }
   },
-  "./instances/random_sat/uf50-05.cnf": {
-    "variables": 50,
-    "clauses": 218,
-    "kissat404": {
+  "logistics.b.cnf": {
+    "clauses": 7301,
+    "variables": 843,
+    "Propagation-HyGra-2-NoWarmup": {
       "satisfiable": true,
-      "time": 0.0035223019999648386,
+      "time": 63.86621000001469,
+      "data": {
+        "common": 125
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 7.681199999751698,
       "data": null
     },
-    "division_solver_naive": {
+    "Propagation-HyGra-2-Warmup-2": {
       "satisfiable": true,
-      "time": 0.7626331839999239,
-      "data": null
+      "time": 177.75400200025615,
+      "data": {
+        "common": 125,
+        "warmup": 138.92860200030555
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": true,
+      "time": 224.9384149999969,
+      "data": {
+        "common": 142,
+        "split": 0
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": true,
+      "time": 41.08719499890867,
+      "data": {
+        "common": 64,
+        "split": 0,
+        "processing": 15.852515000005951
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": true,
+      "time": 37.91760699999713,
+      "data": {
+        "common": 64,
+        "split": 0,
+        "processing": 10.810801999980413
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": true,
+      "time": 72.6137069999595,
+      "data": {
+        "common": 96,
+        "split": 0,
+        "processing": 13.321800999960942
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": true,
+      "time": 32.630399999789006,
+      "data": {
+        "common": 63,
+        "split": 0,
+        "processing": 15.677099999948041
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": true,
+      "time": 48.9477049998186,
+      "data": {
+        "common": 75,
+        "split": 0,
+        "processing": 17.390201999887722
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": true,
+      "time": 40.54099999984828,
+      "data": {
+        "common": 64,
+        "split": 0,
+        "processing": 15.533199999936187
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": true,
+      "time": 18.69346200000166,
+      "data": {
+        "common": 48,
+        "split": 0,
+        "processing": 10.79349399999785
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": true,
+      "time": 62.739709999959814,
+      "data": {
+        "common": 87,
+        "split": 0,
+        "processing": 13.9902349999943
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 21.28980599991337,
+      "data": {
+        "common": 68,
+        "split": 0,
+        "processing": 16.811804999861124
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": true,
+      "time": 26.912862000017412,
+      "data": {
+        "common": 95,
+        "split": 0,
+        "processing": 15.510936000055153
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": true,
+      "time": 30.32952200010186,
+      "data": {
+        "common": 101,
+        "split": 0,
+        "processing": 15.454411000064283
+      }
     }
   },
-  "./instances/random_sat/uf50-031.cnf": {
-    "variables": 50,
-    "clauses": 218,
-    "kissat404": {
+  "flat100-3.cnf": {
+    "clauses": 1117,
+    "variables": 300,
+    "Propagation-HyGra-2-NoWarmup": {
       "satisfiable": true,
-      "time": 0.0008756009999615344,
+      "time": 29.471005000232253,
+      "data": {
+        "common": 83
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 0.4255999992892612,
       "data": null
     },
-    "division_solver_naive": {
+    "Propagation-HyGra-2-Warmup-2": {
       "satisfiable": true,
-      "time": 3.54967855100017,
-      "data": null
+      "time": 34.84670099987852,
+      "data": {
+        "common": 84,
+        "warmup": 5.633300000226882
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": true,
+      "time": 18.997801000296022,
+      "data": {
+        "common": 101,
+        "split": 0
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": true,
+      "time": 9.596768997653271,
+      "data": {
+        "common": 56,
+        "split": 0,
+        "processing": 2.639918999193469
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": true,
+      "time": 10.934800999990557,
+      "data": {
+        "common": 66,
+        "split": 0,
+        "processing": 1.9217999999909807
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": true,
+      "time": 52.55560500000911,
+      "data": {
+        "common": 93,
+        "split": 0,
+        "processing": 1.8608999999969456
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": true,
+      "time": 5.495999999993728,
+      "data": {
+        "common": 75,
+        "split": 0,
+        "processing": 2.6167000000896223
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": true,
+      "time": 10.241402000019662,
+      "data": {
+        "common": 95,
+        "split": 0,
+        "processing": 2.7081010000529204
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": true,
+      "time": 9.905200000048353,
+      "data": {
+        "common": 85,
+        "split": 0,
+        "processing": 2.674200000001292
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": true,
+      "time": 6.1599530000009395,
+      "data": {
+        "common": 79,
+        "split": 0,
+        "processing": 1.8656159999963506
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": true,
+      "time": 19.14521099996591,
+      "data": {
+        "common": 92,
+        "split": 0,
+        "processing": 2.304388999959883
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 6.107101000225157,
+      "data": {
+        "common": 52,
+        "split": 0,
+        "processing": 2.5570000000243454
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": true,
+      "time": 11.978326999951605,
+      "data": {
+        "common": 69,
+        "split": 0,
+        "processing": 2.442004999920755
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": true,
+      "time": 6.5486040000450885,
+      "data": {
+        "common": 70,
+        "split": 0,
+        "processing": 2.617502000020977
+      }
     }
   },
-  "./instances/random_sat/uf50-015.cnf": {
-    "variables": 50,
-    "clauses": 218,
-    "kissat404": {
+  "ais8.cnf": {
+    "clauses": 1520,
+    "variables": 113,
+    "Propagation-HyGra-2-NoWarmup": {
       "satisfiable": true,
-      "time": 0.0020261009999558155,
+      "time": 73.09941200037429,
+      "data": {
+        "common": 74
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 0.5120000005263137,
       "data": null
     },
-    "division_solver_naive": {
+    "Propagation-HyGra-2-Warmup-2": {
       "satisfiable": true,
-      "time": 0.8464169369999581,
-      "data": null
+      "time": 86.61780100010219,
+      "data": {
+        "common": 73,
+        "warmup": 53.82360099974903
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": true,
+      "time": 14.351100999192568,
+      "data": {
+        "common": 75,
+        "split": 0
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": true,
+      "time": 55.15949199980241,
+      "data": {
+        "common": 66,
+        "split": 0,
+        "processing": 2.8650200001720805
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": true,
+      "time": 4.326599999984637,
+      "data": {
+        "common": 70,
+        "split": 0,
+        "processing": 2.1634000000005926
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": true,
+      "time": 5.7795010000063485,
+      "data": {
+        "common": 99,
+        "split": 0,
+        "processing": 2.1610000000009677
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": true,
+      "time": 6.413699999939126,
+      "data": {
+        "common": 90,
+        "split": 0,
+        "processing": 2.9104000000188535
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": true,
+      "time": 7.093601999713428,
+      "data": {
+        "common": 98,
+        "split": 0,
+        "processing": 3.265400999907797
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": true,
+      "time": 9.388500000113709,
+      "data": {
+        "common": 98,
+        "split": 0,
+        "processing": 2.824900000177877
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": true,
+      "time": 20.82998100000566,
+      "data": {
+        "common": 69,
+        "split": 0,
+        "processing": 2.1497190000019373
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": true,
+      "time": 9.887955000010606,
+      "data": {
+        "common": 98,
+        "split": 0,
+        "processing": 2.643487999989702
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 27.21280899982048,
+      "data": {
+        "common": 75,
+        "split": 0,
+        "processing": 2.810100999795395
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": true,
+      "time": 25.38935899997341,
+      "data": {
+        "common": 89,
+        "split": 0,
+        "processing": 2.8353059999517427
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": true,
+      "time": 48.07383499996831,
+      "data": {
+        "common": 78,
+        "split": 0,
+        "processing": 2.8181019999919954
+      }
     }
   },
-  "./instances/random_sat/uf50-030.cnf": {
-    "variables": 50,
-    "clauses": 218,
-    "kissat404": {
+  "bmc-ibm-2.cnf": {
+    "clauses": 11683,
+    "variables": 2810,
+    "Propagation-HyGra-2-NoWarmup": {
       "satisfiable": true,
-      "time": 0.0016876009999577946,
+      "time": 91.58291499988991,
+      "data": {
+        "common": 80
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 8.453600000393635,
       "data": null
     },
-    "division_solver_naive": {
+    "Propagation-HyGra-2-Warmup-2": {
       "satisfiable": true,
-      "time": 5.730787043000191,
-      "data": null
+      "time": 95.7392020000043,
+      "data": {
+        "common": 78,
+        "warmup": 84.29190199967707
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": true,
+      "time": 317.8444210007001,
+      "data": {
+        "common": 231,
+        "split": 0
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": true,
+      "time": 20.137143999818363,
+      "data": {
+        "common": 13,
+        "split": 0,
+        "processing": 14.3853030003811
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": true,
+      "time": 12.179202999988092,
+      "data": {
+        "common": 21,
+        "split": 0,
+        "processing": 8.368701999984296
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": true,
+      "time": 18.090601999972478,
+      "data": {
+        "common": 25,
+        "split": 0,
+        "processing": 8.008001000007425
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": true,
+      "time": 17.220298999973238,
+      "data": {
+        "common": 18,
+        "split": 0,
+        "processing": 14.019198999903892
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": true,
+      "time": 25.65820200015878,
+      "data": {
+        "common": 24,
+        "split": 0,
+        "processing": 14.831801000127598
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": true,
+      "time": 18.834500000139087,
+      "data": {
+        "common": 10,
+        "split": 0,
+        "processing": 14.653400000042893
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": true,
+      "time": 10.597591999996325,
+      "data": {
+        "common": 16,
+        "split": 0,
+        "processing": 7.9494689999961565
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": true,
+      "time": 25.082683999983146,
+      "data": {
+        "common": 33,
+        "split": 0,
+        "processing": 12.051944000006642
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 15.920904999802588,
+      "data": {
+        "common": 13,
+        "split": 0,
+        "processing": 13.213403999998263
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": true,
+      "time": 17.55074099992271,
+      "data": {
+        "common": 16,
+        "split": 0,
+        "processing": 13.42823100003443
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": true,
+      "time": 22.31271599998763,
+      "data": {
+        "common": 20,
+        "split": 0,
+        "processing": 13.716810000005353
+      }
     }
   },
-  "./instances/random_sat/uf50-019.cnf": {
-    "variables": 50,
-    "clauses": 218,
-    "kissat404": {
+  "bw_large.c.cnf": {
+    "clauses": 50457,
+    "variables": 3016,
+    "Propagation-HyGra-2-NoWarmup": {
       "satisfiable": true,
-      "time": 0.0023467010000786104,
+      "time": 1398.110722000638,
+      "data": {
+        "common": 240
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 37.8485000001092,
       "data": null
     },
-    "division_solver_naive": {
+    "Propagation-HyGra-2-Warmup-2": {
       "satisfiable": true,
-      "time": 0.35735182700000223,
-      "data": null
+      "time": 6246.955306000018,
+      "data": {
+        "common": 491,
+        "warmup": 2968.6515160001363
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": true,
+      "time": 3344.89750099965,
+      "data": {
+        "common": 414,
+        "split": 0
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": true,
+      "time": 1213.3407270011958,
+      "data": {
+        "common": 171,
+        "split": 0,
+        "processing": 106.45635699984268
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": true,
+      "time": 1109.1368820000014,
+      "data": {
+        "common": 203,
+        "split": 0,
+        "processing": 110.1327180000169
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": true,
+      "time": 6163.549359000001,
+      "data": {
+        "common": 736,
+        "split": 0,
+        "processing": 110.62111100000038
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": true,
+      "time": 1044.5776659998955,
+      "data": {
+        "common": 203,
+        "split": 1000,
+        "processing": 110.25139599996692
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": true,
+      "time": 4503.000751999934,
+      "data": {
+        "common": 411,
+        "split": 1000,
+        "processing": 106.56131099995036
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": true,
+      "time": 6867.1250749994215,
+      "data": {
+        "common": 711,
+        "split": 29000,
+        "processing": 101.14989899966531
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": true,
+      "time": 831.9564750000054,
+      "data": {
+        "common": 179,
+        "split": 62000,
+        "processing": 107.6572320000011
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": true,
+      "time": 10315.567398000041,
+      "data": {
+        "common": 602,
+        "split": 0,
+        "processing": 101.52143300001626
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 841.2568670000837,
+      "data": {
+        "common": 180,
+        "split": 0,
+        "processing": 101.702633000059
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": true,
+      "time": 3134.5695879999766,
+      "data": {
+        "common": 330,
+        "split": 0,
+        "processing": 106.74934799999392
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": true,
+      "time": 7316.597227000102,
+      "data": {
+        "common": 475,
+        "split": 0,
+        "processing": 105.40107700012413
+      }
     }
   },
-  "./instances/random_sat/uf50-027.cnf": {
-    "variables": 50,
-    "clauses": 218,
-    "kissat404": {
+  "hanoi5.cnf": {
+    "clauses": 14468,
+    "variables": 1931,
+    "Propagation-HyGra-2-NoWarmup": {
       "satisfiable": true,
-      "time": 0.00016179999988708005,
+      "time": 2053.120669999771,
+      "data": {
+        "common": 55
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 230.12529200059362,
       "data": null
     },
-    "division_solver_naive": {
+    "Propagation-HyGra-2-Warmup-2": {
       "satisfiable": true,
-      "time": 0.13406738499998028,
-      "data": null
+      "time": 10649.526299999707,
+      "data": {
+        "common": 52,
+        "warmup": 148.69879500020033
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": true,
+      "time": 3199.680192999949,
+      "data": {
+        "common": 73,
+        "split": 0
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": true,
+      "time": 847.016794999945,
+      "data": {
+        "common": 29,
+        "split": 0,
+        "processing": 22.99486300034914
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": true,
+      "time": 3671.152804000002,
+      "data": {
+        "common": 69,
+        "split": 0,
+        "processing": 17.60280300001682
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": true,
+      "time": 12469.199001999981,
+      "data": {
+        "common": 102,
+        "split": 0,
+        "processing": 15.853702000015346
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": true,
+      "time": 1368.501857000183,
+      "data": {
+        "common": 29,
+        "split": 0,
+        "processing": 25.16169900013665
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": true,
+      "time": 7737.820648000024,
+      "data": {
+        "common": 58,
+        "split": 0,
+        "processing": 25.00089999989541
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": true,
+      "time": 12453.3414980001,
+      "data": {
+        "common": 71,
+        "split": 2000,
+        "processing": 25.844700000106968
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": true,
+      "time": 3288.1159760000005,
+      "data": {
+        "common": 30,
+        "split": 1000,
+        "processing": 16.3347920000092
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": true,
+      "time": 28040.907897000012,
+      "data": {
+        "common": 147,
+        "split": 0,
+        "processing": 17.058296999948652
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 3230.5505240001366,
+      "data": {
+        "common": 47,
+        "split": 0,
+        "processing": 24.993808000090212
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": true,
+      "time": 19581.218723000122,
+      "data": {
+        "common": 73,
+        "split": 0,
+        "processing": 26.06132500000058
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": true,
+      "time": 11136.687559999928,
+      "data": {
+        "common": 95,
+        "split": 0,
+        "processing": 26.28130199991574
+      }
     }
   },
-  "./instances/random_sat/uf50-039.cnf": {
-    "variables": 50,
-    "clauses": 218,
-    "kissat404": {
+  "flat200-1.cnf": {
+    "clauses": 2237,
+    "variables": 600,
+    "Propagation-HyGra-2-NoWarmup": {
       "satisfiable": true,
-      "time": 0.0023832020001464116,
+      "time": 303.5632869996334,
+      "data": {
+        "common": 162
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 5.630300000120769,
       "data": null
     },
-    "division_solver_naive": {
+    "Propagation-HyGra-2-Warmup-2": {
       "satisfiable": true,
-      "time": 6.060875807000002,
-      "data": null
+      "time": 460.7848820005529,
+      "data": {
+        "common": 162,
+        "warmup": 22.375599000042712
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": true,
+      "time": 462.00642800067726,
+      "data": {
+        "common": 230,
+        "split": 0
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": true,
+      "time": 104.53921299995272,
+      "data": {
+        "common": 106,
+        "split": 0,
+        "processing": 5.5721999997331295
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": true,
+      "time": 63.424710999981926,
+      "data": {
+        "common": 124,
+        "split": 0,
+        "processing": 3.6824009999918417
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": true,
+      "time": 153.3370340000033,
+      "data": {
+        "common": 193,
+        "split": 0,
+        "processing": 3.615201000002344
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": true,
+      "time": 558.4871939997811,
+      "data": {
+        "common": 155,
+        "split": 0,
+        "processing": 13.234199999942575
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": true,
+      "time": 224.76549999987583,
+      "data": {
+        "common": 193,
+        "split": 0,
+        "processing": 6.17999999985841
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": true,
+      "time": 333.9376019998781,
+      "data": {
+        "common": 166,
+        "split": 0,
+        "processing": 6.06500000003507
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": true,
+      "time": 550.4393909999976,
+      "data": {
+        "common": 158,
+        "split": 0,
+        "processing": 3.6466979999971727
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": true,
+      "time": 362.6463230000354,
+      "data": {
+        "common": 180,
+        "split": 0,
+        "processing": 5.6887010000536975
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 418.1985329998952,
+      "data": {
+        "common": 105,
+        "split": 0,
+        "processing": 4.993501999933869
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": true,
+      "time": 427.32746699994095,
+      "data": {
+        "common": 134,
+        "split": 0,
+        "processing": 5.448500999818862
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": true,
+      "time": 333.8947420002114,
+      "data": {
+        "common": 138,
+        "split": 0,
+        "processing": 5.5790990002151375
+      }
     }
   },
-  "./instances/random_sat/uf50-049.cnf": {
-    "variables": 50,
-    "clauses": 218,
-    "kissat404": {
+  "medium.cnf": {
+    "clauses": 953,
+    "variables": 116,
+    "Propagation-HyGra-2-NoWarmup": {
       "satisfiable": true,
-      "time": 0.0020742009999139555,
+      "time": 1.410300000316056,
+      "data": {
+        "common": 33
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 0.3361999997650855,
       "data": null
     },
-    "division_solver_naive": {
+    "Propagation-HyGra-2-Warmup-2": {
       "satisfiable": true,
-      "time": 2.169122649999963,
-      "data": null
+      "time": 24.459899000248697,
+      "data": {
+        "common": 34,
+        "warmup": 23.94539899978554
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": true,
+      "time": 54.593502998613985,
+      "data": {
+        "common": 52,
+        "split": 0
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": true,
+      "time": 1.0612999994918937,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 0.7998999990377342
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": true,
+      "time": 0.7902000000115095,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 0.6849000000102023
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": true,
+      "time": 0.8114000000318811,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 0.6576000000109161
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": true,
+      "time": 0.8989999996629194,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 0.7638999998107465
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": true,
+      "time": 1.0110000000622676,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 0.843600000052902
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": true,
+      "time": 0.9250000002793968,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 0.7659000002604444
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": true,
+      "time": 0.7602000000019871,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 0.6522000000188655
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": true,
+      "time": 0.8641000000579879,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 0.6925000000137516
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 0.9846999998899264,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 0.7915999999568157
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": true,
+      "time": 0.9491999999227119,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 0.751799999989089
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": true,
+      "time": 0.9614000000510714,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 0.7241999999223481
+      }
     }
   },
-  "./instances/random_sat/uf50-024.cnf": {
-    "variables": 50,
-    "clauses": 218,
-    "kissat404": {
+  "sw100-4.cnf": {
+    "clauses": 3100,
+    "variables": 500,
+    "Propagation-HyGra-2-NoWarmup": {
       "satisfiable": true,
-      "time": 0.001737900000080117,
+      "time": 9.345200000097975,
+      "data": {
+        "common": 40
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 6.828898999629018,
       "data": null
     },
-    "division_solver_naive": {
+    "Propagation-HyGra-2-Warmup-2": {
       "satisfiable": true,
-      "time": 0.0611816269999963,
-      "data": null
+      "time": 69.96049800000037,
+      "data": {
+        "common": 40,
+        "warmup": 57.72709800021403
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": true,
+      "time": 19.113001000732766,
+      "data": {
+        "common": 45,
+        "split": 0
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": true,
+      "time": 60.67910799902165,
+      "data": {
+        "common": 33,
+        "split": 0,
+        "processing": 6.091301000196836
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": true,
+      "time": 15.633802999985846,
+      "data": {
+        "common": 40,
+        "split": 0,
+        "processing": 3.681000999989692
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": true,
+      "time": 46.33991100001822,
+      "data": {
+        "common": 62,
+        "split": 0,
+        "processing": 3.7442010000177106
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": true,
+      "time": 15.6999010000618,
+      "data": {
+        "common": 36,
+        "split": 0,
+        "processing": 5.750301000034597
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": true,
+      "time": 41.30739999982325,
+      "data": {
+        "common": 72,
+        "split": 0,
+        "processing": 8.860199999844554
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": true,
+      "time": 22.27069999980813,
+      "data": {
+        "common": 32,
+        "split": 0,
+        "processing": 9.409799999957613
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": true,
+      "time": 13.29200099999639,
+      "data": {
+        "common": 36,
+        "split": 0,
+        "processing": 3.8799999999810098
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": true,
+      "time": 16.288601000042036,
+      "data": {
+        "common": 96,
+        "split": 0,
+        "processing": 5.6375010000238035
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 17.94130499979474,
+      "data": {
+        "common": 32,
+        "split": 0,
+        "processing": 6.348401999957787
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": true,
+      "time": 16.8045020000136,
+      "data": {
+        "common": 55,
+        "split": 0,
+        "processing": 7.195301000137988
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": true,
+      "time": 51.41809099995953,
+      "data": {
+        "common": 82,
+        "split": 0,
+        "processing": 6.769398999949772
+      }
     }
   },
-  "./instances/random_sat/uf50-047.cnf": {
-    "variables": 50,
-    "clauses": 218,
-    "kissat404": {
+  "bw_large.d.cnf": {
+    "clauses": 131973,
+    "variables": 6325,
+    "Propagation-HyGra-2-NoWarmup": {
       "satisfiable": true,
-      "time": 0.001455401000157508,
+      "time": 28543.585415000052,
+      "data": {
+        "common": 747
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 74.14529500056233,
       "data": null
     },
-    "division_solver_naive": {
+    "Propagation-HyGra-2-Warmup-2": {
       "satisfiable": true,
-      "time": 3.069980414999918,
-      "data": null
+      "time": 7171.9790750003085,
+      "data": {
+        "common": 383,
+        "warmup": 5536.540693999996
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": true,
+      "time": 13082.341444000122,
+      "data": {
+        "common": 616,
+        "split": 1000
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": true,
+      "time": 12999.335751999752,
+      "data": {
+        "common": 426,
+        "split": 0,
+        "processing": 200.87132600019686
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": true,
+      "time": 13596.919680000014,
+      "data": {
+        "common": 503,
+        "split": 1000,
+        "processing": 182.50822999999627
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": true,
+      "time": 45123.50908799999,
+      "data": {
+        "common": 796,
+        "split": 1000,
+        "processing": 192.36924200004069
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": true,
+      "time": 5657.028856999887,
+      "data": {
+        "common": 380,
+        "split": 13000,
+        "processing": 182.02600199992958
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": true,
+      "time": 57386.22674399994,
+      "data": {
+        "common": 1325,
+        "split": 11000,
+        "processing": 190.1405999999497
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": true,
+      "time": 8650.070516000142,
+      "data": {
+        "common": 584,
+        "split": 410000,
+        "processing": 175.6680020002932
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": true,
+      "time": -1,
+      "data": {
+        "split-timeout": true,
+        "common": 36,
+        "processing": -1
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": "unknown",
+      "time": -1,
+      "data": {
+        "common": 1604,
+        "split": 1000,
+        "processing": 190.60240600003908
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 24386.51777900009,
+      "data": {
+        "common": 679,
+        "split": 0,
+        "processing": 168.58695300015825
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": true,
+      "time": 41941.22197799993,
+      "data": {
+        "common": 786,
+        "split": 0,
+        "processing": 186.75722900002256
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": "unknown",
+      "time": -1,
+      "data": {
+        "common": 1171,
+        "split": 0,
+        "processing": 183.28776800012747
+      }
     }
   },
-  "./instances/random_sat/uf50-041.cnf": {
-    "variables": 50,
-    "clauses": 218,
-    "kissat404": {
+  "flat200-4.cnf": {
+    "clauses": 2237,
+    "variables": 600,
+    "Propagation-HyGra-2-NoWarmup": {
       "satisfiable": true,
-      "time": 0.0015103069999895524,
+      "time": 564.0513099997406,
+      "data": {
+        "common": 154
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 18.408897999506735,
       "data": null
     },
-    "division_solver_naive": {
+    "Propagation-HyGra-2-Warmup-2": {
       "satisfiable": true,
-      "time": 1.8405394080000406,
-      "data": null
+      "time": 401.02549199946225,
+      "data": {
+        "common": 166,
+        "warmup": 41.51999800069461
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": true,
+      "time": 1212.0385360012733,
+      "data": {
+        "common": 196,
+        "split": 0
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": true,
+      "time": 708.4030730002269,
+      "data": {
+        "common": 108,
+        "split": 0,
+        "processing": 5.669480000506155
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": true,
+      "time": 160.1312109999924,
+      "data": {
+        "common": 138,
+        "split": 0,
+        "processing": 3.8586999999949967
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": true,
+      "time": 988.4921759999656,
+      "data": {
+        "common": 188,
+        "split": 0,
+        "processing": 4.211513999962335
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": true,
+      "time": 1148.803455999996,
+      "data": {
+        "common": 158,
+        "split": 0,
+        "processing": 6.286800999987463
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": true,
+      "time": 864.5066699998551,
+      "data": {
+        "common": 188,
+        "split": 0,
+        "processing": 5.96399999994901
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": true,
+      "time": 1813.282918999903,
+      "data": {
+        "common": 160,
+        "split": 0,
+        "processing": 6.590299999970739
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": true,
+      "time": 700.21074400006,
+      "data": {
+        "common": 160,
+        "split": 0,
+        "processing": 3.4611999999469845
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": true,
+      "time": 629.5558000000483,
+      "data": {
+        "common": 184,
+        "split": 0,
+        "processing": 5.478600000060396
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 1454.5335370003158,
+      "data": {
+        "common": 112,
+        "split": 0,
+        "processing": 5.857601000116119
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": true,
+      "time": 468.4009589998368,
+      "data": {
+        "common": 139,
+        "split": 0,
+        "processing": 8.711298999969586
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": true,
+      "time": 974.6605740001542,
+      "data": {
+        "common": 148,
+        "split": 0,
+        "processing": 5.948700000089957
+      }
     }
   },
-  "./instances/random_sat/uf50-046.cnf": {
-    "variables": 50,
-    "clauses": 218,
-    "kissat404": {
+  "flat200-3.cnf": {
+    "clauses": 2237,
+    "variables": 600,
+    "Propagation-HyGra-2-NoWarmup": {
       "satisfiable": true,
-      "time": 0.002866101000108756,
+      "time": 712.9739680003695,
+      "data": {
+        "common": 162
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 8.733499999834748,
       "data": null
     },
-    "division_solver_naive": {
+    "Propagation-HyGra-2-Warmup-2": {
       "satisfiable": true,
-      "time": 1.6201217170000746,
-      "data": null
+      "time": 713.4851880000497,
+      "data": {
+        "common": 154,
+        "warmup": 40.31939900050929
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": true,
+      "time": 894.0699350005161,
+      "data": {
+        "common": 195,
+        "split": 0
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": true,
+      "time": 1023.7650089984527,
+      "data": {
+        "common": 120,
+        "split": 0,
+        "processing": 6.2972779996925965
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": true,
+      "time": 216.73101499999348,
+      "data": {
+        "common": 126,
+        "split": 0,
+        "processing": 3.901799999994182
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": true,
+      "time": 1150.6555349999985,
+      "data": {
+        "common": 185,
+        "split": 0,
+        "processing": 4.401000000029853
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": true,
+      "time": 212.11872800017773,
+      "data": {
+        "common": 160,
+        "split": 0,
+        "processing": 5.979799999977331
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": true,
+      "time": 240.58399199998348,
+      "data": {
+        "common": 186,
+        "split": 0,
+        "processing": 5.9020999999575
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": true,
+      "time": 143.96880100002818,
+      "data": {
+        "common": 150,
+        "split": 0,
+        "processing": 6.128099999841652
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": true,
+      "time": 949.4470590000219,
+      "data": {
+        "common": 129,
+        "split": 0,
+        "processing": 3.4971000000041386
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": true,
+      "time": 538.4012999999186,
+      "data": {
+        "common": 200,
+        "split": 0,
+        "processing": 5.5257999999867025
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 439.90976899999623,
+      "data": {
+        "common": 100,
+        "split": 0,
+        "processing": 5.863600999873597
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": true,
+      "time": 284.81047499985834,
+      "data": {
+        "common": 135,
+        "split": 0,
+        "processing": 5.854298999793173
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": true,
+      "time": 981.0714759998973,
+      "data": {
+        "common": 142,
+        "split": 0,
+        "processing": 6.118301000014981
+      }
     }
   },
-  "./instances/random_sat/uf50-017.cnf": {
-    "variables": 50,
-    "clauses": 218,
-    "kissat404": {
+  "bmc-galileo-9.cnf": {
+    "clauses": 326999,
+    "variables": 63624,
+    "Propagation-HyGra-2-NoWarmup": {
       "satisfiable": true,
-      "time": 0.001793400999986261,
+      "time": 10870.729331000803,
+      "data": {
+        "common": 228
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 456.4158929997575,
       "data": null
     },
-    "division_solver_naive": {
+    "Propagation-HyGra-2-Warmup-2": {
       "satisfiable": true,
-      "time": 5.95905036299996,
-      "data": null
+      "time": 8795.693464000578,
+      "data": {
+        "common": 218,
+        "warmup": 1710.9751719999622
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": "unknown",
+      "time": -1,
+      "data": {
+        "common": 1225,
+        "split": 29000
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": true,
+      "time": 1947.3760929995478,
+      "data": {
+        "common": 193,
+        "split": 0,
+        "processing": 459.5856220003043
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": true,
+      "time": 2913.5260510000194,
+      "data": {
+        "common": 357,
+        "split": 2000,
+        "processing": 425.54423000001407
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": true,
+      "time": 16357.770711,
+      "data": {
+        "common": 801,
+        "split": 2000,
+        "processing": 436.2099509999666
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": true,
+      "time": 21221.38372200015,
+      "data": {
+        "common": 767,
+        "split": 68000,
+        "processing": 492.1641670000554
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": true,
+      "time": 18733.24602800017,
+      "data": {
+        "common": 2272,
+        "split": 66000,
+        "processing": 470.51748400008364
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": true,
+      "time": -1,
+      "data": {
+        "split-timeout": true,
+        "processing": -1
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": true,
+      "time": -1,
+      "data": {
+        "split-timeout": true,
+        "processing": -1
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": true,
+      "time": 12140.183630000025,
+      "data": {
+        "common": 1357,
+        "split": 2000,
+        "processing": 476.66500000002543
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 1004.9391569998534,
+      "data": {
+        "common": 173,
+        "split": 0,
+        "processing": 422.97466599984546
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": true,
+      "time": 4930.089077000048,
+      "data": {
+        "common": 328,
+        "split": 0,
+        "processing": 447.66255200011074
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": true,
+      "time": 2990.0407299996914,
+      "data": {
+        "common": 399,
+        "split": 0,
+        "processing": 427.3302329997932
+      }
     }
   },
-  "./instances/random_sat/uf50-03.cnf": {
-    "variables": 50,
-    "clauses": 218,
-    "kissat404": {
+  "flat200-5.cnf": {
+    "clauses": 2237,
+    "variables": 600,
+    "Propagation-HyGra-2-NoWarmup": {
       "satisfiable": true,
-      "time": 0.0009308999999575462,
+      "time": 713.6550360000911,
+      "data": {
+        "common": 158
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 13.187900000048103,
       "data": null
     },
-    "division_solver_naive": {
+    "Propagation-HyGra-2-Warmup-2": {
       "satisfiable": true,
-      "time": 0.645902931999899,
-      "data": null
+      "time": 652.1554910004852,
+      "data": {
+        "common": 154,
+        "warmup": 12.584400000378082
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": true,
+      "time": 3900.0576329999603,
+      "data": {
+        "common": 202,
+        "split": 0
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": true,
+      "time": 1911.1478310005623,
+      "data": {
+        "common": 106,
+        "split": 0,
+        "processing": 6.144400000266614
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": true,
+      "time": 2453.406417999986,
+      "data": {
+        "common": 138,
+        "split": 0,
+        "processing": 5.875600999985409
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": true,
+      "time": 2694.6233040000607,
+      "data": {
+        "common": 185,
+        "split": 0,
+        "processing": 6.215900000029251
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": true,
+      "time": 2796.28308700012,
+      "data": {
+        "common": 155,
+        "split": 0,
+        "processing": 6.099200000107885
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": true,
+      "time": 1665.077440999994,
+      "data": {
+        "common": 171,
+        "split": 0,
+        "processing": 5.851500000062515
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": true,
+      "time": 2090.809801999967,
+      "data": {
+        "common": 161,
+        "split": 0,
+        "processing": 3.4986999999091495
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": true,
+      "time": 1167.901380999865,
+      "data": {
+        "common": 139,
+        "split": 0,
+        "processing": 3.736799999842333
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": true,
+      "time": 1877.2190969999656,
+      "data": {
+        "common": 190,
+        "split": 0,
+        "processing": 7.298499999933483
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 1528.0340369999976,
+      "data": {
+        "common": 106,
+        "split": 0,
+        "processing": 6.007200000112789
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": true,
+      "time": 1385.311152999975,
+      "data": {
+        "common": 133,
+        "split": 0,
+        "processing": 6.453699000076085
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": true,
+      "time": 2008.1685540001217,
+      "data": {
+        "common": 139,
+        "split": 0,
+        "processing": 6.724801000018488
+      }
     }
   },
-  "./instances/random_sat/uf50-045.cnf": {
-    "variables": 50,
-    "clauses": 218,
-    "kissat404": {
+  "flat100-2.cnf": {
+    "clauses": 1117,
+    "variables": 300,
+    "Propagation-HyGra-2-NoWarmup": {
       "satisfiable": true,
-      "time": 0.002723500000001877,
+      "time": 11.97479700022086,
+      "data": {
+        "common": 81
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 0.39509999987785704,
       "data": null
     },
-    "division_solver_naive": {
+    "Propagation-HyGra-2-Warmup-2": {
       "satisfiable": true,
-      "time": 0.915764746999912,
-      "data": null
+      "time": 41.60599999977421,
+      "data": {
+        "common": 78,
+        "warmup": 15.947800000503776
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": true,
+      "time": 79.19349400071951,
+      "data": {
+        "common": 109,
+        "split": 0
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": true,
+      "time": 10.665898998922785,
+      "data": {
+        "common": 61,
+        "split": 0,
+        "processing": 3.1115999991015997
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": true,
+      "time": 8.441202000000203,
+      "data": {
+        "common": 59,
+        "split": 0,
+        "processing": 2.374601000013854
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": true,
+      "time": 29.611993000003167,
+      "data": {
+        "common": 107,
+        "split": 0,
+        "processing": 3.0004999999846405
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": true,
+      "time": 15.558499999997366,
+      "data": {
+        "common": 81,
+        "split": 0,
+        "processing": 2.9113000000506872
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": true,
+      "time": 23.901899000065896,
+      "data": {
+        "common": 89,
+        "split": 0,
+        "processing": 3.0874999997649866
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": true,
+      "time": 30.006500999888885,
+      "data": {
+        "common": 99,
+        "split": 0,
+        "processing": 1.8178000000261818
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": true,
+      "time": 18.687898999814934,
+      "data": {
+        "common": 81,
+        "split": 0,
+        "processing": 2.117399999860936
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": true,
+      "time": 46.41649999996389,
+      "data": {
+        "common": 103,
+        "split": 0,
+        "processing": 2.9860999999300475
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 17.072602999860464,
+      "data": {
+        "common": 57,
+        "split": 0,
+        "processing": 4.364600999906543
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": true,
+      "time": 8.188898000071276,
+      "data": {
+        "common": 69,
+        "split": 0,
+        "processing": 3.1103989999792248
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": true,
+      "time": 11.209301000008054,
+      "data": {
+        "common": 79,
+        "split": 0,
+        "processing": 3.0343000000812026
+      }
     }
   },
-  "./instances/random_sat/uf50-021.cnf": {
-    "variables": 50,
-    "clauses": 218,
-    "kissat404": {
+  "bw_large.b.cnf": {
+    "clauses": 13772,
+    "variables": 1087,
+    "Propagation-HyGra-2-NoWarmup": {
       "satisfiable": true,
-      "time": 0.0017017000000123517,
+      "time": 62.0008850000886,
+      "data": {
+        "common": 132
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 10.778700000628305,
       "data": null
     },
-    "division_solver_naive": {
+    "Propagation-HyGra-2-Warmup-2": {
       "satisfiable": true,
-      "time": 1.860466795000093,
-      "data": null
+      "time": 302.4167950006813,
+      "data": {
+        "common": 132,
+        "warmup": 270.86959600001137
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": true,
+      "time": 393.00007299971185,
+      "data": {
+        "common": 208,
+        "split": 0
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": true,
+      "time": 17.137198001364595,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 16.9184980004502
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": true,
+      "time": 11.824400999984164,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 11.68560099998217
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": true,
+      "time": 14.546196999958738,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 14.368896999997105
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": true,
+      "time": 16.117300000132673,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 15.960500000119282
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": true,
+      "time": 18.16589899999599,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 17.958998999802134
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": true,
+      "time": 11.279099999910613,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 11.137399999824993
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": true,
+      "time": 11.475499999960448,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 11.328999999932421
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": true,
+      "time": 14.729800000054638,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 14.536200000065946
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 16.657101999726365,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 16.465001999904416
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": true,
+      "time": 18.202598000016224,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 18.008797999982562
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": true,
+      "time": 18.45920000005208,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 18.236500000057276
+      }
     }
   },
-  "./instances/random_sat/uf50-016.cnf": {
-    "variables": 50,
-    "clauses": 218,
-    "kissat404": {
+  "bw_large.a.cnf": {
+    "clauses": 4675,
+    "variables": 459,
+    "Propagation-HyGra-2-NoWarmup": {
       "satisfiable": true,
-      "time": 0.001274299999977302,
+      "time": 31.679091999649245,
+      "data": {
+        "common": 94
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 4.9774999997680425,
       "data": null
     },
-    "division_solver_naive": {
+    "Propagation-HyGra-2-Warmup-2": {
       "satisfiable": true,
-      "time": 3.4205281079998713,
-      "data": null
+      "time": 34.508820999690215,
+      "data": {
+        "common": 99,
+        "warmup": 32.82732000025135
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": true,
+      "time": 51.12889700103551,
+      "data": {
+        "common": 91,
+        "split": 0
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": true,
+      "time": 5.38349999806087,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 5.1485999993019504
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": true,
+      "time": 2.9896999999721174,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 2.8640999999822725
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": true,
+      "time": 4.345899000043119,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 4.175099000008231
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": true,
+      "time": 4.454599999917264,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 4.29889999986699
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": true,
+      "time": 5.642000000534608,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 5.346600000393664
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": true,
+      "time": 2.9589999999188876,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 2.838800000063202
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": true,
+      "time": 2.9230999998617335,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 2.7949999998782005
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": true,
+      "time": 4.344500000001972,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 4.17820000006941
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 4.4275009997818415,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 4.248900999982652
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": true,
+      "time": 5.3389000001971,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 5.13190000015129
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": true,
+      "time": 5.485500999839132,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 5.239800999788713
+      }
     }
   },
-  "./instances/random_sat/uf50-028.cnf": {
-    "variables": 50,
-    "clauses": 218,
-    "kissat404": {
+  "bmc-ibm-4.cnf": {
+    "clauses": 139716,
+    "variables": 28161,
+    "Propagation-HyGra-2-NoWarmup": {
       "satisfiable": true,
-      "time": 0.002427999000019554,
+      "time": 11275.521597999614,
+      "data": {
+        "common": 250
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 121.35057399973448,
       "data": null
     },
-    "division_solver_naive": {
+    "Propagation-HyGra-2-Warmup-2": {
       "satisfiable": true,
-      "time": 20.04477592499984,
-      "data": null
+      "time": 749.586456000543,
+      "data": {
+        "common": 203,
+        "warmup": 576.5479499996218
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": true,
+      "time": 30201.696121999703,
+      "data": {
+        "common": 1141,
+        "split": 1000
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": true,
+      "time": 1319.7343569991062,
+      "data": {
+        "common": 109,
+        "split": 0,
+        "processing": 212.99657700001262
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": true,
+      "time": 3508.3344390000093,
+      "data": {
+        "common": 298,
+        "split": 0,
+        "processing": 198.36801799999648
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": true,
+      "time": 15498.557434999952,
+      "data": {
+        "common": 485,
+        "split": 0,
+        "processing": 201.70305199997074
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": true,
+      "time": 2482.561128000043,
+      "data": {
+        "common": 285,
+        "split": 3000,
+        "processing": 196.6746030000195
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": true,
+      "time": 17698.226517999956,
+      "data": {
+        "common": 580,
+        "split": 3000,
+        "processing": 198.682892999841
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": true,
+      "time": -1,
+      "data": {
+        "split-timeout": true,
+        "processing": -1
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": true,
+      "time": 5912.058896999952,
+      "data": {
+        "common": 443,
+        "split": 47000,
+        "processing": 207.1772100000544
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": true,
+      "time": 21922.767305999965,
+      "data": {
+        "common": 706,
+        "split": 0,
+        "processing": 196.57329999995454
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 1151.0471799999777,
+      "data": {
+        "common": 114,
+        "split": 0,
+        "processing": 198.86953099990023
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": true,
+      "time": 4365.188582000201,
+      "data": {
+        "common": 191,
+        "split": 0,
+        "processing": 193.63637900005415
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": true,
+      "time": 5081.467395000118,
+      "data": {
+        "common": 253,
+        "split": 0,
+        "processing": 195.06120400001237
+      }
     }
   },
-  "./instances/random_sat/uf50-037.cnf": {
-    "variables": 50,
-    "clauses": 218,
-    "kissat404": {
+  "flat100-1.cnf": {
+    "clauses": 1117,
+    "variables": 300,
+    "Propagation-HyGra-2-NoWarmup": {
       "satisfiable": true,
-      "time": 0.0018730000001596636,
+      "time": 3.786199999922246,
+      "data": {
+        "common": 81
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 0.45059999956720276,
       "data": null
     },
-    "division_solver_naive": {
+    "Propagation-HyGra-2-Warmup-2": {
       "satisfiable": true,
-      "time": 1.6209602760000053,
-      "data": null
+      "time": 10.19770599941694,
+      "data": {
+        "common": 78,
+        "warmup": 6.076403999941249
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": true,
+      "time": 31.324600999141694,
+      "data": {
+        "common": 113,
+        "split": 0
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": true,
+      "time": 10.339598999053123,
+      "data": {
+        "common": 56,
+        "split": 0,
+        "processing": 2.892200000133016
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": true,
+      "time": 9.855700999992223,
+      "data": {
+        "common": 63,
+        "split": 0,
+        "processing": 2.66510000000153
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": true,
+      "time": 19.4404989999839,
+      "data": {
+        "common": 96,
+        "split": 0,
+        "processing": 2.5466999999821383
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": true,
+      "time": 16.58050000014555,
+      "data": {
+        "common": 75,
+        "split": 0,
+        "processing": 3.0037999999876774
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": true,
+      "time": 14.747699999588804,
+      "data": {
+        "common": 92,
+        "split": 0,
+        "processing": 3.0208999996830244
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": true,
+      "time": 20.35470000009809,
+      "data": {
+        "common": 82,
+        "split": 0,
+        "processing": 1.9935000000259606
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": true,
+      "time": 21.398100000169507,
+      "data": {
+        "common": 82,
+        "split": 0,
+        "processing": 2.1403999999165535
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": true,
+      "time": 24.63399999999183,
+      "data": {
+        "common": 97,
+        "split": 0,
+        "processing": 2.910100000008242
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 22.310004000019035,
+      "data": {
+        "common": 55,
+        "split": 0,
+        "processing": 4.556201000013971
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": true,
+      "time": 13.04519900008927,
+      "data": {
+        "common": 72,
+        "split": 0,
+        "processing": 3.1291000000237545
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": true,
+      "time": 27.259399999820744,
+      "data": {
+        "common": 64,
+        "split": 0,
+        "processing": 3.4319999999752326
+      }
     }
   },
-  "./instances/random_sat/uf50-02.cnf": {
-    "variables": 50,
-    "clauses": 218,
-    "kissat404": {
+  "huge.cnf": {
+    "clauses": 7054,
+    "variables": 459,
+    "Propagation-HyGra-2-NoWarmup": {
       "satisfiable": true,
-      "time": 0.001505898999994315,
+      "time": 39.417003000380646,
+      "data": {
+        "common": 100
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 6.658903999777976,
       "data": null
     },
-    "division_solver_naive": {
+    "Propagation-HyGra-2-Warmup-2": {
       "satisfiable": true,
-      "time": 75.27583987599996,
-      "data": null
+      "time": 53.039503999571025,
+      "data": {
+        "common": 93,
+        "warmup": 50.91500399976212
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": true,
+      "time": 79.99429700066685,
+      "data": {
+        "common": 103,
+        "split": 0
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": true,
+      "time": 6.935599001735682,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 6.675399001323967
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": true,
+      "time": 3.8344999999821994,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 3.7122999999894546
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": true,
+      "time": 3.839099999993323,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 3.703499999971882
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": true,
+      "time": 6.486799999947834,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 6.339100000104736
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": true,
+      "time": 6.936400000540743,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 6.739300000390358
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": true,
+      "time": 3.696699999863995,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 3.5748999998759245
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": true,
+      "time": 3.4157000000050175,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 3.29650000003312
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": true,
+      "time": 6.598799999892435,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 6.416999999942163
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 6.816900999865538,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 6.628801000033491
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": true,
+      "time": 6.967798999994557,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 6.74589899995226
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": true,
+      "time": 7.331100000101287,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 7.092400000146881
+      }
     }
   },
-  "./instances/random_sat/uf50-014.cnf": {
-    "variables": 50,
-    "clauses": 218,
-    "kissat404": {
+  "flat100-5.cnf": {
+    "clauses": 1117,
+    "variables": 300,
+    "Propagation-HyGra-2-NoWarmup": {
       "satisfiable": true,
-      "time": 0.001979200000050696,
+      "time": 12.170001000413322,
+      "data": {
+        "common": 81
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 0.4443000007086084,
       "data": null
     },
-    "division_solver_naive": {
+    "Propagation-HyGra-2-Warmup-2": {
       "satisfiable": true,
-      "time": 11.946168035000028,
-      "data": null
+      "time": 8.839801000249281,
+      "data": {
+        "common": 79,
+        "warmup": 5.42920000043523
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": true,
+      "time": 38.35739899841428,
+      "data": {
+        "common": 101,
+        "split": 0
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": true,
+      "time": 15.829298001335701,
+      "data": {
+        "common": 56,
+        "split": 0,
+        "processing": 3.4838000010495307
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": true,
+      "time": 8.79370000001245,
+      "data": {
+        "common": 68,
+        "split": 0,
+        "processing": 2.3360000000138825
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": true,
+      "time": 16.381898000076944,
+      "data": {
+        "common": 97,
+        "split": 0,
+        "processing": 2.477399000042624
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": true,
+      "time": 7.454200000211131,
+      "data": {
+        "common": 83,
+        "split": 0,
+        "processing": 2.5410000000647415
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": true,
+      "time": 14.540800000304444,
+      "data": {
+        "common": 89,
+        "split": 0,
+        "processing": 2.866000000267377
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": true,
+      "time": 12.175600000091436,
+      "data": {
+        "common": 79,
+        "split": 0,
+        "processing": 1.9210000000384753
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": true,
+      "time": 12.896100000034494,
+      "data": {
+        "common": 72,
+        "split": 0,
+        "processing": 1.8242000001009728
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": true,
+      "time": 18.15060000012636,
+      "data": {
+        "common": 97,
+        "split": 0,
+        "processing": 2.785000000017135
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 10.224601000118128,
+      "data": {
+        "common": 56,
+        "split": 0,
+        "processing": 2.7370000000246364
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": true,
+      "time": 17.308698999841,
+      "data": {
+        "common": 70,
+        "split": 0,
+        "processing": 3.1146999999691616
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": true,
+      "time": 27.631100000235165,
+      "data": {
+        "common": 70,
+        "split": 0,
+        "processing": 3.146900000047026
+      }
     }
   },
-  "./instances/random_sat/uf50-035.cnf": {
-    "variables": 50,
-    "clauses": 218,
-    "kissat404": {
+  "ais10.cnf": {
+    "clauses": 3151,
+    "variables": 181,
+    "Propagation-HyGra-2-NoWarmup": {
       "satisfiable": true,
-      "time": 0.002290999000024385,
+      "time": 308.61112300044624,
+      "data": {
+        "common": 121
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 1.1401000001569628,
       "data": null
     },
-    "division_solver_naive": {
+    "Propagation-HyGra-2-Warmup-2": {
       "satisfiable": true,
-      "time": 1.3569268050000574,
-      "data": null
+      "time": 597.8255479994914,
+      "data": {
+        "common": 123,
+        "warmup": 408.8320330001807
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": true,
+      "time": 123.27449499935028,
+      "data": {
+        "common": 103,
+        "split": 0
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": true,
+      "time": 190.88487900080509,
+      "data": {
+        "common": 100,
+        "split": 0,
+        "processing": 8.204199000829249
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": true,
+      "time": 9.979200999993054,
+      "data": {
+        "common": 126,
+        "split": 0,
+        "processing": 4.577299999994011
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": true,
+      "time": 26.59939700004088,
+      "data": {
+        "common": 159,
+        "split": 0,
+        "processing": 5.988599000033901
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": true,
+      "time": 13.823999000123877,
+      "data": {
+        "common": 152,
+        "split": 0,
+        "processing": 6.133398999963902
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": true,
+      "time": 1161.3524960002906,
+      "data": {
+        "common": 163,
+        "split": 0,
+        "processing": 6.229399999938323
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": true,
+      "time": 178.14710199991168,
+      "data": {
+        "common": 99,
+        "split": 1000,
+        "processing": 4.21409999989919
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": true,
+      "time": 10.580099999970116,
+      "data": {
+        "common": 145,
+        "split": 0,
+        "processing": 4.164099999798054
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": true,
+      "time": 17.103798999983155,
+      "data": {
+        "common": 162,
+        "split": 0,
+        "processing": 7.3486000000002605
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 26.665103999903295,
+      "data": {
+        "common": 98,
+        "split": 0,
+        "processing": 6.756200999916473
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": true,
+      "time": 72.24869399988165,
+      "data": {
+        "common": 133,
+        "split": 0,
+        "processing": 6.119898999941142
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": true,
+      "time": 19.57620100006352,
+      "data": {
+        "common": 143,
+        "split": 0,
+        "processing": 6.2046010000358365
+      }
     }
   },
-  "./instances/random_sat/uf50-023.cnf": {
-    "variables": 50,
-    "clauses": 218,
-    "kissat404": {
+  "logistics.c.cnf": {
+    "clauses": 10719,
+    "variables": 1141,
+    "Propagation-HyGra-2-NoWarmup": {
       "satisfiable": true,
-      "time": 0.0019214999999803695,
+      "time": 105.05910800020501,
+      "data": {
+        "common": 147
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 10.631200999341672,
       "data": null
     },
-    "division_solver_naive": {
+    "Propagation-HyGra-2-Warmup-2": {
       "satisfiable": true,
-      "time": 1.6931220100000246,
-      "data": null
+      "time": 171.45101400001295,
+      "data": {
+        "common": 125,
+        "warmup": 127.82820999927935
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": true,
+      "time": 400.10258199981763,
+      "data": {
+        "common": 193,
+        "split": 0
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": true,
+      "time": 53.39189400001487,
+      "data": {
+        "common": 65,
+        "split": 0,
+        "processing": 25.297096999565838
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": true,
+      "time": 98.64680499998713,
+      "data": {
+        "common": 92,
+        "split": 0,
+        "processing": 16.51230099997747
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": true,
+      "time": 179.4271869999875,
+      "data": {
+        "common": 108,
+        "split": 0,
+        "processing": 16.31059900000764
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": true,
+      "time": 79.15520000005927,
+      "data": {
+        "common": 81,
+        "split": 0,
+        "processing": 24.31750000005195
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": true,
+      "time": 125.65650000033202,
+      "data": {
+        "common": 92,
+        "split": 0,
+        "processing": 25.568600000042352
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": true,
+      "time": 80.11420100001487,
+      "data": {
+        "common": 81,
+        "split": 0,
+        "processing": 15.20940000000337
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": true,
+      "time": 77.94639800022196,
+      "data": {
+        "common": 85,
+        "split": 0,
+        "processing": 15.034899000056612
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": true,
+      "time": 161.12959399993088,
+      "data": {
+        "common": 123,
+        "split": 0,
+        "processing": 21.894298999995954
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 35.89280599999256,
+      "data": {
+        "common": 67,
+        "split": 0,
+        "processing": 24.629303999972763
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": true,
+      "time": 68.23019500006922,
+      "data": {
+        "common": 113,
+        "split": 0,
+        "processing": 24.75769800003036
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": true,
+      "time": 106.45770199994331,
+      "data": {
+        "common": 137,
+        "split": 0,
+        "processing": 25.13430099998004
+      }
     }
   },
-  "./instances/random_sat/uf50-012.cnf": {
-    "variables": 50,
-    "clauses": 218,
-    "kissat404": {
+  "ais6.cnf": {
+    "clauses": 581,
+    "variables": 61,
+    "Propagation-HyGra-2-NoWarmup": {
       "satisfiable": true,
-      "time": 0.0011076999999204418,
+      "time": 1.3567999994847924,
+      "data": {
+        "common": 39
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 0.2324999995835242,
       "data": null
     },
-    "division_solver_naive": {
+    "Propagation-HyGra-2-Warmup-2": {
       "satisfiable": true,
-      "time": 0.5680243030001293,
-      "data": null
+      "time": 42.13440300009097,
+      "data": {
+        "common": 39,
+        "warmup": 36.84580299977824
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": true,
+      "time": 7.725899000433856,
+      "data": {
+        "common": 36,
+        "split": 0
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": true,
+      "time": 12.023998997392482,
+      "data": {
+        "common": 34,
+        "split": 0,
+        "processing": 1.3107999984640628
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": true,
+      "time": 2.139799999980596,
+      "data": {
+        "common": 40,
+        "split": 0,
+        "processing": 1.2097999999980402
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": true,
+      "time": 2.6268999999956577,
+      "data": {
+        "common": 54,
+        "split": 0,
+        "processing": 1.2262999999848034
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": true,
+      "time": 2.701800000068033,
+      "data": {
+        "common": 50,
+        "split": 0,
+        "processing": 1.3145000000349683
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": true,
+      "time": 3.327299999909883,
+      "data": {
+        "common": 45,
+        "split": 0,
+        "processing": 1.2765999999828637
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": true,
+      "time": 6.672399999843037,
+      "data": {
+        "common": 49,
+        "split": 0,
+        "processing": 1.0654000000158703
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": true,
+      "time": 2.944298999864259,
+      "data": {
+        "common": 41,
+        "split": 0,
+        "processing": 1.1509000000842207
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": true,
+      "time": 2.867600000058701,
+      "data": {
+        "common": 55,
+        "split": 0,
+        "processing": 1.2731000000485437
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 5.35289999993438,
+      "data": {
+        "common": 34,
+        "split": 0,
+        "processing": 1.2325999998665793
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": true,
+      "time": 5.895598999813956,
+      "data": {
+        "common": 41,
+        "split": 0,
+        "processing": 1.2755999998717016
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": true,
+      "time": 7.995000000164509,
+      "data": {
+        "common": 43,
+        "split": 0,
+        "processing": 1.3426000000436034
+      }
     }
   },
-  "./instances/random_sat/uf50-025.cnf": {
-    "variables": 50,
-    "clauses": 218,
-    "kissat404": {
+  "bmc-galileo-8.cnf": {
+    "clauses": 294821,
+    "variables": 58074,
+    "Propagation-HyGra-2-NoWarmup": {
       "satisfiable": true,
-      "time": 0.0026212000000214175,
+      "time": 12260.070802999508,
+      "data": {
+        "common": 215
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 406.68083199943794,
       "data": null
     },
-    "division_solver_naive": {
+    "Propagation-HyGra-2-Warmup-2": {
       "satisfiable": true,
-      "time": 6.350845054000047,
-      "data": null
+      "time": 12686.903623000035,
+      "data": {
+        "common": 225,
+        "warmup": 3729.164590000437
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": true,
+      "time": 26837.775476000388,
+      "data": {
+        "common": 678,
+        "split": 25000
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": true,
+      "time": 1351.8338519988902,
+      "data": {
+        "common": 159,
+        "split": 0,
+        "processing": 418.5458539996034
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": true,
+      "time": 2686.4701430000077,
+      "data": {
+        "common": 281,
+        "split": 2000,
+        "processing": 385.8200210000007
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": true,
+      "time": 14009.795240999949,
+      "data": {
+        "common": 1031,
+        "split": 2000,
+        "processing": 400.06837099997483
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": true,
+      "time": 29824.790408000124,
+      "data": {
+        "common": 1119,
+        "split": 59000,
+        "processing": 394.6385960000498
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": true,
+      "time": 24340.077576000112,
+      "data": {
+        "common": 978,
+        "split": 54000,
+        "processing": 389.6942979999949
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": true,
+      "time": -1,
+      "data": {
+        "split-timeout": true,
+        "processing": -1
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": true,
+      "time": -1,
+      "data": {
+        "split-timeout": true,
+        "common": 36,
+        "processing": -1
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": true,
+      "time": 10514.571959000023,
+      "data": {
+        "common": 1164,
+        "split": 2000,
+        "processing": 383.42968500001007
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 1287.8581019999729,
+      "data": {
+        "common": 165,
+        "split": 0,
+        "processing": 370.94965799997226
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": true,
+      "time": 7067.688524000005,
+      "data": {
+        "common": 333,
+        "split": 0,
+        "processing": 383.4489729999859
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": true,
+      "time": 3799.2197390001365,
+      "data": {
+        "common": 414,
+        "split": 0,
+        "processing": 387.6077070001429
+      }
     }
   },
-  "./instances/random_sat/uf50-010.cnf": {
-    "variables": 50,
-    "clauses": 218,
-    "kissat404": {
+  "sw100-2.cnf": {
+    "clauses": 3100,
+    "variables": 500,
+    "Propagation-HyGra-2-NoWarmup": {
       "satisfiable": true,
-      "time": 0.0016338000000359898,
+      "time": 44.54409900063183,
+      "data": {
+        "common": 40
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 11.040100999707647,
       "data": null
     },
-    "division_solver_naive": {
+    "Propagation-HyGra-2-Warmup-2": {
       "satisfiable": true,
-      "time": 1.015366313999948,
-      "data": null
+      "time": 77.39170599961653,
+      "data": {
+        "common": 40,
+        "warmup": 68.62470600026427
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": true,
+      "time": 107.93400300099165,
+      "data": {
+        "common": 45,
+        "split": 0
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": true,
+      "time": 62.78689399914583,
+      "data": {
+        "common": 32,
+        "split": 0,
+        "processing": 6.208900000274298
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": true,
+      "time": 25.41880099994387,
+      "data": {
+        "common": 40,
+        "split": 0,
+        "processing": 4.956699999979719
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": true,
+      "time": 100.93999299999723,
+      "data": {
+        "common": 61,
+        "split": 0,
+        "processing": 5.644899999992958
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": true,
+      "time": 32.489300000179355,
+      "data": {
+        "common": 40,
+        "split": 0,
+        "processing": 6.162399999993795
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": true,
+      "time": 13.861899999938032,
+      "data": {
+        "common": 67,
+        "split": 0,
+        "processing": 6.508599999961007
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": true,
+      "time": 14.83730000018113,
+      "data": {
+        "common": 40,
+        "split": 0,
+        "processing": 3.6352000001897977
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": true,
+      "time": 16.43259999991642,
+      "data": {
+        "common": 40,
+        "split": 0,
+        "processing": 4.0560000002187735
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": true,
+      "time": 79.23569399997632,
+      "data": {
+        "common": 80,
+        "split": 0,
+        "processing": 8.534399999916786
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 23.655202999862013,
+      "data": {
+        "common": 32,
+        "split": 0,
+        "processing": 6.524000999888813
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": true,
+      "time": 107.88179700011824,
+      "data": {
+        "common": 56,
+        "split": 0,
+        "processing": 6.636299000092549
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": true,
+      "time": 177.63950099993053,
+      "data": {
+        "common": 74,
+        "split": 0,
+        "processing": 6.022000000029948
+      }
     }
   },
-  "./instances/random_sat/uf50-011.cnf": {
-    "variables": 50,
-    "clauses": 218,
-    "kissat404": {
+  "hanoi4.cnf": {
+    "clauses": 4934,
+    "variables": 718,
+    "Propagation-HyGra-2-NoWarmup": {
       "satisfiable": true,
-      "time": 0.0007588999999370571,
+      "time": 221.08269500040478,
+      "data": {
+        "common": 44
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 29.86130299996148,
       "data": null
     },
-    "division_solver_naive": {
+    "Propagation-HyGra-2-Warmup-2": {
       "satisfiable": true,
-      "time": 3.3130705459998353,
-      "data": null
+      "time": 153.80021300006774,
+      "data": {
+        "common": 39,
+        "warmup": 24.937301999671035
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": true,
+      "time": 99.37570299916842,
+      "data": {
+        "common": 34,
+        "split": 0
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": true,
+      "time": 86.99909099959768,
+      "data": {
+        "common": 21,
+        "split": 0,
+        "processing": 10.079798999868217
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": true,
+      "time": 87.21910500003105,
+      "data": {
+        "common": 44,
+        "split": 0,
+        "processing": 8.655201000010493
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": true,
+      "time": 437.14006800001926,
+      "data": {
+        "common": 78,
+        "split": 0,
+        "processing": 7.988399999987905
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": true,
+      "time": 132.54529999971965,
+      "data": {
+        "common": 42,
+        "split": 0,
+        "processing": 8.693899999798305
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": true,
+      "time": 185.68529899994246,
+      "data": {
+        "common": 43,
+        "split": 0,
+        "processing": 9.917000000314147
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": true,
+      "time": 138.95969499935745,
+      "data": {
+        "common": 43,
+        "split": 0,
+        "processing": 5.8080999997400795
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": true,
+      "time": 53.09549900039201,
+      "data": {
+        "common": 21,
+        "split": 0,
+        "processing": 5.980200000067271
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": true,
+      "time": 483.5897570000043,
+      "data": {
+        "common": 106,
+        "split": 0,
+        "processing": 8.683498999971562
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 81.86501400018642,
+      "data": {
+        "common": 25,
+        "split": 0,
+        "processing": 9.815602000116996
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": true,
+      "time": 177.71489599999768,
+      "data": {
+        "common": 59,
+        "split": 0,
+        "processing": 9.924299999966024
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": true,
+      "time": 484.6196039998176,
+      "data": {
+        "common": 88,
+        "split": 0,
+        "processing": 9.454999999888969
+      }
     }
   },
-  "./instances/random_sat/uf50-07.cnf": {
-    "variables": 50,
-    "clauses": 218,
-    "kissat404": {
+  "flat200-2.cnf": {
+    "clauses": 2237,
+    "variables": 600,
+    "Propagation-HyGra-2-NoWarmup": {
       "satisfiable": true,
-      "time": 0.002931100000068909,
+      "time": 1464.2689619995508,
+      "data": {
+        "common": 148
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 17.585901000529702,
       "data": null
     },
-    "division_solver_naive": {
+    "Propagation-HyGra-2-Warmup-2": {
       "satisfiable": true,
-      "time": 17.95226857600005,
-      "data": null
+      "time": 558.7982490005743,
+      "data": {
+        "common": 164,
+        "warmup": 10.022000999924785
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": true,
+      "time": 988.9674260011816,
+      "data": {
+        "common": 208,
+        "split": 0
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": true,
+      "time": 427.2222539984796,
+      "data": {
+        "common": 102,
+        "split": 0,
+        "processing": 6.185499998537125
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": true,
+      "time": 415.2786219999598,
+      "data": {
+        "common": 138,
+        "split": 0,
+        "processing": 4.4992999999635686
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": true,
+      "time": 791.0973409999542,
+      "data": {
+        "common": 190,
+        "split": 0,
+        "processing": 5.14829999997346
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": true,
+      "time": 921.1778950002554,
+      "data": {
+        "common": 148,
+        "split": 0,
+        "processing": 5.7667000000947155
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": true,
+      "time": 427.0113970001148,
+      "data": {
+        "common": 168,
+        "split": 0,
+        "processing": 7.404399999813904
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": true,
+      "time": 1254.8642550000295,
+      "data": {
+        "common": 151,
+        "split": 0,
+        "processing": 3.705699999954959
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": true,
+      "time": 1268.751679000161,
+      "data": {
+        "common": 158,
+        "split": 0,
+        "processing": 3.520100000059756
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": true,
+      "time": 434.94826200003445,
+      "data": {
+        "common": 198,
+        "split": 0,
+        "processing": 5.492799999956333
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 793.3404239997799,
+      "data": {
+        "common": 100,
+        "split": 0,
+        "processing": 5.869100999916554
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": true,
+      "time": 832.1899810000559,
+      "data": {
+        "common": 129,
+        "split": 0,
+        "processing": 5.813700000089739
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": true,
+      "time": 577.6827039999262,
+      "data": {
+        "common": 144,
+        "split": 0,
+        "processing": 5.789300000060393
+      }
     }
   },
-  "./instances/random_sat/uf50-038.cnf": {
-    "variables": 50,
-    "clauses": 218,
-    "kissat404": {
+  "bmc-ibm-1.cnf": {
+    "clauses": 55870,
+    "variables": 9685,
+    "Propagation-HyGra-2-NoWarmup": {
       "satisfiable": true,
-      "time": 0.003089100000124745,
+      "time": 803.0436339995504,
+      "data": {
+        "common": 96
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 57.02170499989734,
       "data": null
     },
-    "division_solver_naive": {
+    "Propagation-HyGra-2-Warmup-2": {
       "satisfiable": true,
-      "time": 11.590656373000002,
-      "data": null
+      "time": 380.10433399995236,
+      "data": {
+        "common": 78,
+        "warmup": 138.15231199987466
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": true,
+      "time": 1793.410357000539,
+      "data": {
+        "common": 180,
+        "split": 0
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": true,
+      "time": 445.8490510005504,
+      "data": {
+        "common": 69,
+        "split": 0,
+        "processing": 165.22308200001135
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": true,
+      "time": 304.4558980000147,
+      "data": {
+        "common": 189,
+        "split": 0,
+        "processing": 160.48970800000006
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": true,
+      "time": 943.5558290000472,
+      "data": {
+        "common": 310,
+        "split": 0,
+        "processing": 157.89558800003078
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": true,
+      "time": 1033.6518950002755,
+      "data": {
+        "common": 194,
+        "split": 2000,
+        "processing": 151.80459900011556
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": true,
+      "time": 3110.979077999673,
+      "data": {
+        "common": 377,
+        "split": 2000,
+        "processing": 148.61289899999974
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": true,
+      "time": -1,
+      "data": {
+        "split-timeout": true,
+        "processing": -1
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": true,
+      "time": 1573.6591889994997,
+      "data": {
+        "common": 311,
+        "split": 42000,
+        "processing": 147.39209499975914
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": true,
+      "time": 5667.582739000068,
+      "data": {
+        "common": 484,
+        "split": 0,
+        "processing": 151.7515860000458
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 692.9522079999515,
+      "data": {
+        "common": 70,
+        "split": 0,
+        "processing": 149.03122299983806
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": true,
+      "time": 1019.2973759999404,
+      "data": {
+        "common": 104,
+        "split": 0,
+        "processing": 154.36929599991345
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": true,
+      "time": 458.19810299985875,
+      "data": {
+        "common": 115,
+        "split": 0,
+        "processing": 151.96730100001332
+      }
     }
   },
-  "./instances/random_sat/uf50-06.cnf": {
-    "variables": 50,
-    "clauses": 218,
-    "kissat404": {
+  "logistics.d.cnf": {
+    "clauses": 21991,
+    "variables": 4713,
+    "Propagation-HyGra-2-NoWarmup": {
       "satisfiable": true,
-      "time": 0.0014452989998972043,
+      "time": 799.0268339999602,
+      "data": {
+        "common": 183
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 31.51740300017991,
       "data": null
     },
-    "division_solver_naive": {
+    "Propagation-HyGra-2-Warmup-2": {
       "satisfiable": true,
-      "time": 3.208560271999886,
-      "data": null
+      "time": 810.5314719996386,
+      "data": {
+        "common": 157,
+        "warmup": 547.5022480004554
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": true,
+      "time": 34860.145537999415,
+      "data": {
+        "common": 907,
+        "split": 0
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": true,
+      "time": 544.4917359982355,
+      "data": {
+        "common": 143,
+        "split": 0,
+        "processing": 71.1059919995023
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": true,
+      "time": 438.7921680000204,
+      "data": {
+        "common": 428,
+        "split": 0,
+        "processing": 69.97959500000661
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": true,
+      "time": 742.845444000011,
+      "data": {
+        "common": 737,
+        "split": 0,
+        "processing": 64.0767950000054
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": true,
+      "time": 757.7678260001903,
+      "data": {
+        "common": 690,
+        "split": 1000,
+        "processing": 78.8566990001982
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": true,
+      "time": 3048.431089999667,
+      "data": {
+        "common": 884,
+        "split": 0,
+        "processing": 80.4767989998254
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": true,
+      "time": 1577.6316980000047,
+      "data": {
+        "common": 677,
+        "split": 6000,
+        "processing": 63.097900000229856
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": true,
+      "time": 1550.703373000033,
+      "data": {
+        "common": 726,
+        "split": 6000,
+        "processing": 127.7804979999928
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": true,
+      "time": 4147.5565529999585,
+      "data": {
+        "common": 827,
+        "split": 0,
+        "processing": 77.59339699998691
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 300.38484700025947,
+      "data": {
+        "common": 141,
+        "split": 0,
+        "processing": 71.18451100018319
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": true,
+      "time": 515.3686909998214,
+      "data": {
+        "common": 198,
+        "split": 0,
+        "processing": 88.42279800001052
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": true,
+      "time": 603.0917040000077,
+      "data": {
+        "common": 246,
+        "split": 0,
+        "processing": 91.38280000001942
+      }
     }
   },
-  "./instances/random_sat/uf50-01.cnf": {
-    "variables": 50,
-    "clauses": 218,
-    "kissat404": {
+  "logistics.a.cnf": {
+    "clauses": 6718,
+    "variables": 828,
+    "Propagation-HyGra-2-NoWarmup": {
       "satisfiable": true,
-      "time": 0.0013814000001275417,
+      "time": 56.73390299944003,
+      "data": {
+        "common": 105
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 8.99850099995092,
       "data": null
     },
-    "division_solver_naive": {
+    "Propagation-HyGra-2-Warmup-2": {
       "satisfiable": true,
-      "time": 14.74614891400006,
-      "data": null
+      "time": 58.255205000023125,
+      "data": {
+        "common": 105,
+        "warmup": 35.90620399972977
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": true,
+      "time": 189.10980800137622,
+      "data": {
+        "common": 158,
+        "split": 0
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": true,
+      "time": 35.813188000247465,
+      "data": {
+        "common": 42,
+        "split": 0,
+        "processing": 14.505794999422505
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": true,
+      "time": 14.540199000066423,
+      "data": {
+        "common": 47,
+        "split": 0,
+        "processing": 8.079499000018586
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": true,
+      "time": 20.05709799999522,
+      "data": {
+        "common": 61,
+        "split": 0,
+        "processing": 11.369999000010012
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": true,
+      "time": 18.035597999869424,
+      "data": {
+        "common": 53,
+        "split": 0,
+        "processing": 11.988698999857661
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": true,
+      "time": 27.676200000314566,
+      "data": {
+        "common": 56,
+        "split": 0,
+        "processing": 12.949899999966874
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": true,
+      "time": 20.021300000280462,
+      "data": {
+        "common": 65,
+        "split": 0,
+        "processing": 7.600899999943067
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": true,
+      "time": 15.59689800023989,
+      "data": {
+        "common": 55,
+        "split": 0,
+        "processing": 7.485199000257126
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": true,
+      "time": 21.734799999990173,
+      "data": {
+        "common": 62,
+        "split": 0,
+        "processing": 11.006800000018302
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 20.00870199981364,
+      "data": {
+        "common": 41,
+        "split": 0,
+        "processing": 11.232100999905015
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": true,
+      "time": 23.711499999990338,
+      "data": {
+        "common": 66,
+        "split": 0,
+        "processing": 13.184700000010707
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": true,
+      "time": 29.286501000115095,
+      "data": {
+        "common": 77,
+        "split": 0,
+        "processing": 15.113500000097702
+      }
     }
   },
-  "./instances/random_sat/uf50-034.cnf": {
-    "variables": 50,
-    "clauses": 218,
-    "kissat404": {
+  "bmc-ibm-3.cnf": {
+    "clauses": 72106,
+    "variables": 14930,
+    "Propagation-HyGra-2-NoWarmup": {
       "satisfiable": true,
-      "time": 0.002570799999830342,
+      "time": 584.0734250004971,
+      "data": {
+        "common": 80
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 98.52359700016677,
       "data": null
     },
-    "division_solver_naive": {
+    "Propagation-HyGra-2-Warmup-2": {
       "satisfiable": true,
-      "time": 8.544546372000013,
+      "time": 592.606381999758,
+      "data": {
+        "common": 81,
+        "warmup": 215.84609399997134
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": true,
+      "time": 1874.3464760009374,
+      "data": {
+        "common": 135,
+        "split": 0
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": true,
+      "time": 693.3296710012655,
+      "data": {
+        "common": 70,
+        "split": 0,
+        "processing": 165.42824499993003
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": true,
+      "time": 833.1290390000277,
+      "data": {
+        "common": 141,
+        "split": 0,
+        "processing": 166.608387999986
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": true,
+      "time": 8660.691043999974,
+      "data": {
+        "common": 511,
+        "split": 0,
+        "processing": 167.7148879999777
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": true,
+      "time": 1263.551563999954,
+      "data": {
+        "common": 338,
+        "split": 5000,
+        "processing": 166.08258299993395
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": true,
+      "time": 23780.278434999673,
+      "data": {
+        "common": 651,
+        "split": 5000,
+        "processing": 158.6473939996722
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": true,
+      "time": -1,
+      "data": {
+        "split-timeout": true,
+        "processing": -1
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": true,
+      "time": -1,
+      "data": {
+        "split-timeout": true,
+        "processing": -1
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": true,
+      "time": 28751.15167499996,
+      "data": {
+        "common": 685,
+        "split": 0,
+        "processing": 164.9306939999633
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 451.0829719999947,
+      "data": {
+        "common": 72,
+        "split": 0,
+        "processing": 161.7166260000431
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": true,
+      "time": 1949.7355820001303,
+      "data": {
+        "common": 215,
+        "split": 0,
+        "processing": 160.58729900009894
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": true,
+      "time": 3942.557860000079,
+      "data": {
+        "common": 234,
+        "split": 0,
+        "processing": 163.20270200003506
+      }
+    }
+  },
+  "sw100-3.cnf": {
+    "clauses": 3100,
+    "variables": 500,
+    "Propagation-HyGra-2-NoWarmup": {
+      "satisfiable": true,
+      "time": 22.008801000083622,
+      "data": {
+        "common": 49
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 6.034900000486232,
       "data": null
+    },
+    "Propagation-HyGra-2-Warmup-2": {
+      "satisfiable": true,
+      "time": 34.547299000223575,
+      "data": {
+        "common": 50,
+        "warmup": 22.758199000236345
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": true,
+      "time": 21.798900999783655,
+      "data": {
+        "common": 50,
+        "split": 0
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": true,
+      "time": 43.7111859992001,
+      "data": {
+        "common": 40,
+        "split": 0,
+        "processing": 6.308297999567003
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": true,
+      "time": 48.991196999963904,
+      "data": {
+        "common": 40,
+        "split": 0,
+        "processing": 5.714399999988018
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": true,
+      "time": 26.535099999989598,
+      "data": {
+        "common": 57,
+        "split": 0,
+        "processing": 5.573900000001686
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": true,
+      "time": 21.407999000075506,
+      "data": {
+        "common": 36,
+        "split": 0,
+        "processing": 6.497600000102466
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": true,
+      "time": 23.365198999727,
+      "data": {
+        "common": 52,
+        "split": 0,
+        "processing": 6.567398999777652
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": true,
+      "time": 49.01110000037079,
+      "data": {
+        "common": 32,
+        "split": 0,
+        "processing": 3.729200000179844
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": true,
+      "time": 165.28028500033543,
+      "data": {
+        "common": 48,
+        "split": 0,
+        "processing": 3.9805989999877056
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": true,
+      "time": 36.86700000002929,
+      "data": {
+        "common": 76,
+        "split": 0,
+        "processing": 5.872100000033242
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 17.296102999807772,
+      "data": {
+        "common": 40,
+        "split": 0,
+        "processing": 7.100700999899345
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": true,
+      "time": 26.769199999989723,
+      "data": {
+        "common": 52,
+        "split": 0,
+        "processing": 7.2067999999489984
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": true,
+      "time": 73.7076990001242,
+      "data": {
+        "common": 72,
+        "split": 0,
+        "processing": 6.350900000143156
+      }
+    }
+  },
+  "ais12.cnf": {
+    "clauses": 5666,
+    "variables": 265,
+    "Propagation-HyGra-2-NoWarmup": {
+      "satisfiable": true,
+      "time": 4166.580934000194,
+      "data": {
+        "common": 179
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 1.5633000002708286,
+      "data": null
+    },
+    "Propagation-HyGra-2-Warmup-2": {
+      "satisfiable": true,
+      "time": 3413.7049970004227,
+      "data": {
+        "common": 174,
+        "warmup": 209.52619299987418
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": true,
+      "time": 1230.4857899998751,
+      "data": {
+        "common": 148,
+        "split": 0
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": true,
+      "time": 1062.2461499988276,
+      "data": {
+        "common": 174,
+        "split": 0,
+        "processing": 11.27769599952444
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": true,
+      "time": 1258.4335070000066,
+      "data": {
+        "common": 155,
+        "split": 0,
+        "processing": 8.034499000018513
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": true,
+      "time": 28.97680000000946,
+      "data": {
+        "common": 241,
+        "split": 0,
+        "processing": 9.471800000028452
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": true,
+      "time": 28.85909800011177,
+      "data": {
+        "common": 231,
+        "split": 0,
+        "processing": 11.435698000013872
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": true,
+      "time": 70.58399800007464,
+      "data": {
+        "common": 241,
+        "split": 0,
+        "processing": 19.191898999906698
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": true,
+      "time": 20.398098999976355,
+      "data": {
+        "common": 165,
+        "split": 4000,
+        "processing": 6.888299999900482
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": true,
+      "time": 6739.239129999532,
+      "data": {
+        "common": 232,
+        "split": 1000,
+        "processing": 7.243999999900552
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": true,
+      "time": 7818.601896000018,
+      "data": {
+        "common": 221,
+        "split": 0,
+        "processing": 10.301099000002978
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 4667.023756000162,
+      "data": {
+        "common": 169,
+        "split": 0,
+        "processing": 11.340901000039594
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": true,
+      "time": 54.566799999975046,
+      "data": {
+        "common": 216,
+        "split": 0,
+        "processing": 11.712900000020454
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": true,
+      "time": 194.60149599990473,
+      "data": {
+        "common": 216,
+        "split": 0,
+        "processing": 11.702699999887045
+      }
+    }
+  },
+  "sw100-1.cnf": {
+    "clauses": 3100,
+    "variables": 500,
+    "Propagation-HyGra-2-NoWarmup": {
+      "satisfiable": true,
+      "time": 7.12780699996074,
+      "data": {
+        "common": 41
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 1.0827999994944548,
+      "data": null
+    },
+    "Propagation-HyGra-2-Warmup-2": {
+      "satisfiable": true,
+      "time": 13.752098999248119,
+      "data": {
+        "common": 40,
+        "warmup": 9.555898999678902
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": true,
+      "time": 14.334800000142423,
+      "data": {
+        "common": 40,
+        "split": 0
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": true,
+      "time": 33.125689000371494,
+      "data": {
+        "common": 32,
+        "split": 0,
+        "processing": 6.108998000854626
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": true,
+      "time": 8.84559899998294,
+      "data": {
+        "common": 32,
+        "split": 0,
+        "processing": 4.808498999977928
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": true,
+      "time": 10.062699999991764,
+      "data": {
+        "common": 49,
+        "split": 0,
+        "processing": 5.075400000009722
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": true,
+      "time": 9.051299999782714,
+      "data": {
+        "common": 32,
+        "split": 0,
+        "processing": 5.856099999846265
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": true,
+      "time": 10.502099999939674,
+      "data": {
+        "common": 48,
+        "split": 0,
+        "processing": 5.531100000098377
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": true,
+      "time": 6.703999999899679,
+      "data": {
+        "common": 32,
+        "split": 0,
+        "processing": 3.588000000036118
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": true,
+      "time": 14.5092040002055,
+      "data": {
+        "common": 32,
+        "split": 0,
+        "processing": 3.8047009998081194
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": true,
+      "time": 16.35239899997032,
+      "data": {
+        "common": 64,
+        "split": 0,
+        "processing": 8.30009899993911
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 25.59890299971812,
+      "data": {
+        "common": 32,
+        "split": 0,
+        "processing": 20.175902999881146
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": true,
+      "time": 13.330800000176168,
+      "data": {
+        "common": 48,
+        "split": 0,
+        "processing": 6.651700000020355
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": true,
+      "time": 14.877699999715333,
+      "data": {
+        "common": 65,
+        "split": 0,
+        "processing": 7.434299999886207
+      }
+    }
+  },
+  "anomaly.cnf": {
+    "clauses": 261,
+    "variables": 48,
+    "Propagation-HyGra-2-NoWarmup": {
+      "satisfiable": true,
+      "time": 0.48609999976179097,
+      "data": {
+        "common": 17
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 0.15770000027259812,
+      "data": null
+    },
+    "Propagation-HyGra-2-Warmup-2": {
+      "satisfiable": true,
+      "time": 2.119700000548619,
+      "data": {
+        "common": 17,
+        "warmup": 1.9034000006286078
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": true,
+      "time": 2.4993999995786,
+      "data": {
+        "common": 20,
+        "split": 0
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": true,
+      "time": 0.6580000008398201,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 0.4133000002184417
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": true,
+      "time": 0.3821999999331638,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 0.28649999995877806
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": true,
+      "time": 0.44519999994463433,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 0.31659999996236365
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": true,
+      "time": 0.5253000001630426,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 0.3920000001471635
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": true,
+      "time": 0.4729000002043904,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 0.33970000004046597
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": true,
+      "time": 0.4222000002300774,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 0.3074999999626016
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": true,
+      "time": 0.4476000003705849,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 0.3249000001233071
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": true,
+      "time": 0.4817999999886524,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 0.33150000001569424
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 0.5296000001635548,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 0.3243000001020846
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": true,
+      "time": 0.5411000001913635,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 0.3351000000293425
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": true,
+      "time": 0.5794999999579886,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 0.3481999999621621
+      }
+    }
+  },
+  "flat100-4.cnf": {
+    "clauses": 1117,
+    "variables": 300,
+    "Propagation-HyGra-2-NoWarmup": {
+      "satisfiable": true,
+      "time": 20.910620999529783,
+      "data": {
+        "common": 72
+      }
+    },
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 0.4857000003539724,
+      "data": null
+    },
+    "Propagation-HyGra-2-Warmup-2": {
+      "satisfiable": true,
+      "time": 8.935500000006869,
+      "data": {
+        "common": 79,
+        "warmup": 5.355000000236032
+      }
+    },
+    "Propagation-Dual-2-30": {
+      "satisfiable": true,
+      "time": 13.23899899944081,
+      "data": {
+        "common": 121,
+        "split": 0
+      }
+    },
+    "Propagation-HyGra-2-Processed": {
+      "satisfiable": true,
+      "time": 35.87498900014907,
+      "data": {
+        "common": 58,
+        "split": 0,
+        "processing": 3.3088990003307117
+      }
+    },
+    "Dual-MinCut-2": {
+      "satisfiable": true,
+      "time": 12.733199000024342,
+      "data": {
+        "common": 77,
+        "split": 0,
+        "processing": 2.6569999999992433
+      }
+    },
+    "Dual-MinCut-3": {
+      "satisfiable": true,
+      "time": 96.72830099998464,
+      "data": {
+        "common": 100,
+        "split": 0,
+        "processing": 2.7398999999945772
+      }
+    },
+    "Dual-leiden-2": {
+      "satisfiable": true,
+      "time": 22.79380000004494,
+      "data": {
+        "common": 82,
+        "split": 0,
+        "processing": 4.135299999916242
+      }
+    },
+    "Dual-leiden-3": {
+      "satisfiable": true,
+      "time": 22.0235000001594,
+      "data": {
+        "common": 99,
+        "split": 0,
+        "processing": 2.9696000001422362
+      }
+    },
+    "Dual-community_walktrap-2": {
+      "satisfiable": true,
+      "time": 102.65469900014068,
+      "data": {
+        "common": 90,
+        "split": 0,
+        "processing": 1.9511000000420609
+      }
+    },
+    "Dual-infomap-2": {
+      "satisfiable": true,
+      "time": 15.310604000205785,
+      "data": {
+        "common": 87,
+        "split": 0,
+        "processing": 2.4047000001701235
+      }
+    },
+    "Dual-MinCut-4": {
+      "satisfiable": true,
+      "time": 43.499499000063224,
+      "data": {
+        "common": 105,
+        "split": 0,
+        "processing": 2.9085000001032313
+      }
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 21.485002999952485,
+      "data": {
+        "common": 54,
+        "split": 0,
+        "processing": 3.1631009999273374
+      }
+    },
+    "Hyper-3": {
+      "satisfiable": true,
+      "time": 36.4205989999391,
+      "data": {
+        "common": 63,
+        "split": 0,
+        "processing": 3.379499999937252
+      }
+    },
+    "Hyper-4": {
+      "satisfiable": true,
+      "time": 35.81169900007808,
+      "data": {
+        "common": 67,
+        "split": 0,
+        "processing": 3.43750000001819
+      }
     }
   }
 }

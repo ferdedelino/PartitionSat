@@ -72,9 +72,9 @@ class TwoWatchedLiterals:
                     continue
                 if (literal_util.evaluates_negative(clauseLit, assignment)):
                     continue
-                found_literal = clauseLit;
-                found = True;
-                break;
+                found_literal = clauseLit
+                found = True
+                break
 
             if found:
                 watch[1 - other_watch_index] = found_literal; # "1 -": the other watcher 1-->0, 0-->1

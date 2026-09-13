@@ -3,7 +3,8 @@ import os
 import json
 from multiprocessing import Process, Queue
 from partitionsolver.utils import file_reader
-import partitionsolver.utils.hypergraph_worker as hypergraph_worker
+import partitionsolver.partitioning.hypergraph_edges_worker as hypergraph_worker
+
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parents[3]

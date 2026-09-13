@@ -17,9 +17,7 @@ class HyperGraphEdges(FormulaSplits):
         self.file_location = file_location
 
     def split_formula(self, clauses: list[list[int]], num_variables: int, num_clauses: int) -> tuple[list[CNF], list[int]]:
-        # === Read in the hyperedges directly from file === 
-        h_clauses, hyperedges = self.hypergraph_from_cnf_xz(file_location=self.file_location, display_progress=False, remove_empty_hyperedges=True)
-
+        h_clauses, hyperedges = self.hypergraph_from_formula(clauses, num_variables, num_clauses, display_progress=False, remove_empty_hyperedges=True)
 
         # === Compute a minimal split using multiprocessing === 
         ctx = mp.get_context("spawn")
@@ -147,3 +145,57 @@ class HyperGraphEdges(FormulaSplits):
             print(f"Hyperedges cleaned in {time.perf_counter() - start:.2f}s")
         
         return num_clauses, cleaned_hyperedges
+
+
+    
+    def hypergraph_from_formula(self, clauses, num_vars, num_clauses, display_progress:bool = False, remove_empty_hyperedges:bool = True):
+            """Reads a .cnf or .cnf.xz file and creates a hypergraph representation of it."""
+    
+            start = time.perf_counter()
+            
+            hyperedge_sizes = np.zeros(num_vars, dtype=int)
+
+            # First pass: count sizes
+            for clause in clauses:
+                for lit in clause:
+                    var = abs(lit) - 1
+                    hyperedge_sizes[var] += 1    
+            # Allocate
+            hyperedges = np.empty(num_vars, dtype=object)
+            hyperedge_indices = np.zeros(num_vars, dtype=int)
+            for i in range(num_vars):
+                hyperedges[i] = np.zeros(hyperedge_sizes[i], dtype=int)
+    
+            if display_progress:
+                print(f"Memory allocated in {time.perf_counter() - start:.2f}s")
+                print(f"Memory used: {psutil.virtual_memory().used / 1024**3:.2f} GB")
+                start = time.perf_counter()
+    
+            # Second pass: fill
+            for clause_number in range(num_clauses):
+                clause = clauses[clause_number]
+                for lit in clause:
+                    var = abs(lit) - 1
+                    hyperedges[var][hyperedge_indices[var]] = clause_number
+                    hyperedge_indices[var] += 1
+    
+            if display_progress:
+                print(f"Edges filled in {time.perf_counter() - start:.2f}s")
+                print(f"Memory used: {psutil.virtual_memory().used / 1024**3:.2f} GB")
+                start = time.perf_counter()
+    
+            del hyperedge_indices  # free memory
+        
+            if not remove_empty_hyperedges:
+                del hyperedge_sizes  # free memory
+                return num_clauses, hyperedges
+    
+            mask = hyperedge_sizes > 0
+            del hyperedge_sizes  # free memory
+            cleaned_hyperedges = hyperedges[mask]
+            del hyperedges  # free memory
+    
+            if display_progress:
+                print(f"Hyperedges cleaned in {time.perf_counter() - start:.2f}s")
+            
+            return num_clauses, cleaned_hyperedges

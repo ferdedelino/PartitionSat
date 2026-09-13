@@ -3,6 +3,7 @@ import random
 from pysat.solvers import Cadical300
 from pysat.formula import CNF
 import time
+from typing import Callable
 
 from partitionsolver.solver.two_watched_literals import TwoWatchedLiterals
 from partitionsolver.solver.variable_translation import VariableTranslation
@@ -14,13 +15,14 @@ from partitionsolver.utils.heapdict import HeapDict
 
 class PartitionCDCL:
 
-    def __init__(self, num_variables:int, glue_variables:list, partial_clauses:list, debug_level:int = 0):
+    def __init__(self, num_variables:int, glue_variables:list, partial_clauses:list, debug_level:int = 0, solvers = None):
         self.num_variables = num_variables
         self.glue_variables = glue_variables
         self.partial_clauses = partial_clauses
         self.num_gvars = len(glue_variables)
         self.DEBUG_LEVEL = debug_level
 
+        self.persistant_solvers = solvers
         self.trails = [] # (variable_index, antecedent)
         self.values = [0] * self.num_gvars
         self.variable_levels = [-1] * self.num_gvars # -1: not set, 0: globally set
@@ -46,6 +48,14 @@ class PartitionCDCL:
         self.nof_test_conflicts = 0
         self.nof_implications = 0
         self.test_time = 0
+
+        self.clauses_to_add = []
+        self.pending_level_0_decisions = []
+
+        # Configuration
+        self.append_first_solver = True
+        self.clauses_add_intervall = 100
+        self.clauses_add_per_intervall = 10
 
         self.var_incr = 1                 # Helper variable to regulate variable activity
         self.clause_incr = 1              # Helper variable to regulate clause activity
@@ -123,13 +133,20 @@ class PartitionCDCL:
 
     def test_assignment(self):
         start = time.perf_counter()
+        self.share_level_0_decisions()
         assumption_lits = [self.glue_variables[var_index] * (-1 if value < 0 else 1) for var_index, value in enumerate(self.values) if value != 0]
 
         #TODO: which order?
         sat = True
         conflict_core = None
-        for solver in self.persistant_solvers:
+        first_solver_sat = True
+
+        start = time.perf_counter()
+        for i in range(len(self.persistant_solvers)):
+            solver = self.persistant_solvers[i]
             if not solver.solve(assumptions=assumption_lits):
+                if i == 0:
+                    first_solver_sat = False
                 sat = False
                 conflict_core = solver.get_core()
                 break
@@ -137,8 +154,27 @@ class PartitionCDCL:
         if self.DEBUG_LEVEL >= 3:
             print(f"Tested single assignment in {1000 * (time.perf_counter() - start):.2f}ms")
 
+        if not first_solver_sat and self.append_first_solver and not conflict_core is None:
+            self.clauses_to_add.append([-l for l in conflict_core])
+            if len(self.clauses_to_add) > self.clauses_add_intervall:
+                clauses = []
+                added = 0
+                for clause in sorted(self.clauses_to_add, key=len):
+                    if len(clause) > 2 and added >= self.clauses_add_per_intervall:
+                        break
+                    clauses.append(clause)
+                self.persistant_solvers[0].append_formula(clauses)
+                self.clauses_to_add = []
+
         self.test_time += time.perf_counter() - start
         return sat, conflict_core
+
+    def share_level_0_decisions(self):
+        if len(self.pending_level_0_decisions) == 0:
+            return
+        for solver in self.persistant_solvers:
+            solver.append_formula([[l] for l in self.pending_level_0_decisions])
+        self.pending_level_0_decisions = []
 
     def local_clauses_cause_conflict(self):
         for clause in self.learnt_clauses:
@@ -161,17 +197,13 @@ class PartitionCDCL:
         return False
 
     def initialize_persistent_solvers(self):
-        # Destroy old instances (maybe a todo for later - keeping them?)
-        for solver in getattr(self, 'persistant_solvers', []) or []:
-            if solver is not None:
-                solver.delete()
-            self.persistant_solvers = []
-
+        if self.persistant_solvers is not None:
+            return
+        
         # Create solvers that support assumptions!
         self.persistant_solvers = [None] * len(self.partial_clauses)
         for i in range(len(self.partial_clauses)):
-            clauses = self.partial_clauses[i]
-            cnf = CNF(from_clauses=clauses)
+            cnf = self.partial_clauses[i]
             cnf.nv = self.num_variables
             self.persistant_solvers[i] = Cadical300(bootstrap_with=cnf)
 
@@ -426,13 +458,13 @@ class PartitionCDCL:
             if self.all_variables_set():
                 test_sat, test_unsat_core = self.test_assignment()
                 conflict = not test_sat
-                propagation_conflict =False
+                propagation_conflict = False
                 if not conflict:
                     self.model = [-var if self.values[var_index] < 0 else var
                                 for var_index, var in enumerate(self.glue_variables)]
                     return True
                 else:
-                    conflict_clause = literal_util.clause_from_dimacs([-1 * lit for lit in test_unsat_core])
+                    conflict_clause = literal_util.clause_from_dimacs([-1 * lit for lit in test_unsat_core]) if test_unsat_core is not None else []
                     if unsat_core_is_global(conflict_clause):
                         return False
 
@@ -646,6 +678,7 @@ class PartitionCDCL:
             if self.DEBUG_LEVEL >= 2:
                 print(f"Level 0 prop: {var * (1 if literal_util.is_positive(lit) else -1)}")
             self.trails[0].append((var_index, -999))
+            self.pending_level_0_decisions.append(var if new_value == 1 else -var)
             return False, None
 
 
@@ -654,11 +687,11 @@ class PartitionCDCL:
         self.two_watched_literals.add_learnt_clause(self.twl_translation.clause_to_local(clause), clause_id, self.values)
         return False, clause_id
 
-    def add_initial_clauses(self, num_clauses : int):
+    def add_initial_clauses(self, num_clauses : int, stop_probing: Callable[[int], bool] = lambda: False):
         for _ in range(num_clauses):
             clause = self.probe_for_new_clause()
             if clause == None:
-                # Found a model.
+                
                 if self.DEBUG_LEVEL >= 1:
                     print(f"Found a model while probing")
                 return True
@@ -672,7 +705,13 @@ class PartitionCDCL:
             if len(self.trails[0]) == len(self.glue_variables):
                 if self.local_clauses_cause_conflict():
                     return False
-                return self.test_assignment()[0]
+                sat = self.test_assignment()[0]
+                if sat:
+                    self.model = [-var if self.values[var_index] < 0 else var for var_index, var in enumerate(self.glue_variables)]
+                return sat
+
+            if stop_probing(len(clause)):
+                break
                 
         self.reset_solver()
         
@@ -708,6 +747,7 @@ class PartitionCDCL:
             #print(f"Core: {len(unsat_core)} / {len(self.decision_stack)}: {new_clause}")
 
         self.reset_solver(keep_global_decisions=True)
+        assert new_clause is not None
         
         return new_clause        
 

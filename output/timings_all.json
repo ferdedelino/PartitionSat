@@ -1,0 +1,2712 @@
+{
+  "hole7.cnf": {
+    "variables": 56,
+    "clauses": 204,
+    "CaDiCaL": {
+      "satisfiable": false,
+      "time": 26.473091999832832,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": false,
+      "time": 37.69910200026061,
+      "data": {
+        "common": 29,
+        "split": 0,
+        "processing": 3.7896009998803493
+      }
+    }
+  },
+  "hole10.cnf": {
+    "variables": 110,
+    "clauses": 561,
+    "CaDiCaL": {
+      "satisfiable": false,
+      "time": 36796.88543799966,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": false,
+      "time": 10553.291098000045,
+      "data": {
+        "common": 55,
+        "split": 0,
+        "processing": 0.9135000000242144
+      }
+    }
+  },
+  "par32-4-c.cnf": {
+    "variables": 1333,
+    "clauses": 5326,
+    "CaDiCaL": {
+      "satisfiable": "unknown",
+      "time": -1,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": "unknown",
+      "time": -1,
+      "data": {
+        "common": 42,
+        "split": 0,
+        "processing": 9.894602999338531
+      }
+    }
+  },
+  "bmc-ibm-6.cnf": {
+    "variables": 51639,
+    "clauses": 368352,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 290.00177400030225,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 3919.847712999399,
+      "data": {
+        "common": 104,
+        "split": 0,
+        "processing": 582.7575889998116
+      }
+    }
+  },
+  "g250.15.cnf": {
+    "variables": 3750,
+    "clauses": 233965,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 806.5165289999641,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": "unknown",
+      "time": -1,
+      "data": {
+        "common": 2164,
+        "split": 0,
+        "processing": 227.51479299950006
+      }
+    }
+  },
+  "sw100-5.cnf": {
+    "variables": 500,
+    "clauses": 3100,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 0.9430999998585321,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 14.085000000704895,
+      "data": {
+        "common": 120,
+        "split": 0,
+        "processing": 4.193900000245776
+      }
+    }
+  },
+  "planning_anomaly.cnf": {
+    "variables": 48,
+    "clauses": 261,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 0.1770999997461331,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 0.4500999993979349,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 0.29829999948560726
+      }
+    }
+  },
+  "hole6.cnf": {
+    "variables": 42,
+    "clauses": 133,
+    "CaDiCaL": {
+      "satisfiable": false,
+      "time": 3.4123999994335463,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": false,
+      "time": 5.008799999814073,
+      "data": {
+        "common": 21,
+        "split": 0,
+        "processing": 0.4951999999320833
+      }
+    }
+  },
+  "logistics.b.cnf": {
+    "variables": 843,
+    "clauses": 7301,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 7.913399999779358,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 21.090201000333764,
+      "data": {
+        "common": 70,
+        "split": 0,
+        "processing": 11.232200999984343
+      }
+    }
+  },
+  "pret150_60.cnf": {
+    "variables": 150,
+    "clauses": 400,
+    "CaDiCaL": {
+      "satisfiable": false,
+      "time": 34.19989699978032,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": false,
+      "time": 33.26430099878053,
+      "data": {
+        "common": 8,
+        "split": 0,
+        "processing": 1.2510999995356542
+      }
+    }
+  },
+  "qg4-08.cnf": {
+    "variables": 512,
+    "clauses": 9685,
+    "CaDiCaL": {
+      "satisfiable": false,
+      "time": 13.0996990001222,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": false,
+      "time": 575.364620000073,
+      "data": {
+        "common": 178,
+        "split": 0,
+        "processing": 6.953101000362949
+      }
+    }
+  },
+  "par8-3.cnf": {
+    "variables": 350,
+    "clauses": 1171,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 2.0127990001128637,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 2.6221999996778322,
+      "data": {
+        "common": 10,
+        "split": 0,
+        "processing": 1.320299999861163
+      }
+    }
+  },
+  "flat100-3.cnf": {
+    "variables": 300,
+    "clauses": 1117,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 0.4015000004073954,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 8.111500000268279,
+      "data": {
+        "common": 62,
+        "split": 0,
+        "processing": 2.4335999996765167
+      }
+    }
+  },
+  "flat75-1.cnf": {
+    "variables": 225,
+    "clauses": 840,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 3.403700000490062,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 4.6910000000934815,
+      "data": {
+        "common": 41,
+        "split": 0,
+        "processing": 1.9320999999763444
+      }
+    }
+  },
+  "pret60_75.cnf": {
+    "variables": 60,
+    "clauses": 160,
+    "CaDiCaL": {
+      "satisfiable": false,
+      "time": 3.4877990001405124,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": false,
+      "time": 5.687099999704515,
+      "data": {
+        "common": 7,
+        "split": 0,
+        "processing": 0.6876999996165978
+      }
+    }
+  },
+  "qg7-12.cnf": {
+    "variables": 1728,
+    "clauses": 70327,
+    "CaDiCaL": {
+      "satisfiable": false,
+      "time": 156.56571199997416,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": false,
+      "time": 4040.566757999841,
+      "data": {
+        "common": 783,
+        "split": 0,
+        "processing": 56.21070399956807
+      }
+    }
+  },
+  "par16-4-c.cnf": {
+    "variables": 324,
+    "clauses": 1292,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 23.85734100062109,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 589.6893529998124,
+      "data": {
+        "common": 24,
+        "split": 0,
+        "processing": 3.013499999724445
+      }
+    }
+  },
+  "pret150_75.cnf": {
+    "variables": 150,
+    "clauses": 400,
+    "CaDiCaL": {
+      "satisfiable": false,
+      "time": 31.561220999719808,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": false,
+      "time": 36.78810299970792,
+      "data": {
+        "common": 8,
+        "split": 0,
+        "processing": 1.822399999582558
+      }
+    }
+  },
+  "qg7-13.cnf": {
+    "variables": 2197,
+    "clauses": 97072,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 59.71265200059861,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 28397.857460000523,
+      "data": {
+        "common": 1091,
+        "split": 0,
+        "processing": 76.2266069996258
+      }
+    }
+  },
+  "par8-5.cnf": {
+    "variables": 350,
+    "clauses": 1171,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 1.780896000127541,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 2.2030999998605694,
+      "data": {
+        "common": 9,
+        "split": 0,
+        "processing": 1.4757999997527804
+      }
+    }
+  },
+  "sw100-16.cnf": {
+    "variables": 500,
+    "clauses": 3100,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 0.9061979999387404,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 6.9686979995822185,
+      "data": {
+        "common": 32,
+        "split": 0,
+        "processing": 3.99159900007362
+      }
+    }
+  },
+  "qg5-11.cnf": {
+    "variables": 1331,
+    "clauses": 64054,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 29.396427000392578,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 1078.9017739998599,
+      "data": {
+        "common": 580,
+        "split": 0,
+        "processing": 53.31148899949767
+      }
+    }
+  },
+  "ais8.cnf": {
+    "variables": 113,
+    "clauses": 1520,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 0.5224979995546164,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 9.789796999939426,
+      "data": {
+        "common": 61,
+        "split": 0,
+        "processing": 2.559298999585735
+      }
+    }
+  },
+  "flat50-4.cnf": {
+    "variables": 150,
+    "clauses": 545,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 0.24749899966991507,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 4.258797998772934,
+      "data": {
+        "common": 32,
+        "split": 0,
+        "processing": 1.3325989993973053
+      }
+    }
+  },
+  "par16-2-c.cnf": {
+    "variables": 349,
+    "clauses": 1392,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 34.38941399963369,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 131.35017300010077,
+      "data": {
+        "common": 23,
+        "split": 0,
+        "processing": 3.4036999995805672
+      }
+    }
+  },
+  "par16-1-c.cnf": {
+    "variables": 317,
+    "clauses": 1264,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 8.559378999962064,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 464.2024019995006,
+      "data": {
+        "common": 22,
+        "split": 0,
+        "processing": 2.9171989999667858
+      }
+    }
+  },
+  "qg7-09.cnf": {
+    "variables": 729,
+    "clauses": 22060,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 5.672186000083457,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 18.337195999265532,
+      "data": {
+        "common": 92,
+        "split": 0,
+        "processing": 10.931997999250598
+      }
+    }
+  },
+  "qg5-12.cnf": {
+    "variables": 1728,
+    "clauses": 90919,
+    "CaDiCaL": {
+      "satisfiable": false,
+      "time": 59.16725299994141,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": false,
+      "time": 2478.6769519996597,
+      "data": {
+        "common": 819,
+        "split": 0,
+        "processing": 78.01448400005029
+      }
+    }
+  },
+  "bmc-ibm-2.cnf": {
+    "variables": 2810,
+    "clauses": 11683,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 8.81757800016203,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 10.75860099899728,
+      "data": {
+        "common": 13,
+        "split": 0,
+        "processing": 8.214099999349855
+      }
+    }
+  },
+  "flat30-1.cnf": {
+    "variables": 90,
+    "clauses": 300,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 0.17010000010486692,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 1.6722999998819432,
+      "data": {
+        "common": 14,
+        "split": 0,
+        "processing": 0.8858000001055188
+      }
+    }
+  },
+  "hanoi5.cnf": {
+    "variables": 1931,
+    "clauses": 14468,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 226.90263699951174,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 2003.5742120007853,
+      "data": {
+        "common": 40,
+        "split": 0,
+        "processing": 16.1664010001914
+      }
+    }
+  },
+  "flat200-1.cnf": {
+    "variables": 600,
+    "clauses": 2237,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 8.05268000021897,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 128.10900200020114,
+      "data": {
+        "common": 100,
+        "split": 0,
+        "processing": 4.217597000206297
+      }
+    }
+  },
+  "planning_bw_large.c.cnf": {
+    "variables": 3016,
+    "clauses": 50457,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 39.045002999955614,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 928.4480899996197,
+      "data": {
+        "common": 180,
+        "split": 0,
+        "processing": 104.6838199999911
+      }
+    }
+  },
+  "bmc-ibm-10.cnf": {
+    "variables": 59056,
+    "clauses": 323700,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 385.99783099925844,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 6940.802258999611,
+      "data": {
+        "common": 310,
+        "split": 0,
+        "processing": 430.9393710000222
+      }
+    }
+  },
+  "sw100-6.cnf": {
+    "variables": 500,
+    "clauses": 3100,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 4.511700999501045,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 14.056992999940121,
+      "data": {
+        "common": 122,
+        "split": 0,
+        "processing": 5.127696999807085
+      }
+    }
+  },
+  "par16-2.cnf": {
+    "variables": 1015,
+    "clauses": 3374,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 13.32220100084669,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 160.5633230001331,
+      "data": {
+        "common": 22,
+        "split": 0,
+        "processing": 4.778898000040499
+      }
+    }
+  },
+  "sw100-4.cnf": {
+    "variables": 500,
+    "clauses": 3100,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 0.8946010002546245,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 18.93359200039413,
+      "data": {
+        "common": 128,
+        "split": 0,
+        "processing": 4.982297999958973
+      }
+    }
+  },
+  "qg7-10.cnf": {
+    "variables": 1000,
+    "clauses": 33736,
+    "CaDiCaL": {
+      "satisfiable": false,
+      "time": 16.805301000204054,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": false,
+      "time": 48.99317599938513,
+      "data": {
+        "common": 337,
+        "split": 0,
+        "processing": 22.71938899957604
+      }
+    }
+  },
+  "sw100-12.cnf": {
+    "variables": 500,
+    "clauses": 3100,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 10.925100999884307,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 30.161186000441376,
+      "data": {
+        "common": 52,
+        "split": 0,
+        "processing": 7.989697000084561
+      }
+    }
+  },
+  "par32-3.cnf": {
+    "variables": 3176,
+    "clauses": 10297,
+    "CaDiCaL": {
+      "satisfiable": "unknown",
+      "time": -1,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": "unknown",
+      "time": -1,
+      "data": {
+        "common": 43,
+        "split": 0,
+        "processing": 12.633194000045478
+      }
+    }
+  },
+  "planning_bw_large.d.cnf": {
+    "variables": 6325,
+    "clauses": 131973,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 75.175801000114,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 9878.237013999751,
+      "data": {
+        "common": 381,
+        "split": 0,
+        "processing": 188.46097999994527
+      }
+    }
+  },
+  "flat200-3.cnf": {
+    "variables": 600,
+    "clauses": 2237,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 9.19030000022758,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 346.9794880002155,
+      "data": {
+        "common": 100,
+        "split": 0,
+        "processing": 5.292398000165122
+      }
+    }
+  },
+  "par32-3-c.cnf": {
+    "variables": 1325,
+    "clauses": 5294,
+    "CaDiCaL": {
+      "satisfiable": "unknown",
+      "time": -1,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": "unknown",
+      "time": -1,
+      "data": {
+        "common": 47,
+        "split": 0,
+        "processing": 10.97209700037638
+      }
+    }
+  },
+  "sw100-14.cnf": {
+    "variables": 500,
+    "clauses": 3100,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 0.9098000000449247,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 9.74969799972314,
+      "data": {
+        "common": 30,
+        "split": 0,
+        "processing": 5.2665989996967255
+      }
+    }
+  },
+  "qg6-09.cnf": {
+    "variables": 729,
+    "clauses": 21844,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 5.222499999945285,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 16.645999000502343,
+      "data": {
+        "common": 61,
+        "split": 0,
+        "processing": 12.612698999873828
+      }
+    }
+  },
+  "pret60_25.cnf": {
+    "variables": 60,
+    "clauses": 160,
+    "CaDiCaL": {
+      "satisfiable": false,
+      "time": 3.464499999608961,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": false,
+      "time": 5.718898999475641,
+      "data": {
+        "common": 7,
+        "split": 0,
+        "processing": 0.6318999994618935
+      }
+    }
+  },
+  "par8-2.cnf": {
+    "variables": 350,
+    "clauses": 1157,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 1.772501000232296,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 1.0508000004847418,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 0.8950999999797205
+      }
+    }
+  },
+  "bmc-ibm-11.cnf": {
+    "variables": 32109,
+    "clauses": 150027,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 255.13030500042078,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 562.7730319993134,
+      "data": {
+        "common": 85,
+        "split": 0,
+        "processing": 257.370861999334
+      }
+    }
+  },
+  "bmc-galileo-9.cnf": {
+    "variables": 63624,
+    "clauses": 326999,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 443.13200899978256,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 997.0212620009988,
+      "data": {
+        "common": 179,
+        "split": 0,
+        "processing": 448.82728300035524
+      }
+    }
+  },
+  "g125.18.cnf": {
+    "variables": 2250,
+    "clauses": 70163,
+    "CaDiCaL": {
+      "satisfiable": "unknown",
+      "time": -1,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": "unknown",
+      "time": -1,
+      "data": {
+        "common": 1836,
+        "split": 0,
+        "processing": 104.7923960004482
+      }
+    }
+  },
+  "flat50-3.cnf": {
+    "variables": 150,
+    "clauses": 545,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 0.2500000000509317,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 4.300499999772001,
+      "data": {
+        "common": 24,
+        "split": 0,
+        "processing": 1.7056999995475053
+      }
+    }
+  },
+  "flat150-3.cnf": {
+    "variables": 450,
+    "clauses": 1680,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 4.885999999714841,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 186.9397980008216,
+      "data": {
+        "common": 80,
+        "split": 0,
+        "processing": 4.460800000742893
+      }
+    }
+  },
+  "qg6-10.cnf": {
+    "variables": 1000,
+    "clauses": 33466,
+    "CaDiCaL": {
+      "satisfiable": false,
+      "time": 18.320199999834585,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": false,
+      "time": 80.42139999997744,
+      "data": {
+        "common": 394,
+        "split": 0,
+        "processing": 39.631999999983236
+      }
+    }
+  },
+  "pret150_40.cnf": {
+    "variables": 150,
+    "clauses": 400,
+    "CaDiCaL": {
+      "satisfiable": false,
+      "time": 33.96580000026006,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": false,
+      "time": 39.33400000005349,
+      "data": {
+        "common": 8,
+        "split": 0,
+        "processing": 1.280100000258244
+      }
+    }
+  },
+  "par32-5.cnf": {
+    "variables": 3176,
+    "clauses": 10325,
+    "CaDiCaL": {
+      "satisfiable": "unknown",
+      "time": -1,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": "unknown",
+      "time": -1,
+      "data": {
+        "common": 54,
+        "split": 0,
+        "processing": 14.659000000392552
+      }
+    }
+  },
+  "flat100-2.cnf": {
+    "variables": 300,
+    "clauses": 1117,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 0.42519999988144264,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 43.03079300098034,
+      "data": {
+        "common": 58,
+        "split": 0,
+        "processing": 2.875699000469467
+      }
+    }
+  },
+  "par32-1.cnf": {
+    "variables": 3176,
+    "clauses": 10277,
+    "CaDiCaL": {
+      "satisfiable": "unknown",
+      "time": -1,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": "unknown",
+      "time": -1,
+      "data": {
+        "common": 39,
+        "split": 0,
+        "processing": 14.500397999654524
+      }
+    }
+  },
+  "ssa7552-158.cnf": {
+    "variables": 1363,
+    "clauses": 3034,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 1.0001000000556814,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 2.748099999735132,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 2.5957999996535364
+      }
+    }
+  },
+  "qg5-09.cnf": {
+    "variables": 729,
+    "clauses": 28540,
+    "CaDiCaL": {
+      "satisfiable": false,
+      "time": 14.66580000032991,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": false,
+      "time": 7.605900000271504,
+      "data": {
+        "only_processor": true,
+        "processing": 7.605900000271504
+      }
+    }
+  },
+  "sw100-15.cnf": {
+    "variables": 500,
+    "clauses": 3100,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 0.8962000001702108,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 16.465400000015507,
+      "data": {
+        "common": 32,
+        "split": 0,
+        "processing": 5.578799999966577
+      }
+    }
+  },
+  "ssa2670-130.cnf": {
+    "variables": 1359,
+    "clauses": 3321,
+    "CaDiCaL": {
+      "satisfiable": false,
+      "time": 5.721800000173971,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": false,
+      "time": 5.306899999595771,
+      "data": {
+        "only_processor": true,
+        "processing": 5.306899999595771
+      }
+    }
+  },
+  "g125.17.cnf": {
+    "variables": 2125,
+    "clauses": 66272,
+    "CaDiCaL": {
+      "satisfiable": "unknown",
+      "time": -1,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": "unknown",
+      "time": -1,
+      "data": {
+        "common": 1793,
+        "split": 0,
+        "processing": 105.73819900037051
+      }
+    }
+  },
+  "bmc-ibm-5.cnf": {
+    "variables": 9396,
+    "clauses": 41207,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 31.599601000380062,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 51.737100000536884,
+      "data": {
+        "common": 27,
+        "split": 0,
+        "processing": 44.483100000434206
+      }
+    }
+  },
+  "ssa2670-141.cnf": {
+    "variables": 986,
+    "clauses": 2315,
+    "CaDiCaL": {
+      "satisfiable": false,
+      "time": 4.9254010000368,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": false,
+      "time": 4.716299999927287,
+      "data": {
+        "only_processor": true,
+        "processing": 4.716299999927287
+      }
+    }
+  },
+  "pret60_40.cnf": {
+    "variables": 60,
+    "clauses": 160,
+    "CaDiCaL": {
+      "satisfiable": false,
+      "time": 3.664799999569368,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": false,
+      "time": 5.4935000007390045,
+      "data": {
+        "common": 7,
+        "split": 0,
+        "processing": 0.565199999982724
+      }
+    }
+  },
+  "bmc-ibm-4.cnf": {
+    "variables": 28161,
+    "clauses": 139716,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 126.478304999182,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 1125.3687930011438,
+      "data": {
+        "common": 120,
+        "split": 0,
+        "processing": 200.21219800037215
+      }
+    }
+  },
+  "ssa7552-159.cnf": {
+    "variables": 1363,
+    "clauses": 3032,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 1.0249999995721737,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 3.5105000006296905,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 3.35460000042076
+      }
+    }
+  },
+  "pret150_25.cnf": {
+    "variables": 150,
+    "clauses": 400,
+    "CaDiCaL": {
+      "satisfiable": false,
+      "time": 16.793899999356654,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": false,
+      "time": 32.0162000007258,
+      "data": {
+        "common": 8,
+        "split": 0,
+        "processing": 1.3926000001447392
+      }
+    }
+  },
+  "qg4-09.cnf": {
+    "variables": 729,
+    "clauses": 15580,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 15.050300999973842,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 440.3935979999005,
+      "data": {
+        "common": 274,
+        "split": 0,
+        "processing": 12.466700000004494
+      }
+    }
+  },
+  "par8-2-c.cnf": {
+    "variables": 68,
+    "clauses": 270,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 1.2450009999156464,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 2.1215000006122864,
+      "data": {
+        "common": 9,
+        "split": 0,
+        "processing": 1.0068000001410837
+      }
+    }
+  },
+  "qg3-09.cnf": {
+    "variables": 729,
+    "clauses": 16732,
+    "CaDiCaL": {
+      "satisfiable": false,
+      "time": 481.2954210001408,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": "unknown",
+      "time": -1,
+      "data": {
+        "common": 291,
+        "split": 0,
+        "processing": 12.719800000013493
+      }
+    }
+  },
+  "par32-5-c.cnf": {
+    "variables": 1339,
+    "clauses": 5350,
+    "CaDiCaL": {
+      "satisfiable": "unknown",
+      "time": -1,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": "unknown",
+      "time": -1,
+      "data": {
+        "common": 42,
+        "split": 0,
+        "processing": 13.707199999771547
+      }
+    }
+  },
+  "qg5-13.cnf": {
+    "variables": 2197,
+    "clauses": 125464,
+    "CaDiCaL": {
+      "satisfiable": false,
+      "time": 817.0162950000304,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": "unknown",
+      "time": -1,
+      "data": {
+        "common": 1100,
+        "split": 0,
+        "processing": 112.35779799972079
+      }
+    }
+  },
+  "flat125-2.cnf": {
+    "variables": 375,
+    "clauses": 1403,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 4.0662999999767635,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 23.864500999479787,
+      "data": {
+        "common": 66,
+        "split": 0,
+        "processing": 3.8824000002932735
+      }
+    }
+  },
+  "qg2-08.cnf": {
+    "variables": 512,
+    "clauses": 148957,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 139.21389899951464,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": "unknown",
+      "time": -1,
+      "data": {
+        "common": 266,
+        "split": 0,
+        "processing": 39.351700001134304
+      }
+    }
+  },
+  "ssa0432-003.cnf": {
+    "variables": 435,
+    "clauses": 1027,
+    "CaDiCaL": {
+      "satisfiable": false,
+      "time": 2.221599999757018,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": false,
+      "time": 0.5575999985012459,
+      "data": {
+        "only_processor": true,
+        "processing": 0.5575999985012459
+      }
+    }
+  },
+  "qg7-11.cnf": {
+    "variables": 1331,
+    "clauses": 49534,
+    "CaDiCaL": {
+      "satisfiable": false,
+      "time": 43.541499000639305,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": false,
+      "time": 169.86779999933788,
+      "data": {
+        "common": 520,
+        "split": 0,
+        "processing": 36.13059999952384
+      }
+    }
+  },
+  "qg2-07.cnf": {
+    "variables": 343,
+    "clauses": 68083,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 15.954800000145042,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 41.751900000235764,
+      "data": {
+        "common": 140,
+        "split": 0,
+        "processing": 22.61519999956363
+      }
+    }
+  },
+  "par16-5.cnf": {
+    "variables": 1015,
+    "clauses": 3358,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 30.03660000013042,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 36.59069999775966,
+      "data": {
+        "common": 23,
+        "split": 0,
+        "processing": 3.3838999988802243
+      }
+    }
+  },
+  "flat175-3.cnf": {
+    "variables": 525,
+    "clauses": 1951,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 7.55970000045636,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 104.7405000008439,
+      "data": {
+        "common": 90,
+        "split": 0,
+        "processing": 3.1964000008883886
+      }
+    }
+  },
+  "hole8.cnf": {
+    "variables": 72,
+    "clauses": 297,
+    "CaDiCaL": {
+      "satisfiable": false,
+      "time": 226.00839900042047,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": false,
+      "time": 234.62039900005038,
+      "data": {
+        "common": 36,
+        "split": 0,
+        "processing": 0.6083999996917555
+      }
+    }
+  },
+  "par8-1.cnf": {
+    "variables": 350,
+    "clauses": 1149,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 0.5133000004207133,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 2.104499999404652,
+      "data": {
+        "common": 9,
+        "split": 0,
+        "processing": 0.9793999997782521
+      }
+    }
+  },
+  "flat50-2.cnf": {
+    "variables": 150,
+    "clauses": 545,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 0.24339999981748406,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 1.89699999828008,
+      "data": {
+        "common": 28,
+        "split": 0,
+        "processing": 0.9821999992709607
+      }
+    }
+  },
+  "pret60_60.cnf": {
+    "variables": 60,
+    "clauses": 160,
+    "CaDiCaL": {
+      "satisfiable": false,
+      "time": 3.3733000000211177,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": false,
+      "time": 5.841900001541944,
+      "data": {
+        "common": 7,
+        "split": 0,
+        "processing": 0.5560999998124316
+      }
+    }
+  },
+  "flat100-1.cnf": {
+    "variables": 300,
+    "clauses": 1117,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 0.42810000013560057,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 8.833899999444839,
+      "data": {
+        "common": 54,
+        "split": 0,
+        "processing": 1.9286999995529186
+      }
+    }
+  },
+  "par8-3-c.cnf": {
+    "variables": 75,
+    "clauses": 298,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 1.5087000001585693,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 2.6378999991720775,
+      "data": {
+        "common": 11,
+        "split": 0,
+        "processing": 0.9271999988413882
+      }
+    }
+  },
+  "sw100-11.cnf": {
+    "variables": 500,
+    "clauses": 3100,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 4.479300000639341,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 22.086400000262074,
+      "data": {
+        "common": 40,
+        "split": 0,
+        "processing": 3.764999999475549
+      }
+    }
+  },
+  "sw100-10.cnf": {
+    "variables": 500,
+    "clauses": 3100,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 4.41439999940485,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 19.084199999269913,
+      "data": {
+        "common": 52,
+        "split": 0,
+        "processing": 3.62689999928989
+      }
+    }
+  },
+  "bf0432-007.cnf": {
+    "variables": 1040,
+    "clauses": 3668,
+    "CaDiCaL": {
+      "satisfiable": false,
+      "time": 6.517099999655329,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": false,
+      "time": 27.806300000520423,
+      "data": {
+        "common": 28,
+        "split": 0,
+        "processing": 5.960500000583124
+      }
+    }
+  },
+  "par16-1.cnf": {
+    "variables": 1015,
+    "clauses": 3310,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 38.55139900042559,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 222.06049900159996,
+      "data": {
+        "common": 23,
+        "split": 0,
+        "processing": 3.230500000427128
+      }
+    }
+  },
+  "sw100-13.cnf": {
+    "variables": 500,
+    "clauses": 3100,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 0.9713999997984502,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 8.147500000632135,
+      "data": {
+        "common": 34,
+        "split": 0,
+        "processing": 3.467500000624568
+      }
+    }
+  },
+  "qg1-07.cnf": {
+    "variables": 343,
+    "clauses": 68083,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 20.596100000148,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 115.66579999998794,
+      "data": {
+        "common": 132,
+        "split": 0,
+        "processing": 21.565499999269377
+      }
+    }
+  },
+  "ais10.cnf": {
+    "variables": 181,
+    "clauses": 3151,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 0.9153000000878819,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 52.96290000114823,
+      "data": {
+        "common": 110,
+        "split": 0,
+        "processing": 13.65059999989171
+      }
+    }
+  },
+  "planning_bw_large.b.cnf": {
+    "variables": 1087,
+    "clauses": 13772,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 10.42059999963385,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 11.27499999893189,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 11.128599999210564
+      }
+    }
+  },
+  "flat75-3.cnf": {
+    "variables": 225,
+    "clauses": 840,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 3.546900000401365,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 14.27029999831575,
+      "data": {
+        "common": 43,
+        "split": 0,
+        "processing": 1.5399999992951052
+      }
+    }
+  },
+  "qg6-11.cnf": {
+    "variables": 1331,
+    "clauses": 49204,
+    "CaDiCaL": {
+      "satisfiable": false,
+      "time": 47.220199000548746,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": false,
+      "time": 619.22809600037,
+      "data": {
+        "common": 596,
+        "split": 0,
+        "processing": 39.957999000762356
+      }
+    }
+  },
+  "logistics.c.cnf": {
+    "variables": 1141,
+    "clauses": 10719,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 10.702499999752035,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 30.123700000331155,
+      "data": {
+        "common": 65,
+        "split": 0,
+        "processing": 14.977900000303634
+      }
+    }
+  },
+  "flat30-3.cnf": {
+    "variables": 90,
+    "clauses": 300,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 0.16289999985019676,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 1.3614000017696526,
+      "data": {
+        "common": 16,
+        "split": 0,
+        "processing": 0.7920000007288763
+      }
+    }
+  },
+  "sw100-8.cnf": {
+    "variables": 500,
+    "clauses": 3100,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 4.774500000166881,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 22.33680000063032,
+      "data": {
+        "common": 92,
+        "split": 0,
+        "processing": 3.9300999997067265
+      }
+    }
+  },
+  "bmc-ibm-12.cnf": {
+    "variables": 39598,
+    "clauses": 194778,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 804.6176950001609,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 6999.283586999809,
+      "data": {
+        "common": 139,
+        "split": 0,
+        "processing": 407.49429800052894
+      }
+    }
+  },
+  "ais6.cnf": {
+    "variables": 61,
+    "clauses": 581,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 0.2497000004950678,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 3.805599999395781,
+      "data": {
+        "common": 36,
+        "split": 0,
+        "processing": 1.1961999989580363
+      }
+    }
+  },
+  "sw100-7.cnf": {
+    "variables": 500,
+    "clauses": 3100,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 4.35509999988426,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 18.78709999982675,
+      "data": {
+        "common": 88,
+        "split": 0,
+        "processing": 7.924800000182586
+      }
+    }
+  },
+  "flat125-3.cnf": {
+    "variables": 375,
+    "clauses": 1403,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 5.264599999463826,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 40.28250000010303,
+      "data": {
+        "common": 74,
+        "split": 0,
+        "processing": 2.633399999467656
+      }
+    }
+  },
+  "par8-4-c.cnf": {
+    "variables": 67,
+    "clauses": 266,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 1.3275000001158332,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 1.6505000003235182,
+      "data": {
+        "common": 11,
+        "split": 0,
+        "processing": 0.8397000001423294
+      }
+    }
+  },
+  "bmc-galileo-8.cnf": {
+    "variables": 58074,
+    "clauses": 294821,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 364.4646980001198,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 2347.6931039986084,
+      "data": {
+        "common": 177,
+        "split": 0,
+        "processing": 379.4906009989063
+      }
+    }
+  },
+  "planning_huge.cnf": {
+    "variables": 459,
+    "clauses": 7054,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 6.045498999810661,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 4.168399998889072,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 4.009399999631569
+      }
+    }
+  },
+  "sw100-2.cnf": {
+    "variables": 500,
+    "clauses": 3100,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 0.9572999997544684,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 21.94469999994908,
+      "data": {
+        "common": 178,
+        "split": 0,
+        "processing": 5.6227999994007405
+      }
+    }
+  },
+  "g250.29.cnf": {
+    "variables": 7250,
+    "clauses": 454622,
+    "CaDiCaL": {
+      "satisfiable": "unknown",
+      "time": -1,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": "unknown",
+      "time": -1,
+      "data": {
+        "common": 4213,
+        "split": 1000,
+        "processing": 464.722401000472
+      }
+    }
+  },
+  "par8-5-c.cnf": {
+    "variables": 75,
+    "clauses": 298,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 1.3010000002395827,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 1.8041999992419733,
+      "data": {
+        "common": 9,
+        "split": 0,
+        "processing": 1.1380999985703966
+      }
+    }
+  },
+  "flat175-1.cnf": {
+    "variables": 525,
+    "clauses": 1951,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 9.23889999921812,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 81.20859999871755,
+      "data": {
+        "common": 96,
+        "split": 0,
+        "processing": 4.898699999102973
+      }
+    }
+  },
+  "planning_bw_large.a.cnf": {
+    "variables": 459,
+    "clauses": 4675,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 5.015900000216789,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 4.202899999654619,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 4.0210999995906604
+      }
+    }
+  },
+  "hanoi4.cnf": {
+    "variables": 718,
+    "clauses": 4934,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 27.82920000026934,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 61.27740000010817,
+      "data": {
+        "common": 25,
+        "split": 0,
+        "processing": 8.104999998977291
+      }
+    }
+  },
+  "par16-3.cnf": {
+    "variables": 1015,
+    "clauses": 3344,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 10.030100000221864,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 147.54310099851864,
+      "data": {
+        "common": 22,
+        "split": 0,
+        "processing": 4.737699999168399
+      }
+    }
+  },
+  "flat75-2.cnf": {
+    "variables": 225,
+    "clauses": 840,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 3.343200000017532,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 9.494800000538817,
+      "data": {
+        "common": 44,
+        "split": 0,
+        "processing": 1.9845999995595776
+      }
+    }
+  },
+  "qg3-08.cnf": {
+    "variables": 512,
+    "clauses": 10469,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 7.306900000003225,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 76.57739999922342,
+      "data": {
+        "common": 173,
+        "split": 0,
+        "processing": 7.6730999990104465
+      }
+    }
+  },
+  "bmc-ibm-7.cnf": {
+    "variables": 8710,
+    "clauses": 39774,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 12.17610000003333,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 49.068500000430504,
+      "data": {
+        "common": 33,
+        "split": 0,
+        "processing": 38.99040000032983
+      }
+    }
+  },
+  "flat30-2.cnf": {
+    "variables": 90,
+    "clauses": 300,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 0.18959999943035655,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 1.3877000001230044,
+      "data": {
+        "common": 12,
+        "split": 0,
+        "processing": 0.8503999997628853
+      }
+    }
+  },
+  "par32-2.cnf": {
+    "variables": 3176,
+    "clauses": 10253,
+    "CaDiCaL": {
+      "satisfiable": "unknown",
+      "time": -1,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": "unknown",
+      "time": -1,
+      "data": {
+        "common": 39,
+        "split": 0,
+        "processing": 12.909499999295804
+      }
+    }
+  },
+  "ssa7552-160.cnf": {
+    "variables": 1391,
+    "clauses": 3126,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 1.1447999995652935,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 3.4389999982522568,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 3.2869999995455146
+      }
+    }
+  },
+  "bf2670-001.cnf": {
+    "variables": 1393,
+    "clauses": 3434,
+    "CaDiCaL": {
+      "satisfiable": false,
+      "time": 5.744500000218977,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": false,
+      "time": 2.908899999965797,
+      "data": {
+        "only_processor": true,
+        "processing": 2.908899999965797
+      }
+    }
+  },
+  "par32-4.cnf": {
+    "variables": 3176,
+    "clauses": 10313,
+    "CaDiCaL": {
+      "satisfiable": "unknown",
+      "time": -1,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": "unknown",
+      "time": -1,
+      "data": {
+        "common": 60,
+        "split": 0,
+        "processing": 12.785599999915576
+      }
+    }
+  },
+  "flat200-2.cnf": {
+    "variables": 600,
+    "clauses": 2237,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 16.59860000017943,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 448.7502009997115,
+      "data": {
+        "common": 106,
+        "split": 0,
+        "processing": 5.087300000013784
+      }
+    }
+  },
+  "bmc-ibm-1.cnf": {
+    "variables": 9685,
+    "clauses": 55870,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 57.06160000045202,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 469.1929999989952,
+      "data": {
+        "common": 56,
+        "split": 0,
+        "processing": 147.5544999993872
+      }
+    }
+  },
+  "qg6-12.cnf": {
+    "variables": 1728,
+    "clauses": 69931,
+    "CaDiCaL": {
+      "satisfiable": false,
+      "time": 505.9869980004805,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": false,
+      "time": 8034.715183999651,
+      "data": {
+        "common": 845,
+        "split": 0,
+        "processing": 61.20340000052238
+      }
+    }
+  },
+  "par8-1-c.cnf": {
+    "variables": 64,
+    "clauses": 254,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 1.1650999995254097,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 1.3835999998264015,
+      "data": {
+        "common": 9,
+        "split": 0,
+        "processing": 0.9282999999413732
+      }
+    }
+  },
+  "logistics.d.cnf": {
+    "variables": 4713,
+    "clauses": 21991,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 28.49049999986164,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 340.3780970002117,
+      "data": {
+        "common": 126,
+        "split": 0,
+        "processing": 73.73379999989993
+      }
+    }
+  },
+  "logistics.a.cnf": {
+    "variables": 828,
+    "clauses": 6718,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 12.738299999909941,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 14.278700000431854,
+      "data": {
+        "common": 39,
+        "split": 0,
+        "processing": 9.433700000954559
+      }
+    }
+  },
+  "bf1355-075.cnf": {
+    "variables": 2180,
+    "clauses": 6778,
+    "CaDiCaL": {
+      "satisfiable": false,
+      "time": 5.148100000042177,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": false,
+      "time": 11.23090000146476,
+      "data": {
+        "only_processor": true,
+        "processing": 11.23090000146476
+      }
+    }
+  },
+  "flat125-1.cnf": {
+    "variables": 375,
+    "clauses": 1403,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 4.210899999634421,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 51.23710000043502,
+      "data": {
+        "common": 76,
+        "split": 0,
+        "processing": 2.9876999997213716
+      }
+    }
+  },
+  "bmc-ibm-3.cnf": {
+    "variables": 14930,
+    "clauses": 72106,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 100.4573000000164,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 643.0641940023634,
+      "data": {
+        "common": 69,
+        "split": 0,
+        "processing": 158.4612990009191
+      }
+    }
+  },
+  "par16-3-c.cnf": {
+    "variables": 334,
+    "clauses": 1332,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 41.20729999976902,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 512.1308940015297,
+      "data": {
+        "common": 22,
+        "split": 0,
+        "processing": 3.4777000000758562
+      }
+    }
+  },
+  "sw100-3.cnf": {
+    "variables": 500,
+    "clauses": 3100,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 4.8854990000108955,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 19.393099999433616,
+      "data": {
+        "common": 168,
+        "split": 0,
+        "processing": 6.262699998842436
+      }
+    }
+  },
+  "flat150-2.cnf": {
+    "variables": 450,
+    "clauses": 1680,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 8.877600000232633,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 289.68749699924956,
+      "data": {
+        "common": 80,
+        "split": 0,
+        "processing": 4.95260000025155
+      }
+    }
+  },
+  "bmc-ibm-13.cnf": {
+    "variables": 13215,
+    "clauses": 65728,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 229.23539899966272,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 2248.927177997757,
+      "data": {
+        "common": 89,
+        "split": 0,
+        "processing": 132.05159899916907
+      }
+    }
+  },
+  "ssa7552-038.cnf": {
+    "variables": 1501,
+    "clauses": 3575,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 1.3028000003032503,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 4.567699999824981,
+      "data": {
+        "common": 0,
+        "split": 0,
+        "processing": 4.4161999994685175
+      }
+    }
+  },
+  "flat175-2.cnf": {
+    "variables": 525,
+    "clauses": 1951,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 9.296600000197941,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 255.3945970012137,
+      "data": {
+        "common": 98,
+        "split": 0,
+        "processing": 4.822700000659097
+      }
+    }
+  },
+  "qg1-08.cnf": {
+    "variables": 512,
+    "clauses": 148957,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 191.7980999996871,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": "unknown",
+      "time": -1,
+      "data": {
+        "common": 262,
+        "split": 0,
+        "processing": 52.036900000530295
+      }
+    }
+  },
+  "par32-1-c.cnf": {
+    "variables": 1315,
+    "clauses": 5254,
+    "CaDiCaL": {
+      "satisfiable": "unknown",
+      "time": -1,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": "unknown",
+      "time": -1,
+      "data": {
+        "common": 39,
+        "split": 0,
+        "processing": 12.504600001193467
+      }
+    }
+  },
+  "ais12.cnf": {
+    "variables": 265,
+    "clauses": 5666,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 1.4714999997522682,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 1380.3956909996487,
+      "data": {
+        "common": 148,
+        "split": 0,
+        "processing": 9.785999998712214
+      }
+    }
+  },
+  "hole9.cnf": {
+    "variables": 90,
+    "clauses": 415,
+    "CaDiCaL": {
+      "satisfiable": false,
+      "time": 2959.895098999368,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": false,
+      "time": 505.601196000498,
+      "data": {
+        "common": 48,
+        "split": 0,
+        "processing": 0.9045000006153714
+      }
+    }
+  },
+  "ssa6288-047.cnf": {
+    "variables": 10410,
+    "clauses": 34238,
+    "CaDiCaL": {
+      "satisfiable": false,
+      "time": 9.20730000052572,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": false,
+      "time": 6.211399999301648,
+      "data": {
+        "only_processor": true,
+        "processing": 6.211399999301648
+      }
+    }
+  },
+  "par32-2-c.cnf": {
+    "variables": 1303,
+    "clauses": 5206,
+    "CaDiCaL": {
+      "satisfiable": "unknown",
+      "time": -1,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": "unknown",
+      "time": -1,
+      "data": {
+        "common": 39,
+        "split": 0,
+        "processing": 11.92070000070089
+      }
+    }
+  },
+  "par16-4.cnf": {
+    "variables": 1015,
+    "clauses": 3324,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 11.259299000812462,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 66.49280000056024,
+      "data": {
+        "common": 21,
+        "split": 0,
+        "processing": 4.857199999605655
+      }
+    }
+  },
+  "sw100-9.cnf": {
+    "variables": 500,
+    "clauses": 3100,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 4.647199999453733,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 33.660799999779556,
+      "data": {
+        "common": 80,
+        "split": 0,
+        "processing": 5.955200000244076
+      }
+    }
+  },
+  "sw100-1.cnf": {
+    "variables": 500,
+    "clauses": 3100,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 5.502900000465161,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 19.293800000014016,
+      "data": {
+        "common": 173,
+        "split": 0,
+        "processing": 6.109699999797158
+      }
+    }
+  },
+  "qg5-10.cnf": {
+    "variables": 1000,
+    "clauses": 43636,
+    "CaDiCaL": {
+      "satisfiable": false,
+      "time": 20.987097999750404,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": false,
+      "time": 53.48760099877836,
+      "data": {
+        "common": 371,
+        "split": 0,
+        "processing": 30.454800000370597
+      }
+    }
+  },
+  "flat50-1.cnf": {
+    "variables": 150,
+    "clauses": 545,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 0.2660000000105356,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 2.455499999996391,
+      "data": {
+        "common": 28,
+        "split": 0,
+        "processing": 1.4007999998284504
+      }
+    }
+  },
+  "bf1355-638.cnf": {
+    "variables": 2177,
+    "clauses": 6768,
+    "CaDiCaL": {
+      "satisfiable": false,
+      "time": 5.713299000490224,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": false,
+      "time": 10.211900000285823,
+      "data": {
+        "only_processor": true,
+        "processing": 10.211900000285823
+      }
+    }
+  },
+  "flat150-1.cnf": {
+    "variables": 450,
+    "clauses": 1680,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 5.1835989997925935,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 108.2613010021305,
+      "data": {
+        "common": 80,
+        "split": 0,
+        "processing": 3.649300000688527
+      }
+    }
+  },
+  "par16-5-c.cnf": {
+    "variables": 341,
+    "clauses": 1360,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 29.243296999993618,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 919.1488449996541,
+      "data": {
+        "common": 21,
+        "split": 0,
+        "processing": 3.3438999998907093
+      }
+    }
+  },
+  "par8-4.cnf": {
+    "variables": 350,
+    "clauses": 1155,
+    "CaDiCaL": {
+      "satisfiable": true,
+      "time": 1.872900000307709,
+      "data": null
+    },
+    "Hyper-2": {
+      "satisfiable": true,
+      "time": 2.1818000022904016,
+      "data": {
+        "common": 12,
+        "split": 0,
+        "processing": 1.1712000014085788
+      }
+    }
+  }
+}

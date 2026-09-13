@@ -1,9 +1,10 @@
-# test_two_watched_literals.py
 import pytest
 from partitionsolver.solver.two_watched_literals import TwoWatchedLiterals
 from partitionsolver.solver.variable_translation import VariableTranslation
-from partitionsolver.solver.division_solver import DivisionDPLL
 from partitionsolver.utils import literal_util
+
+
+# Test_two_watched_literals.py
 
 def test_notify_neg_var():
     clauses = [[1, -2], [2, 3], [-1, 2]]
@@ -70,24 +71,6 @@ def test_indexed_variables():
     expected = ([], False, 0)
     assert result == expected
 
-def test_solver():
-    clauses1 = [[1, -2], [2, 3], [-1, 4]]
-    clauses2 = [[3, 5], [-3, 4, -5]]
-    solver = DivisionDPLL(5, [3, 4], [clauses1, clauses2])
-    solver.reset_solver()
-    solver.decision_level = 1
-    solver.add_learnt_clause([-3, 4], clause_in_DIMACS=True)
-    solver.set_decision_variable(3, 0, 1)
-
-    solver.values[1] = -1
-    result = solver.unit_propagate(3, 0, 1)
-    assert result == False
-    
-    solver.values[1] = 1
-    result = solver.unit_propagate(3, 0, 1)
-    assert result == True
-
 
 if __name__ == "__main__":
-    #test_solver()
     pytest.main([__file__, "-v"])
